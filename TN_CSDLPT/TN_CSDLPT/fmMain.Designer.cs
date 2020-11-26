@@ -33,9 +33,7 @@
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btn_Login = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
             this.barBtn_Farculty = new DevExpress.XtraBars.BarButtonItem();
             this.barBtn_Subject = new DevExpress.XtraBars.BarButtonItem();
@@ -54,6 +52,7 @@
             this.Stslb_ID = new System.Windows.Forms.ToolStripStatusLabel();
             this.Stslb_Name = new System.Windows.Forms.ToolStripStatusLabel();
             this.Stslb_Group = new System.Windows.Forms.ToolStripStatusLabel();
+            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -68,19 +67,18 @@
             this.ribbonControl1.SearchEditItem,
             this.btn_Login,
             this.barButtonItem1,
-            this.barButtonItem2,
             this.barButtonItem3,
-            this.barButtonItem4,
             this.barButtonItem5,
             this.barBtn_Farculty,
             this.barBtn_Subject,
             this.C,
             this.barButtonItem8,
             this.barButtonItem9,
-            this.barButtonItem10});
+            this.barButtonItem10,
+            this.barButtonItem2});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ribbonControl1.MaxItemId = 13;
+            this.ribbonControl1.MaxItemId = 14;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribPage_System,
@@ -105,27 +103,11 @@
             this.barButtonItem1.Name = "barButtonItem1";
             this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
             // 
-            // barButtonItem2
-            // 
-            this.barButtonItem2.Caption = "Giáo viên";
-            this.barButtonItem2.Id = 3;
-            this.barButtonItem2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
-            this.barButtonItem2.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
-            this.barButtonItem2.Name = "barButtonItem2";
-            // 
             // barButtonItem3
             // 
             this.barButtonItem3.Caption = "barButtonItem3";
             this.barButtonItem3.Id = 4;
             this.barButtonItem3.Name = "barButtonItem3";
-            // 
-            // barButtonItem4
-            // 
-            this.barButtonItem4.Caption = "Sinh viên";
-            this.barButtonItem4.Id = 5;
-            this.barButtonItem4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.Image")));
-            this.barButtonItem4.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.LargeImage")));
-            this.barButtonItem4.Name = "barButtonItem4";
             // 
             // barButtonItem5
             // 
@@ -139,8 +121,8 @@
             // 
             this.barBtn_Farculty.Caption = "Khoa";
             this.barBtn_Farculty.Id = 7;
-            this.barBtn_Farculty.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem6.ImageOptions.Image")));
-            this.barBtn_Farculty.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem6.ImageOptions.LargeImage")));
+            this.barBtn_Farculty.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barBtn_Farculty.ImageOptions.Image")));
+            this.barBtn_Farculty.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barBtn_Farculty.ImageOptions.LargeImage")));
             this.barBtn_Farculty.Name = "barBtn_Farculty";
             this.barBtn_Farculty.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtn_Farculty_ItemClick);
             // 
@@ -210,9 +192,8 @@
             // ribbonPageGroup2
             // 
             this.ribbonPageGroup2.ItemLinks.Add(this.barBtn_Farculty);
-            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem2);
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem5);
-            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem4);
+            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem2);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.Text = "Quản lý user";
             // 
@@ -267,6 +248,14 @@
             this.Stslb_Group.Size = new System.Drawing.Size(50, 20);
             this.Stslb_Group.Text = "Nhóm";
             // 
+            // barButtonItem2
+            // 
+            this.barButtonItem2.Caption = "Giáo viên đăng ký thi";
+            this.barButtonItem2.Id = 13;
+            this.barButtonItem2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
+            this.barButtonItem2.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
+            this.barButtonItem2.Name = "barButtonItem2";
+            // 
             // fmMain
             // 
             this.Appearance.Options.UseFont = true;
@@ -305,10 +294,8 @@
         public System.Windows.Forms.ToolStripStatusLabel Stslb_Name;
         public System.Windows.Forms.ToolStripStatusLabel Stslb_Group;
         public System.Windows.Forms.StatusStrip statusStrip1;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem4;
         private DevExpress.XtraBars.BarButtonItem barButtonItem5;
         private DevExpress.XtraBars.BarButtonItem barBtn_Farculty;
         private DevExpress.XtraBars.BarButtonItem barBtn_Subject;
@@ -319,6 +306,7 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem10;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
         public DevExpress.XtraBars.Ribbon.RibbonPage ribPg_Tabbar;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
     }
 }
 
