@@ -29,10 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.Label mAGVLabel;
+            System.Windows.Forms.Label hOLabel;
+            System.Windows.Forms.Label tENLabel;
+            System.Windows.Forms.Label hOCVILabel;
+            System.Windows.Forms.Label mAKHLabel1;
+            System.Windows.Forms.Label mACSLabel;
             System.Windows.Forms.Label mAKHLabel;
             System.Windows.Forms.Label tENKHLabel;
-            System.Windows.Forms.Label mACSLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fmFarculty));
+            this.kHOABindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dS = new TN_CSDLPT.DS();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.barBtn_Add = new DevExpress.XtraBars.BarButtonItem();
@@ -40,6 +47,7 @@
             this.barBtn_Undo = new DevExpress.XtraBars.BarButtonItem();
             this.barBtn_Save = new DevExpress.XtraBars.BarButtonItem();
             this.barBtn_Refresh = new DevExpress.XtraBars.BarButtonItem();
+            this.barBtn_forbid = new DevExpress.XtraBars.BarButtonItem();
             this.barBtn_Exit = new DevExpress.XtraBars.BarButtonItem();
             this.bar3 = new DevExpress.XtraBars.Bar();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
@@ -50,8 +58,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lb_Branch = new System.Windows.Forms.Label();
             this.cbB_Branch = new System.Windows.Forms.ComboBox();
-            this.dS = new TN_CSDLPT.DS();
-            this.kHOABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.kHOATableAdapter = new TN_CSDLPT.DSTableAdapters.KHOATableAdapter();
             this.tableAdapterManager = new TN_CSDLPT.DSTableAdapters.TableAdapterManager();
             this.kHOAGridControl = new DevExpress.XtraGrid.GridControl();
@@ -60,69 +66,152 @@
             this.colTENKH = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMACS = new DevExpress.XtraGrid.Columns.GridColumn();
             this.grpB_Farculty = new System.Windows.Forms.GroupBox();
+            this.grpB_txtFarculty = new System.Windows.Forms.GroupBox();
+            this.mAKHTextBox = new System.Windows.Forms.TextBox();
+            this.tENKHTextBox = new System.Windows.Forms.TextBox();
+            this.mACSTextBox = new System.Windows.Forms.TextBox();
             this.gIAOVIENGridControl = new DevExpress.XtraGrid.GridControl();
-            this.gIAOVIENBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.MenuStrp_Teacher = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.thêmLớpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.xóaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.phụcHồiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.làmMớiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hủyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gIAOVIENBindingSource_FK = new System.Windows.Forms.BindingSource(this.components);
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMAGV = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colHO = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTEN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colHOCVI = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMAKH1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.mACSTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.tENKHTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.mAKHTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.gIAOVIENBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gIAOVIENTableAdapter = new TN_CSDLPT.DSTableAdapters.GIAOVIENTableAdapter();
             this.lOPBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.grpB_Teacher = new System.Windows.Forms.GroupBox();
+            this.grpB_txtTeacher = new System.Windows.Forms.GroupBox();
+            this.mAGVTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.mAKHTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.hOTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.hOCVITextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.tENTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.lOPTableAdapter = new TN_CSDLPT.DSTableAdapters.LOPTableAdapter();
-            this.lOPBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.bODEBindingSource_FK = new System.Windows.Forms.BindingSource(this.components);
+            this.bODETableAdapter = new TN_CSDLPT.DSTableAdapters.BODETableAdapter();
+            this.ghiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            mAGVLabel = new System.Windows.Forms.Label();
+            hOLabel = new System.Windows.Forms.Label();
+            tENLabel = new System.Windows.Forms.Label();
+            hOCVILabel = new System.Windows.Forms.Label();
+            mAKHLabel1 = new System.Windows.Forms.Label();
+            mACSLabel = new System.Windows.Forms.Label();
             mAKHLabel = new System.Windows.Forms.Label();
             tENKHLabel = new System.Windows.Forms.Label();
-            mACSLabel = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.kHOABindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dS)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kHOABindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kHOAGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.grpB_Farculty.SuspendLayout();
+            this.grpB_txtFarculty.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gIAOVIENGridControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gIAOVIENBindingSource1)).BeginInit();
+            this.MenuStrp_Teacher.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gIAOVIENBindingSource_FK)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mACSTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tENKHTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mAKHTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gIAOVIENBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOPBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lOPBindingSource1)).BeginInit();
+            this.grpB_Teacher.SuspendLayout();
+            this.grpB_txtTeacher.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mAGVTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mAKHTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hOTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hOCVITextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tENTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bODEBindingSource_FK)).BeginInit();
             this.SuspendLayout();
+            // 
+            // mAGVLabel
+            // 
+            mAGVLabel.AutoSize = true;
+            mAGVLabel.Location = new System.Drawing.Point(6, 33);
+            mAGVLabel.Name = "mAGVLabel";
+            mAGVLabel.Size = new System.Drawing.Size(120, 22);
+            mAGVLabel.TabIndex = 7;
+            mAGVLabel.Text = "Mã giáo viên:";
+            // 
+            // hOLabel
+            // 
+            hOLabel.AutoSize = true;
+            hOLabel.Location = new System.Drawing.Point(6, 77);
+            hOLabel.Name = "hOLabel";
+            hOLabel.Size = new System.Drawing.Size(40, 22);
+            hOLabel.TabIndex = 8;
+            hOLabel.Text = "Họ:";
+            // 
+            // tENLabel
+            // 
+            tENLabel.AutoSize = true;
+            tENLabel.Location = new System.Drawing.Point(6, 122);
+            tENLabel.Name = "tENLabel";
+            tENLabel.Size = new System.Drawing.Size(46, 22);
+            tENLabel.TabIndex = 9;
+            tENLabel.Text = "Tên:";
+            // 
+            // hOCVILabel
+            // 
+            hOCVILabel.AutoSize = true;
+            hOCVILabel.Location = new System.Drawing.Point(6, 168);
+            hOCVILabel.Name = "hOCVILabel";
+            hOCVILabel.Size = new System.Drawing.Size(70, 22);
+            hOCVILabel.TabIndex = 10;
+            hOCVILabel.Text = "Học vị:";
+            // 
+            // mAKHLabel1
+            // 
+            mAKHLabel1.AutoSize = true;
+            mAKHLabel1.Location = new System.Drawing.Point(6, 211);
+            mAKHLabel1.Name = "mAKHLabel1";
+            mAKHLabel1.Size = new System.Drawing.Size(84, 22);
+            mAKHLabel1.TabIndex = 11;
+            mAKHLabel1.Text = "Mã khoa:";
+            // 
+            // mACSLabel
+            // 
+            mACSLabel.AutoSize = true;
+            mACSLabel.Location = new System.Drawing.Point(9, 121);
+            mACSLabel.Name = "mACSLabel";
+            mACSLabel.Size = new System.Drawing.Size(91, 22);
+            mACSLabel.TabIndex = 11;
+            mACSLabel.Text = "Mã cơ sở:";
             // 
             // mAKHLabel
             // 
             mAKHLabel.AutoSize = true;
-            mAKHLabel.Location = new System.Drawing.Point(12, 497);
+            mAKHLabel.Location = new System.Drawing.Point(9, 26);
             mAKHLabel.Name = "mAKHLabel";
             mAKHLabel.Size = new System.Drawing.Size(84, 22);
-            mAKHLabel.TabIndex = 0;
+            mAKHLabel.TabIndex = 6;
             mAKHLabel.Text = "Mã khoa:";
             // 
             // tENKHLabel
             // 
             tENKHLabel.AutoSize = true;
-            tENKHLabel.Location = new System.Drawing.Point(12, 544);
+            tENKHLabel.Location = new System.Drawing.Point(9, 77);
             tENKHLabel.Name = "tENKHLabel";
             tENKHLabel.Size = new System.Drawing.Size(88, 22);
-            tENKHLabel.TabIndex = 4;
+            tENKHLabel.TabIndex = 15;
             tENKHLabel.Text = "Tên khoa:";
             // 
-            // mACSLabel
+            // kHOABindingSource
             // 
-            mACSLabel.AutoSize = true;
-            mACSLabel.Location = new System.Drawing.Point(12, 591);
-            mACSLabel.Name = "mACSLabel";
-            mACSLabel.Size = new System.Drawing.Size(91, 22);
-            mACSLabel.TabIndex = 5;
-            mACSLabel.Text = "Mã cơ sở:";
+            this.kHOABindingSource.DataMember = "KHOA";
+            this.kHOABindingSource.DataSource = this.dS;
+            // 
+            // dS
+            // 
+            this.dS.DataSetName = "DS";
+            this.dS.EnforceConstraints = false;
+            this.dS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // barManager1
             // 
@@ -141,9 +230,10 @@
             this.barBtn_Undo,
             this.barBtn_Refresh,
             this.barBtn_Save,
-            this.barBtn_Exit});
+            this.barBtn_Exit,
+            this.barBtn_forbid});
             this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 8;
+            this.barManager1.MaxItemId = 9;
             this.barManager1.StatusBar = this.bar3;
             // 
             // bar2
@@ -161,6 +251,7 @@
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barBtn_Undo, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barBtn_Save, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barBtn_Refresh, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barBtn_forbid, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barBtn_Exit, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
             this.bar2.OptionsBar.MultiLine = true;
             this.bar2.OptionsBar.UseWholeRow = true;
@@ -175,6 +266,7 @@
             this.barBtn_Add.ItemInMenuAppearance.Normal.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.barBtn_Add.ItemInMenuAppearance.Normal.Options.UseFont = true;
             this.barBtn_Add.Name = "barBtn_Add";
+            this.barBtn_Add.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtn_Add_ItemClick);
             // 
             // barBtn_Delete
             // 
@@ -183,6 +275,7 @@
             this.barBtn_Delete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barBtn_Delete.ImageOptions.Image")));
             this.barBtn_Delete.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barBtn_Delete.ImageOptions.LargeImage")));
             this.barBtn_Delete.Name = "barBtn_Delete";
+            this.barBtn_Delete.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtn_Delete_ItemClick);
             // 
             // barBtn_Undo
             // 
@@ -191,6 +284,7 @@
             this.barBtn_Undo.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barBtn_Undo.ImageOptions.Image")));
             this.barBtn_Undo.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barBtn_Undo.ImageOptions.LargeImage")));
             this.barBtn_Undo.Name = "barBtn_Undo";
+            this.barBtn_Undo.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtn_Undo_ItemClick);
             // 
             // barBtn_Save
             // 
@@ -199,6 +293,7 @@
             this.barBtn_Save.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barBtn_Save.ImageOptions.Image")));
             this.barBtn_Save.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barBtn_Save.ImageOptions.LargeImage")));
             this.barBtn_Save.Name = "barBtn_Save";
+            this.barBtn_Save.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtn_Save_ItemClick);
             // 
             // barBtn_Refresh
             // 
@@ -208,6 +303,15 @@
             this.barBtn_Refresh.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barBtn_Refresh.ImageOptions.LargeImage")));
             this.barBtn_Refresh.Name = "barBtn_Refresh";
             this.barBtn_Refresh.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtn_Refresh_ItemClick);
+            // 
+            // barBtn_forbid
+            // 
+            this.barBtn_forbid.Caption = "Hủy";
+            this.barBtn_forbid.Id = 8;
+            this.barBtn_forbid.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barBtn_forbid.ImageOptions.SvgImage")));
+            this.barBtn_forbid.Name = "barBtn_forbid";
+            this.barBtn_forbid.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.barBtn_forbid.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtn_forbid_ItemClick);
             // 
             // barBtn_Exit
             // 
@@ -236,7 +340,7 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(1332, 31);
+            this.barDockControlTop.Size = new System.Drawing.Size(1723, 31);
             // 
             // barDockControlBottom
             // 
@@ -244,7 +348,7 @@
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.barDockControlBottom.Location = new System.Drawing.Point(0, 930);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(1332, 24);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1723, 24);
             // 
             // barDockControlLeft
             // 
@@ -258,7 +362,7 @@
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1332, 31);
+            this.barDockControlRight.Location = new System.Drawing.Point(1723, 31);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 899);
             // 
@@ -275,7 +379,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 31);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1332, 61);
+            this.panel1.Size = new System.Drawing.Size(1723, 59);
             this.panel1.TabIndex = 4;
             // 
             // lb_Branch
@@ -299,17 +403,6 @@
             this.cbB_Branch.Size = new System.Drawing.Size(324, 30);
             this.cbB_Branch.TabIndex = 2;
             this.cbB_Branch.SelectedIndexChanged += new System.EventHandler(this.cbB_Branch_SelectedIndexChanged);
-            // 
-            // dS
-            // 
-            this.dS.DataSetName = "DS";
-            this.dS.EnforceConstraints = false;
-            this.dS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // kHOABindingSource
-            // 
-            this.kHOABindingSource.DataMember = "KHOA";
-            this.kHOABindingSource.DataSource = this.dS;
             // 
             // kHOATableAdapter
             // 
@@ -338,7 +431,7 @@
             this.kHOAGridControl.MainView = this.gridView1;
             this.kHOAGridControl.MenuManager = this.barManager1;
             this.kHOAGridControl.Name = "kHOAGridControl";
-            this.kHOAGridControl.Size = new System.Drawing.Size(1326, 438);
+            this.kHOAGridControl.Size = new System.Drawing.Size(934, 327);
             this.kHOAGridControl.TabIndex = 5;
             this.kHOAGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -351,6 +444,7 @@
             this.colMACS});
             this.gridView1.GridControl = this.kHOAGridControl;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // colMAKH
@@ -403,38 +497,123 @@
             // 
             // grpB_Farculty
             // 
-            this.grpB_Farculty.Controls.Add(this.gIAOVIENGridControl);
-            this.grpB_Farculty.Controls.Add(mACSLabel);
-            this.grpB_Farculty.Controls.Add(this.mACSTextEdit);
+            this.grpB_Farculty.Controls.Add(this.grpB_txtFarculty);
             this.grpB_Farculty.Controls.Add(this.kHOAGridControl);
-            this.grpB_Farculty.Controls.Add(tENKHLabel);
-            this.grpB_Farculty.Controls.Add(this.tENKHTextEdit);
-            this.grpB_Farculty.Controls.Add(mAKHLabel);
-            this.grpB_Farculty.Controls.Add(this.mAKHTextEdit);
-            this.grpB_Farculty.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grpB_Farculty.Location = new System.Drawing.Point(0, 92);
+            this.grpB_Farculty.Dock = System.Windows.Forms.DockStyle.Left;
+            this.grpB_Farculty.Location = new System.Drawing.Point(0, 90);
             this.grpB_Farculty.Name = "grpB_Farculty";
-            this.grpB_Farculty.Size = new System.Drawing.Size(1332, 838);
+            this.grpB_Farculty.Size = new System.Drawing.Size(940, 840);
             this.grpB_Farculty.TabIndex = 11;
             this.grpB_Farculty.TabStop = false;
             // 
+            // grpB_txtFarculty
+            // 
+            this.grpB_txtFarculty.Controls.Add(tENKHLabel);
+            this.grpB_txtFarculty.Controls.Add(this.mAKHTextBox);
+            this.grpB_txtFarculty.Controls.Add(this.tENKHTextBox);
+            this.grpB_txtFarculty.Controls.Add(this.mACSTextBox);
+            this.grpB_txtFarculty.Controls.Add(mACSLabel);
+            this.grpB_txtFarculty.Controls.Add(mAKHLabel);
+            this.grpB_txtFarculty.Dock = System.Windows.Forms.DockStyle.Top;
+            this.grpB_txtFarculty.Location = new System.Drawing.Point(3, 353);
+            this.grpB_txtFarculty.Name = "grpB_txtFarculty";
+            this.grpB_txtFarculty.Size = new System.Drawing.Size(934, 373);
+            this.grpB_txtFarculty.TabIndex = 6;
+            this.grpB_txtFarculty.TabStop = false;
+            // 
+            // mAKHTextBox
+            // 
+            this.mAKHTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kHOABindingSource, "MAKH", true));
+            this.mAKHTextBox.Location = new System.Drawing.Point(106, 23);
+            this.mAKHTextBox.Name = "mAKHTextBox";
+            this.mAKHTextBox.Size = new System.Drawing.Size(472, 30);
+            this.mAKHTextBox.TabIndex = 1;
+            // 
+            // tENKHTextBox
+            // 
+            this.tENKHTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kHOABindingSource, "TENKH", true));
+            this.tENKHTextBox.Location = new System.Drawing.Point(106, 74);
+            this.tENKHTextBox.Name = "tENKHTextBox";
+            this.tENKHTextBox.Size = new System.Drawing.Size(472, 30);
+            this.tENKHTextBox.TabIndex = 2;
+            // 
+            // mACSTextBox
+            // 
+            this.mACSTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kHOABindingSource, "MACS", true));
+            this.mACSTextBox.Enabled = false;
+            this.mACSTextBox.Location = new System.Drawing.Point(106, 118);
+            this.mACSTextBox.Name = "mACSTextBox";
+            this.mACSTextBox.Size = new System.Drawing.Size(472, 30);
+            this.mACSTextBox.TabIndex = 3;
+            // 
             // gIAOVIENGridControl
             // 
-            this.gIAOVIENGridControl.DataSource = this.gIAOVIENBindingSource1;
-            this.gIAOVIENGridControl.Dock = System.Windows.Forms.DockStyle.Right;
-            this.gIAOVIENGridControl.Location = new System.Drawing.Point(355, 464);
+            this.gIAOVIENGridControl.DataSource = this.gIAOVIENBindingSource_FK;
+            this.gIAOVIENGridControl.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gIAOVIENGridControl.Location = new System.Drawing.Point(3, 26);
             this.gIAOVIENGridControl.MainView = this.gridView2;
             this.gIAOVIENGridControl.MenuManager = this.barManager1;
             this.gIAOVIENGridControl.Name = "gIAOVIENGridControl";
-            this.gIAOVIENGridControl.Size = new System.Drawing.Size(974, 371);
+            this.gIAOVIENGridControl.Size = new System.Drawing.Size(777, 327);
             this.gIAOVIENGridControl.TabIndex = 7;
             this.gIAOVIENGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
             // 
-            // gIAOVIENBindingSource1
+            // MenuStrp_Teacher
             // 
-            this.gIAOVIENBindingSource1.DataMember = "FK_GIAOVIEN_KHOA";
-            this.gIAOVIENBindingSource1.DataSource = this.kHOABindingSource;
+            this.MenuStrp_Teacher.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.MenuStrp_Teacher.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MenuStrp_Teacher.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.MenuStrp_Teacher.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.thêmLớpToolStripMenuItem,
+            this.xóaToolStripMenuItem,
+            this.phụcHồiToolStripMenuItem,
+            this.ghiToolStripMenuItem,
+            this.làmMớiToolStripMenuItem,
+            this.hủyToolStripMenuItem});
+            this.MenuStrp_Teacher.Name = "contextMenuStrip1";
+            this.MenuStrp_Teacher.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.MenuStrp_Teacher.Size = new System.Drawing.Size(182, 148);
+            // 
+            // thêmLớpToolStripMenuItem
+            // 
+            this.thêmLớpToolStripMenuItem.Name = "thêmLớpToolStripMenuItem";
+            this.thêmLớpToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.thêmLớpToolStripMenuItem.Text = "Thêm giáo viên";
+            this.thêmLớpToolStripMenuItem.Click += new System.EventHandler(this.thêmGVToolStripMenuItem_Click);
+            // 
+            // xóaToolStripMenuItem
+            // 
+            this.xóaToolStripMenuItem.Name = "xóaToolStripMenuItem";
+            this.xóaToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.xóaToolStripMenuItem.Text = "Xóa";
+            this.xóaToolStripMenuItem.Click += new System.EventHandler(this.xóaToolStripMenuItem_Click);
+            // 
+            // phụcHồiToolStripMenuItem
+            // 
+            this.phụcHồiToolStripMenuItem.Name = "phụcHồiToolStripMenuItem";
+            this.phụcHồiToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.phụcHồiToolStripMenuItem.Text = "Phục hồi";
+            this.phụcHồiToolStripMenuItem.Click += new System.EventHandler(this.phụcHồiToolStripMenuItem_Click);
+            // 
+            // làmMớiToolStripMenuItem
+            // 
+            this.làmMớiToolStripMenuItem.Name = "làmMớiToolStripMenuItem";
+            this.làmMớiToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.làmMớiToolStripMenuItem.Text = "Làm mới";
+            this.làmMớiToolStripMenuItem.Click += new System.EventHandler(this.làmMớiToolStripMenuItem_Click);
+            // 
+            // hủyToolStripMenuItem
+            // 
+            this.hủyToolStripMenuItem.Name = "hủyToolStripMenuItem";
+            this.hủyToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.hủyToolStripMenuItem.Text = "Hủy thao tác";
+            this.hủyToolStripMenuItem.Click += new System.EventHandler(this.hủyToolStripMenuItem_Click);
+            // 
+            // gIAOVIENBindingSource_FK
+            // 
+            this.gIAOVIENBindingSource_FK.DataMember = "FK_GIAOVIEN_KHOA";
+            this.gIAOVIENBindingSource_FK.DataSource = this.kHOABindingSource;
             // 
             // gridView2
             // 
@@ -446,6 +625,7 @@
             this.colMAKH1});
             this.gridView2.GridControl = this.gIAOVIENGridControl;
             this.gridView2.Name = "gridView2";
+            this.gridView2.OptionsView.ShowGroupPanel = false;
             // 
             // colMAGV
             // 
@@ -527,40 +707,6 @@
             this.colMAKH1.VisibleIndex = 4;
             this.colMAKH1.Width = 94;
             // 
-            // mACSTextEdit
-            // 
-            this.mACSTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.kHOABindingSource, "MACS", true));
-            this.mACSTextEdit.Enabled = false;
-            this.mACSTextEdit.Location = new System.Drawing.Point(123, 588);
-            this.mACSTextEdit.MenuManager = this.barManager1;
-            this.mACSTextEdit.Name = "mACSTextEdit";
-            this.mACSTextEdit.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mACSTextEdit.Properties.Appearance.Options.UseFont = true;
-            this.mACSTextEdit.Size = new System.Drawing.Size(395, 28);
-            this.mACSTextEdit.TabIndex = 3;
-            // 
-            // tENKHTextEdit
-            // 
-            this.tENKHTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.kHOABindingSource, "TENKH", true));
-            this.tENKHTextEdit.Location = new System.Drawing.Point(123, 542);
-            this.tENKHTextEdit.MenuManager = this.barManager1;
-            this.tENKHTextEdit.Name = "tENKHTextEdit";
-            this.tENKHTextEdit.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tENKHTextEdit.Properties.Appearance.Options.UseFont = true;
-            this.tENKHTextEdit.Size = new System.Drawing.Size(395, 28);
-            this.tENKHTextEdit.TabIndex = 2;
-            // 
-            // mAKHTextEdit
-            // 
-            this.mAKHTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.kHOABindingSource, "MAKH", true));
-            this.mAKHTextEdit.Location = new System.Drawing.Point(123, 494);
-            this.mAKHTextEdit.MenuManager = this.barManager1;
-            this.mAKHTextEdit.Name = "mAKHTextEdit";
-            this.mAKHTextEdit.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mAKHTextEdit.Properties.Appearance.Options.UseFont = true;
-            this.mAKHTextEdit.Size = new System.Drawing.Size(395, 28);
-            this.mAKHTextEdit.TabIndex = 1;
-            // 
             // gIAOVIENBindingSource
             // 
             this.gIAOVIENBindingSource.DataMember = "GIAOVIEN";
@@ -575,21 +721,120 @@
             this.lOPBindingSource.DataMember = "LOP";
             this.lOPBindingSource.DataSource = this.dS;
             // 
+            // grpB_Teacher
+            // 
+            this.grpB_Teacher.ContextMenuStrip = this.MenuStrp_Teacher;
+            this.grpB_Teacher.Controls.Add(this.grpB_txtTeacher);
+            this.grpB_Teacher.Controls.Add(this.gIAOVIENGridControl);
+            this.grpB_Teacher.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grpB_Teacher.Location = new System.Drawing.Point(940, 90);
+            this.grpB_Teacher.Name = "grpB_Teacher";
+            this.grpB_Teacher.Size = new System.Drawing.Size(783, 840);
+            this.grpB_Teacher.TabIndex = 16;
+            this.grpB_Teacher.TabStop = false;
+            // 
+            // grpB_txtTeacher
+            // 
+            this.grpB_txtTeacher.Controls.Add(mAGVLabel);
+            this.grpB_txtTeacher.Controls.Add(mAKHLabel1);
+            this.grpB_txtTeacher.Controls.Add(this.mAGVTextEdit);
+            this.grpB_txtTeacher.Controls.Add(this.mAKHTextEdit);
+            this.grpB_txtTeacher.Controls.Add(this.hOTextEdit);
+            this.grpB_txtTeacher.Controls.Add(hOCVILabel);
+            this.grpB_txtTeacher.Controls.Add(hOLabel);
+            this.grpB_txtTeacher.Controls.Add(this.hOCVITextEdit);
+            this.grpB_txtTeacher.Controls.Add(this.tENTextEdit);
+            this.grpB_txtTeacher.Controls.Add(tENLabel);
+            this.grpB_txtTeacher.Dock = System.Windows.Forms.DockStyle.Top;
+            this.grpB_txtTeacher.Location = new System.Drawing.Point(3, 353);
+            this.grpB_txtTeacher.Name = "grpB_txtTeacher";
+            this.grpB_txtTeacher.Size = new System.Drawing.Size(777, 373);
+            this.grpB_txtTeacher.TabIndex = 13;
+            this.grpB_txtTeacher.TabStop = false;
+            // 
+            // mAGVTextEdit
+            // 
+            this.mAGVTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.gIAOVIENBindingSource_FK, "MAGV", true));
+            this.mAGVTextEdit.Location = new System.Drawing.Point(129, 27);
+            this.mAGVTextEdit.MenuManager = this.barManager1;
+            this.mAGVTextEdit.Name = "mAGVTextEdit";
+            this.mAGVTextEdit.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mAGVTextEdit.Properties.Appearance.Options.UseFont = true;
+            this.mAGVTextEdit.Size = new System.Drawing.Size(450, 28);
+            this.mAGVTextEdit.TabIndex = 1;
+            // 
+            // mAKHTextEdit
+            // 
+            this.mAKHTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.gIAOVIENBindingSource_FK, "MAKH", true));
+            this.mAKHTextEdit.Enabled = false;
+            this.mAKHTextEdit.Location = new System.Drawing.Point(129, 208);
+            this.mAKHTextEdit.MenuManager = this.barManager1;
+            this.mAKHTextEdit.Name = "mAKHTextEdit";
+            this.mAKHTextEdit.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mAKHTextEdit.Properties.Appearance.Options.UseFont = true;
+            this.mAKHTextEdit.Size = new System.Drawing.Size(450, 28);
+            this.mAKHTextEdit.TabIndex = 5;
+            // 
+            // hOTextEdit
+            // 
+            this.hOTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.gIAOVIENBindingSource_FK, "HO", true));
+            this.hOTextEdit.Location = new System.Drawing.Point(129, 70);
+            this.hOTextEdit.MenuManager = this.barManager1;
+            this.hOTextEdit.Name = "hOTextEdit";
+            this.hOTextEdit.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hOTextEdit.Properties.Appearance.Options.UseFont = true;
+            this.hOTextEdit.Size = new System.Drawing.Size(450, 28);
+            this.hOTextEdit.TabIndex = 2;
+            // 
+            // hOCVITextEdit
+            // 
+            this.hOCVITextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.gIAOVIENBindingSource_FK, "HOCVI", true));
+            this.hOCVITextEdit.Location = new System.Drawing.Point(129, 165);
+            this.hOCVITextEdit.MenuManager = this.barManager1;
+            this.hOCVITextEdit.Name = "hOCVITextEdit";
+            this.hOCVITextEdit.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hOCVITextEdit.Properties.Appearance.Options.UseFont = true;
+            this.hOCVITextEdit.Size = new System.Drawing.Size(450, 28);
+            this.hOCVITextEdit.TabIndex = 4;
+            // 
+            // tENTextEdit
+            // 
+            this.tENTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.gIAOVIENBindingSource_FK, "TEN", true));
+            this.tENTextEdit.Location = new System.Drawing.Point(129, 119);
+            this.tENTextEdit.MenuManager = this.barManager1;
+            this.tENTextEdit.Name = "tENTextEdit";
+            this.tENTextEdit.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tENTextEdit.Properties.Appearance.Options.UseFont = true;
+            this.tENTextEdit.Size = new System.Drawing.Size(450, 28);
+            this.tENTextEdit.TabIndex = 3;
+            // 
             // lOPTableAdapter
             // 
             this.lOPTableAdapter.ClearBeforeFill = true;
             // 
-            // lOPBindingSource1
+            // bODEBindingSource_FK
             // 
-            this.lOPBindingSource1.DataMember = "FK_LOP_KHOA";
-            this.lOPBindingSource1.DataSource = this.kHOABindingSource;
+            this.bODEBindingSource_FK.DataMember = "FK_BODE_GIAOVIEN";
+            this.bODEBindingSource_FK.DataSource = this.gIAOVIENBindingSource_FK;
+            // 
+            // bODETableAdapter
+            // 
+            this.bODETableAdapter.ClearBeforeFill = true;
+            // 
+            // ghiToolStripMenuItem
+            // 
+            this.ghiToolStripMenuItem.Name = "ghiToolStripMenuItem";
+            this.ghiToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.ghiToolStripMenuItem.Text = "Ghi";
+            this.ghiToolStripMenuItem.Click += new System.EventHandler(this.ghiToolStripMenuItem_Click);
             // 
             // fmFarculty
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1332, 954);
+            this.ClientSize = new System.Drawing.Size(1723, 954);
+            this.Controls.Add(this.grpB_Teacher);
             this.Controls.Add(this.grpB_Farculty);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.barDockControlLeft);
@@ -601,24 +846,31 @@
             this.Name = "fmFarculty";
             this.Text = "Khoa";
             this.Load += new System.EventHandler(this.fmFarculty_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.kHOABindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dS)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kHOABindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kHOAGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.grpB_Farculty.ResumeLayout(false);
-            this.grpB_Farculty.PerformLayout();
+            this.grpB_txtFarculty.ResumeLayout(false);
+            this.grpB_txtFarculty.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gIAOVIENGridControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gIAOVIENBindingSource1)).EndInit();
+            this.MenuStrp_Teacher.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gIAOVIENBindingSource_FK)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mACSTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tENKHTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mAKHTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gIAOVIENBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOPBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lOPBindingSource1)).EndInit();
+            this.grpB_Teacher.ResumeLayout(false);
+            this.grpB_txtTeacher.ResumeLayout(false);
+            this.grpB_txtTeacher.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mAGVTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mAKHTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hOTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hOCVITextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tENTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bODEBindingSource_FK)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -653,21 +905,38 @@
         private DevExpress.XtraGrid.Columns.GridColumn colTENKH;
         private DevExpress.XtraGrid.Columns.GridColumn colMACS;
         private System.Windows.Forms.GroupBox grpB_Farculty;
-        private DevExpress.XtraEditors.TextEdit tENKHTextEdit;
-        private DevExpress.XtraEditors.TextEdit mAKHTextEdit;
-        private DevExpress.XtraEditors.TextEdit mACSTextEdit;
         private System.Windows.Forms.BindingSource gIAOVIENBindingSource;
         private DSTableAdapters.GIAOVIENTableAdapter gIAOVIENTableAdapter;
         private System.Windows.Forms.BindingSource lOPBindingSource;
-        private DSTableAdapters.LOPTableAdapter lOPTableAdapter;
         private DevExpress.XtraGrid.GridControl gIAOVIENGridControl;
-        private System.Windows.Forms.BindingSource gIAOVIENBindingSource1;
+        private System.Windows.Forms.BindingSource gIAOVIENBindingSource_FK;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
         private DevExpress.XtraGrid.Columns.GridColumn colMAGV;
         private DevExpress.XtraGrid.Columns.GridColumn colHO;
         private DevExpress.XtraGrid.Columns.GridColumn colTEN;
         private DevExpress.XtraGrid.Columns.GridColumn colHOCVI;
         private DevExpress.XtraGrid.Columns.GridColumn colMAKH1;
-        private System.Windows.Forms.BindingSource lOPBindingSource1;
+        private System.Windows.Forms.GroupBox grpB_Teacher;
+        private DevExpress.XtraEditors.TextEdit mAKHTextEdit;
+        private DevExpress.XtraEditors.TextEdit hOCVITextEdit;
+        private DevExpress.XtraEditors.TextEdit tENTextEdit;
+        private DevExpress.XtraEditors.TextEdit hOTextEdit;
+        private DevExpress.XtraEditors.TextEdit mAGVTextEdit;
+        private System.Windows.Forms.ContextMenuStrip MenuStrp_Teacher;
+        private System.Windows.Forms.ToolStripMenuItem thêmLớpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem xóaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem phụcHồiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem làmMớiToolStripMenuItem;
+        private DevExpress.XtraBars.BarButtonItem barBtn_forbid;
+        private System.Windows.Forms.ToolStripMenuItem hủyToolStripMenuItem;
+        private DSTableAdapters.LOPTableAdapter lOPTableAdapter;
+        private System.Windows.Forms.GroupBox grpB_txtFarculty;
+        private System.Windows.Forms.TextBox mACSTextBox;
+        private System.Windows.Forms.TextBox tENKHTextBox;
+        private System.Windows.Forms.TextBox mAKHTextBox;
+        private System.Windows.Forms.GroupBox grpB_txtTeacher;
+        private System.Windows.Forms.BindingSource bODEBindingSource_FK;
+        private DSTableAdapters.BODETableAdapter bODETableAdapter;
+        private System.Windows.Forms.ToolStripMenuItem ghiToolStripMenuItem;
     }
 }

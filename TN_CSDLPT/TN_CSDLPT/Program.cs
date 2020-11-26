@@ -75,7 +75,7 @@ namespace TN_CSDLPT
                 return null;
             }
         }
-        public static DataTable ExecSqlDataTable(String cmd)
+        public static DataTable ExecSqlDataTable(String cmd)//trả về một bảng data table từ csdl
         {
             DataTable dt = new DataTable();
             if (Program.conn.State == ConnectionState.Closed) Program.conn.Open();
@@ -94,7 +94,8 @@ namespace TN_CSDLPT
             if (conn.State == ConnectionState.Closed) conn.Open();
             try
             {
-                Sqlcmd.ExecuteNonQuery(); conn.Close();
+                int data=Sqlcmd.ExecuteNonQuery();
+                conn.Close();
                 return 0;
             }
             catch (SqlException ex)
@@ -105,6 +106,46 @@ namespace TN_CSDLPT
                 conn.Close();
                 return ex.State; // trang thai lỗi gởi từ RAISERROR trong SQL Server qua
             }
+        }
+
+        public static int ExecuteNonQuery1(String query, object[] parameter = null)
+        {
+            int data = 0;//số dòng thêm thành công
+
+            using (SqlConnection connection = new SqlConnection(Program.connstr))
+            { //using: sau khi khối lệnh phía trong chạy xong biến connection tự giải phóng
+
+                //mở kết nối để lấy dữ liệu
+                connection.Open();
+                try
+                {
+                    SqlCommand command = new SqlCommand(query, connection);//lệnh thực thi câu truy vấn tại kết nối "connection"
+
+                    if (parameter != null)
+                    {
+                        string[] listPara = query.Split(' ');
+                        int i = 0;
+                        foreach (string item in listPara)
+                        {
+                            if (item.Contains('@'))
+                            {
+                                command.Parameters.AddWithValue(item, parameter[i]);
+                                i++;
+                            }
+                        }
+                    }
+
+                    data = command.ExecuteNonQuery();//số lần thêm thành công
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("Có lỗi xảy ra! Kiểm tra lại! \n"+ex.Message, "Thông báo", MessageBoxButtons.OK);
+                }
+                // đóng kết nối sql để tránh việc quá nhiều dữ liệu cùng một lúc đổ vê
+                connection.Close();
+            }
+
+            return data;
         }
 
         [STAThread]

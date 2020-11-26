@@ -39,6 +39,7 @@
             this.barBtn_Undo = new DevExpress.XtraBars.BarButtonItem();
             this.barBtn_Save = new DevExpress.XtraBars.BarButtonItem();
             this.barBtn_Refresh = new DevExpress.XtraBars.BarButtonItem();
+            this.barBtn_Forbid = new DevExpress.XtraBars.BarButtonItem();
             this.barBtn_Exit = new DevExpress.XtraBars.BarButtonItem();
             this.bar3 = new DevExpress.XtraBars.Bar();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
@@ -62,6 +63,8 @@
             this.mAMHTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.bODEBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bODETableAdapter = new TN_CSDLPT.DSTableAdapters.BODETableAdapter();
+            this.bODEBindingSource_FK = new System.Windows.Forms.BindingSource(this.components);
+            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             mAMHLabel = new System.Windows.Forms.Label();
             tENMHLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
@@ -74,6 +77,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.tENMHTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mAMHTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bODEBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bODEBindingSource_FK)).BeginInit();
             this.SuspendLayout();
             // 
             // mAMHLabel
@@ -110,9 +114,10 @@
             this.barBtn_Undo,
             this.barBtn_Save,
             this.barBtn_Refresh,
-            this.barBtn_Exit});
+            this.barBtn_Exit,
+            this.barBtn_Forbid});
             this.barManager1.MainMenu = this.bar_Funtion;
-            this.barManager1.MaxItemId = 7;
+            this.barManager1.MaxItemId = 8;
             this.barManager1.StatusBar = this.bar3;
             // 
             // bar_Funtion
@@ -135,6 +140,7 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.barBtn_Undo),
             new DevExpress.XtraBars.LinkPersistInfo(this.barBtn_Save),
             new DevExpress.XtraBars.LinkPersistInfo(this.barBtn_Refresh),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barBtn_Forbid, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(this.barBtn_Exit)});
             this.bar_Funtion.OptionsBar.MultiLine = true;
             this.bar_Funtion.OptionsBar.UseWholeRow = true;
@@ -189,6 +195,14 @@
             this.barBtn_Refresh.Name = "barBtn_Refresh";
             this.barBtn_Refresh.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.barBtn_Refresh.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtn_Refresh_ItemClick);
+            // 
+            // barBtn_Forbid
+            // 
+            this.barBtn_Forbid.Caption = "Hủy";
+            this.barBtn_Forbid.Id = 7;
+            this.barBtn_Forbid.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barBtn_Forbid.ImageOptions.SvgImage")));
+            this.barBtn_Forbid.Name = "barBtn_Forbid";
+            this.barBtn_Forbid.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             // 
             // barBtn_Exit
             // 
@@ -335,6 +349,7 @@
             this.gV_Subjects.DetailHeight = 385;
             this.gV_Subjects.GridControl = this.mONHOCGridControl;
             this.gV_Subjects.Name = "gV_Subjects";
+            this.gV_Subjects.OptionsView.ShowGroupPanel = false;
             // 
             // colMAMH
             // 
@@ -421,6 +436,18 @@
             // 
             this.bODETableAdapter.ClearBeforeFill = true;
             // 
+            // bODEBindingSource_FK
+            // 
+            this.bODEBindingSource_FK.DataMember = "FK_BODE_MONHOC";
+            this.bODEBindingSource_FK.DataSource = this.mONHOCBindingSource;
+            // 
+            // barButtonItem2
+            // 
+            this.barButtonItem2.Caption = "Hủy";
+            this.barButtonItem2.Id = 8;
+            this.barButtonItem2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem2.ImageOptions.SvgImage")));
+            this.barButtonItem2.Name = "barButtonItem2";
+            // 
             // fmSubject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
@@ -453,6 +480,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.tENMHTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mAMHTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bODEBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bODEBindingSource_FK)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -490,5 +518,8 @@
         private DevExpress.XtraBars.BarButtonItem barBtn_Exit;
         private System.Windows.Forms.BindingSource bODEBindingSource;
         private DSTableAdapters.BODETableAdapter bODETableAdapter;
+        private System.Windows.Forms.BindingSource bODEBindingSource_FK;
+        private DevExpress.XtraBars.BarButtonItem barBtn_Forbid;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
     }
 }

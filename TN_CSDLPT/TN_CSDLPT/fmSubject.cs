@@ -23,6 +23,7 @@ namespace TN_CSDLPT
             // TODO: This line of code loads data into the 'ds1.MONHOC' table. You can move, or remove it, as needed.
             this.mONHOCTableAdapter.Connection.ConnectionString = Program.connstr;//thực hiện lấy kết nối đến csdl phân tán mà ta đã chọn đăng nhập ở login
             this.mONHOCTableAdapter.Fill(this.ds1.MONHOC);
+         
             // TODO: This line of code loads data into the 'ds1.BODE' table. You can move, or remove it, as needed.
             this.bODETableAdapter.Connection.ConnectionString = Program.connstr;
             this.bODETableAdapter.Fill(this.ds1.BODE);
@@ -53,11 +54,11 @@ namespace TN_CSDLPT
 
         private void cbB_Branch_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbB_Branch.SelectedIndex.ToString() == "System.Data.DataRowView")
+            if (cbB_Branch.SelectedValue.ToString() == "System.Data.DataRowView")
             {
-                Program.servername = cbB_Branch.SelectedValue.ToString();//server name sẽ được đổi qua sever name mới vừa chọn ở combo box
+                return;
             }
-
+            Program.servername = cbB_Branch.SelectedValue.ToString();//server name sẽ được đổi qua sever name mới vừa chọn ở combo box
             //Nếu chi nhánh được chọn khác chi nhánh lúc đầu thì đăng nhập bằng tài khoản HTKN
             if (cbB_Branch.SelectedIndex!=Program.mCoso)
             {
@@ -88,7 +89,7 @@ namespace TN_CSDLPT
             vitri = mONHOCBindingSource.Position;
             grpB_Subjects.Enabled = true;
             mONHOCBindingSource.AddNew();//thêm vào cuối
-            barBtn_Add.Enabled = barBtn_Delete.Enabled = barBtn_Refresh.Enabled = barBtn_Exit.Enabled=barBtn_Save.Enabled= false;//Tránh trường hợp chưa thêm đã xóa hoặc ghi,...
+            barBtn_Add.Enabled = barBtn_Delete.Enabled = barBtn_Refresh.Enabled = barBtn_Exit.Enabled=false;//Tránh trường hợp chưa thêm đã xóa hoặc ghi,...
             barBtn_Save.Enabled = barBtn_Undo.Enabled = true;
             mONHOCGridControl.Enabled = false;
         }
@@ -145,7 +146,7 @@ namespace TN_CSDLPT
         private void barBtn_Delete_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             string mamh = "";
-            if (bODEBindingSource.Count > 0)
+            if (bODEBindingSource_FK.Count > 0)
             {
                 MessageBox.Show("Không thể xóa môn học này vì đã có bộ đề của môn học", "Thông báo", MessageBoxButtons.OK);
             }
