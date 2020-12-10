@@ -18,12 +18,12 @@ namespace TN_CSDLPT
             InitializeComponent();
         }
 
-        private void fmTeacher_Load(object sender, EventArgs e)
+        private void fmSubject_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'ds1.MONHOC' table. You can move, or remove it, as needed.
             this.mONHOCTableAdapter.Connection.ConnectionString = Program.connstr;//thực hiện lấy kết nối đến csdl phân tán mà ta đã chọn đăng nhập ở login
             this.mONHOCTableAdapter.Fill(this.ds1.MONHOC);
-         
+
             // TODO: This line of code loads data into the 'ds1.BODE' table. You can move, or remove it, as needed.
             this.bODETableAdapter.Connection.ConnectionString = Program.connstr;
             this.bODETableAdapter.Fill(this.ds1.BODE);
@@ -39,6 +39,7 @@ namespace TN_CSDLPT
                 barBtn_Delete.Enabled = false;
                 barBtn_Undo.Enabled = false;
                 barBtn_Save.Enabled = false;
+                barBtn_Forbid.Enabled = false;
                 grpB_Subjects.Enabled = false;
             }
             else cbB_Branch.Enabled = false;
@@ -54,9 +55,16 @@ namespace TN_CSDLPT
 
         private void cbB_Branch_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbB_Branch.SelectedValue.ToString() == "System.Data.DataRowView")
+            try
             {
-                return;
+                if (cbB_Branch.SelectedValue.ToString() == "System.Data.DataRowView")
+                {
+                    return;
+                }
+            }
+            catch
+            {
+
             }
             Program.servername = cbB_Branch.SelectedValue.ToString();//server name sẽ được đổi qua sever name mới vừa chọn ở combo box
             //Nếu chi nhánh được chọn khác chi nhánh lúc đầu thì đăng nhập bằng tài khoản HTKN
@@ -89,8 +97,8 @@ namespace TN_CSDLPT
             vitri = mONHOCBindingSource.Position;
             grpB_Subjects.Enabled = true;
             mONHOCBindingSource.AddNew();//thêm vào cuối
-            barBtn_Add.Enabled = barBtn_Delete.Enabled = barBtn_Refresh.Enabled = barBtn_Exit.Enabled=false;//Tránh trường hợp chưa thêm đã xóa hoặc ghi,...
-            barBtn_Save.Enabled = barBtn_Undo.Enabled = true;
+            barBtn_Add.Enabled = barBtn_Delete.Enabled = barBtn_Refresh.Enabled = false;//Tránh trường hợp chưa thêm đã xóa hoặc ghi,...
+            barBtn_Save.Enabled = barBtn_Undo.Enabled = barBtn_Exit.Enabled = true;
             mONHOCGridControl.Enabled = false;
         }
 
@@ -116,7 +124,7 @@ namespace TN_CSDLPT
             }
             mONHOCGridControl.Enabled = true;
             barBtn_Add.Enabled = barBtn_Delete.Enabled = barBtn_Refresh.Enabled = barBtn_Exit.Enabled = true;
-            barBtn_Save.Enabled = barBtn_Undo.Enabled = false;
+            barBtn_Save.Enabled = barBtn_Undo.Enabled =true;
             grpB_Subjects.Enabled = false;
         }
 
@@ -170,12 +178,43 @@ namespace TN_CSDLPT
                 {
                     barBtn_Delete.Enabled = false;
                 }
+                fmSubject_Load(sender, e);
+            }
+        }
+
+        private void barBtn_Forbid_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            mONHOCBindingSource.CancelEdit();
+            fmSubject_Load(sender, e);
+            mONHOCGridControl.Enabled =
+            grpB_Subjects.Enabled=true;
+            if (vitri > 0)
+            {
+                mONHOCBindingSource.Position = vitri;
             }
         }
 
         private void barBtn_Exit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            this.Close();
+            if (grpB_Subjects.Enabled == true)
+            {
+                DialogResult dr = MessageBox.Show("Dữ liệu chưa được lưu lại. Bạn có muốn thoát!", "Thông báo", MessageBoxButtons.OKCancel);
+                if (dr == DialogResult.Cancel)
+                {
+                    return;
+                }
+                else if (dr == DialogResult.OK)
+                {
+                    this.Close();
+                }
+            }
+            else
+            {
+                this.Close();
+                return;
+            }
         }
+
+        
     }
 }

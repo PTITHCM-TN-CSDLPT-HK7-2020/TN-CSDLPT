@@ -115,6 +115,12 @@ namespace TN_CSDLPT
             Program.conn.Close();
             Program.fmChinh.HienThiTTUser();
             Program.fmChinh.ribPg_Tabbar.Visible = true;
+            if (Program.mGroup == "Giangvien")
+            {
+                Program.fmChinh.barBtn_Class.Enabled=
+                Program.fmChinh.barBtn_Farculty.Enabled = false;
+
+            }
         }
 
         private void btn_Exit_Click(object sender, EventArgs e)

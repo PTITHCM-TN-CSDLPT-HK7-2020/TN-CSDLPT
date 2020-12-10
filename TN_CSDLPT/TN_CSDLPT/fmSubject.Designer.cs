@@ -203,6 +203,7 @@
             this.barBtn_Forbid.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barBtn_Forbid.ImageOptions.SvgImage")));
             this.barBtn_Forbid.Name = "barBtn_Forbid";
             this.barBtn_Forbid.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.barBtn_Forbid.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtn_Forbid_ItemClick);
             // 
             // barBtn_Exit
             // 
@@ -400,7 +401,7 @@
             this.grpB_Subjects.Controls.Add(this.tENMHTextEdit);
             this.grpB_Subjects.Controls.Add(mAMHLabel);
             this.grpB_Subjects.Controls.Add(this.mAMHTextEdit);
-            this.grpB_Subjects.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grpB_Subjects.Dock = System.Windows.Forms.DockStyle.Top;
             this.grpB_Subjects.Location = new System.Drawing.Point(0, 401);
             this.grpB_Subjects.Name = "grpB_Subjects";
             this.grpB_Subjects.Size = new System.Drawing.Size(1053, 241);
@@ -467,7 +468,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Môn học";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.fmTeacher_Load);
+            this.Load += new System.EventHandler(this.fmSubject_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ds1)).EndInit();
             this.panel1.ResumeLayout(false);

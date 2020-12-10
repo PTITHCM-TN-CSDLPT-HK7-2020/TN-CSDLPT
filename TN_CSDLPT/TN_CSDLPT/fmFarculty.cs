@@ -29,9 +29,7 @@ namespace TN_CSDLPT
         }
 
         private void fmFarculty_Load(object sender, EventArgs e)
-        {
-            
-            
+        {   
             dS.EnforceConstraints = false;
 
             // TODO: This line of code loads data into the 'dS.KHOA' table. You can move, or remove it, as needed.
@@ -60,6 +58,7 @@ namespace TN_CSDLPT
                 barBtn_Delete.Enabled = false;
                 barBtn_Undo.Enabled = false;
                 barBtn_Save.Enabled = false;
+                barBtn_forbid.Enabled = false;
                 grpB_Farculty.Enabled = false;
             }
             else if(Program.mGroup == "Coso")
@@ -228,7 +227,7 @@ namespace TN_CSDLPT
 
         private void barBtn_Exit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (grpB_txtFarculty.Enabled == true)
+            if (kHOAGridControl.Enabled == false && Program.mGroup !="Truong")
             {
                 DialogResult dr = MessageBox.Show("Dữ liệu chưa được lưu lại. Bạn có muốn thoát!", "Thông báo", MessageBoxButtons.OKCancel);
                 if(dr == DialogResult.Cancel)

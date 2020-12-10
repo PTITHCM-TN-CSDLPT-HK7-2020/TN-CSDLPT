@@ -14,11 +14,13 @@ namespace TN_CSDLPT
         public fmMain()
         {
             InitializeComponent();
+           
         }
 
         private void fmMain_Load(object sender, EventArgs e)
         {
             ribPg_Tabbar.Visible = false;
+            
         }
 
         private Form CheckExists(Type ftype)
@@ -29,18 +31,7 @@ namespace TN_CSDLPT
             return null;
         }
 
-        private void btn_Login_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            Form frm = this.CheckExists(typeof(fmLogin));
-            if (frm != null) frm.Activate();
-            else
-            {
-                fmLogin f = new fmLogin();
-                f.MdiParent = this;
-                f.Show();
-            }
-
-        }
+        
         public void HienThiTTUser()
         {
 
@@ -54,6 +45,18 @@ namespace TN_CSDLPT
             Close();
         }
         //==============================Event button=============================================//
+        private void btn_Login_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(fmLogin));
+            if (frm != null) frm.Activate();
+            else
+            {
+                fmLogin f = new fmLogin();
+                f.MdiParent = this;
+                f.Show();
+            }
+
+        }
         private void barBtn_Subject_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Form frm = this.CheckExists(typeof(fmSubject));
@@ -79,6 +82,36 @@ namespace TN_CSDLPT
             else
             {
                 fmFarculty f = new fmFarculty();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void barBtn_Question_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form form = this.CheckExists(typeof(fmQuestion));
+            if (form != null)
+            {
+                form.Activate();
+            }
+            else
+            {
+                fmQuestion f = new fmQuestion();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void barBtn_RegisTest_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form form = this.CheckExists(typeof(fmRegistTest));
+            if(form != null)
+            {
+                form.Activate();
+            }
+            else
+            {
+                fmRegistTest f = new fmRegistTest();
                 f.MdiParent = this;
                 f.Show();
             }

@@ -22,6 +22,7 @@ namespace TN_CSDLPT
         public static String username = "";//manv
         public static String mlogin = "";//login name
         public static String password = "";
+        public static String mSV = "";
 
         public static String database = "TN_CSDLPT";
         public static String remotelogin = "HTKN";
