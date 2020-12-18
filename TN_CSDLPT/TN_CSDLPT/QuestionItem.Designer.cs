@@ -71,6 +71,7 @@
             this.rBtn_AnswerA.TabStop = true;
             this.rBtn_AnswerA.Text = "đáp án A";
             this.rBtn_AnswerA.UseVisualStyleBackColor = true;
+            this.rBtn_AnswerA.CheckedChanged += new System.EventHandler(this.rBtn_AnswerA_CheckedChanged);
             // 
             // rBtn_AnswerB
             // 
@@ -82,6 +83,7 @@
             this.rBtn_AnswerB.TabStop = true;
             this.rBtn_AnswerB.Text = "đáp án B";
             this.rBtn_AnswerB.UseVisualStyleBackColor = true;
+            this.rBtn_AnswerB.CheckedChanged += new System.EventHandler(this.rBtn_AnswerB_CheckedChanged);
             // 
             // rBtn_AnswerC
             // 
@@ -93,6 +95,7 @@
             this.rBtn_AnswerC.TabStop = true;
             this.rBtn_AnswerC.Text = "đáp án C";
             this.rBtn_AnswerC.UseVisualStyleBackColor = true;
+            this.rBtn_AnswerC.CheckedChanged += new System.EventHandler(this.rBtn_AnswerC_CheckedChanged);
             // 
             // rBtn_AnswerD
             // 
@@ -104,6 +107,7 @@
             this.rBtn_AnswerD.TabStop = true;
             this.rBtn_AnswerD.Text = "đáp án D";
             this.rBtn_AnswerD.UseVisualStyleBackColor = true;
+            this.rBtn_AnswerD.CheckedChanged += new System.EventHandler(this.rBtn_AnswerD_CheckedChanged);
             // 
             // lb_A
             // 
@@ -157,9 +161,9 @@
             this.Controls.Add(this.lb_ContentQuestion);
             this.Controls.Add(this.lb_IndexQuestion);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "QuestionItem";
-            this.Size = new System.Drawing.Size(1185, 485);
+            this.Size = new System.Drawing.Size(1312, 439);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -20,7 +20,7 @@ namespace TN_CSDLPT
         private void fmMain_Load(object sender, EventArgs e)
         {
             ribPg_Tabbar.Visible = false;
-            
+            ribbonPage_Stu.Visible = false;
         }
 
         private Form CheckExists(Type ftype)
@@ -112,6 +112,36 @@ namespace TN_CSDLPT
             else
             {
                 fmRegistTest f = new fmRegistTest();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void barButtonItem8_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)//Form thi thử
+        {
+            Form form = this.CheckExists(typeof(fmDoExam));
+            if (form != null)
+            {
+                form.Activate();
+            }
+            else
+            {
+                fmDoExam f = new fmDoExam();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void barButtonItem_TestStu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form form = this.CheckExists(typeof(fmDoExam));
+            if (form != null)
+            {
+                form.Activate();
+            }
+            else
+            {
+                fmDoExam f = new fmDoExam();
                 f.MdiParent = this;
                 f.Show();
             }

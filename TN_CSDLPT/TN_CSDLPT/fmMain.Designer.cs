@@ -38,16 +38,19 @@
             this.barBtn_Farculty = new DevExpress.XtraBars.BarButtonItem();
             this.barBtn_Subject = new DevExpress.XtraBars.BarButtonItem();
             this.barBtn_RegisTest = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem_TestTeaccher = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
             this.barBtn_Question = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem_TestStu = new DevExpress.XtraBars.BarButtonItem();
             this.ribPage_System = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribPageGroup_Student = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribPg_Tabbar = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPage_Stu = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.Stslb_ID = new System.Windows.Forms.ToolStripStatusLabel();
@@ -72,17 +75,19 @@
             this.barBtn_Farculty,
             this.barBtn_Subject,
             this.barBtn_RegisTest,
-            this.barButtonItem8,
+            this.barButtonItem_TestTeaccher,
             this.barButtonItem9,
             this.barButtonItem10,
-            this.barBtn_Question});
+            this.barBtn_Question,
+            this.barButtonItem_TestStu});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ribbonControl1.MaxItemId = 15;
+            this.ribbonControl1.MaxItemId = 16;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribPage_System,
-            this.ribPg_Tabbar});
+            this.ribPg_Tabbar,
+            this.ribbonPage_Stu});
             this.ribbonControl1.Size = new System.Drawing.Size(1237, 178);
             // 
             // btn_Login
@@ -144,13 +149,14 @@
             this.barBtn_RegisTest.Name = "barBtn_RegisTest";
             this.barBtn_RegisTest.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtn_RegisTest_ItemClick);
             // 
-            // barButtonItem8
+            // barButtonItem_TestTeaccher
             // 
-            this.barButtonItem8.Caption = "Thi thử";
-            this.barButtonItem8.Id = 10;
-            this.barButtonItem8.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem8.ImageOptions.Image")));
-            this.barButtonItem8.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem8.ImageOptions.LargeImage")));
-            this.barButtonItem8.Name = "barButtonItem8";
+            this.barButtonItem_TestTeaccher.Caption = "Thi thử";
+            this.barButtonItem_TestTeaccher.Id = 10;
+            this.barButtonItem_TestTeaccher.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem_TestTeaccher.ImageOptions.Image")));
+            this.barButtonItem_TestTeaccher.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem_TestTeaccher.ImageOptions.LargeImage")));
+            this.barButtonItem_TestTeaccher.Name = "barButtonItem_TestTeaccher";
+            this.barButtonItem_TestTeaccher.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem8_ItemClick);
             // 
             // barButtonItem9
             // 
@@ -176,6 +182,15 @@
             this.barBtn_Question.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barBtn_Question.ImageOptions.LargeImage")));
             this.barBtn_Question.Name = "barBtn_Question";
             this.barBtn_Question.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtn_Question_ItemClick);
+            // 
+            // barButtonItem_TestStu
+            // 
+            this.barButtonItem_TestStu.Caption = "Thi";
+            this.barButtonItem_TestStu.Id = 15;
+            this.barButtonItem_TestStu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem_TestStu.ImageOptions.Image")));
+            this.barButtonItem_TestStu.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem_TestStu.ImageOptions.LargeImage")));
+            this.barButtonItem_TestStu.Name = "barButtonItem_TestStu";
+            this.barButtonItem_TestStu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem_TestStu_ItemClick);
             // 
             // ribPage_System
             // 
@@ -211,7 +226,7 @@
             this.ribbonPageGroup3.ItemLinks.Add(this.barBtn_Subject);
             this.ribbonPageGroup3.ItemLinks.Add(this.barBtn_Question);
             this.ribbonPageGroup3.ItemLinks.Add(this.barBtn_RegisTest);
-            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem8);
+            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem_TestTeaccher);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             this.ribbonPageGroup3.Text = "Quản lý đề thi";
             // 
@@ -221,6 +236,19 @@
             this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItem10);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
             this.ribbonPageGroup4.Text = "Xem báo cáo";
+            // 
+            // ribbonPage_Stu
+            // 
+            this.ribbonPage_Stu.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup1});
+            this.ribbonPage_Stu.Name = "ribbonPage_Stu";
+            this.ribbonPage_Stu.Text = "Thi";
+            // 
+            // ribbonPageGroup1
+            // 
+            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem_TestStu);
+            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
+            this.ribbonPageGroup1.Text = "Thi";
             // 
             // xtraTabbedMdiManager1
             // 
@@ -300,7 +328,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
         private DevExpress.XtraBars.BarButtonItem barBtn_Subject;
         private DevExpress.XtraBars.BarButtonItem barBtn_RegisTest;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem8;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem_TestTeaccher;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
         private DevExpress.XtraBars.BarButtonItem barButtonItem9;
         private DevExpress.XtraBars.BarButtonItem barButtonItem10;
@@ -309,6 +337,9 @@
         private DevExpress.XtraBars.BarButtonItem barBtn_Question;
         public DevExpress.XtraBars.BarButtonItem barBtn_Class;
         public DevExpress.XtraBars.BarButtonItem barBtn_Farculty;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem_TestStu;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
+        public DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage_Stu;
     }
 }
 

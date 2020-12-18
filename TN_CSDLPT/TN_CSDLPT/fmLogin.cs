@@ -68,21 +68,33 @@ namespace TN_CSDLPT
 
         private void btn_Login_Click_1(object sender, EventArgs e)
         {
+            
             if (txtBox_LgName.Text.Trim() == "")
             {
                 MessageBox.Show("Login name không được để trống", "Báo lỗi", MessageBoxButtons.OK);
                 txtBox_LgName.Focus();
                 return;
             }
-            if (txtBox_Password.Text.Trim() == "")
+
+            if (txtBox_Password.Text.Trim() == "" && radBtn_Teacher.Checked==true)
             {
                 MessageBox.Show("Mật khẩu không được để trống", "Báo lỗi", MessageBoxButtons.OK);
                 txtBox_Password.Focus();
                 return;
             }
-            Program.mlogin = txtBox_LgName.Text.ToString();
-            Program.password = txtBox_Password.Text.ToString();
-            
+
+            if (radBtn_Student.Checked == true)
+            {
+                Program.mlogin = "sv";
+                Program.password = "123";
+                Program.mSV = txtBox_LgName.Text.Trim();
+            }
+            else
+            {
+                Program.mlogin = txtBox_LgName.Text.ToString();
+                Program.password = txtBox_Password.Text.ToString();
+            }
+
             if (Program.KetNoi() == 0)
             {
                 //textBox1.Text = Program.connstr;
@@ -96,7 +108,17 @@ namespace TN_CSDLPT
 
             
             String strLenh = "exec SP_THONGTINDANGNHAP '" + Program.mlogin + "'";
-            Program.myReader = Program.ExecSqlDataReader(strLenh);
+
+            //Sinh vien
+            String strLenh2 = "exec SP_THONGTINDANGNHAPSV '"+Program.mlogin+"','"+Program.mSV+"'";
+            if (radBtn_Teacher.Checked == true)
+            {
+                Program.myReader = Program.ExecSqlDataReader(strLenh);
+            }
+            else
+            {
+                Program.myReader = Program.ExecSqlDataReader(strLenh2);
+            }
 
             if (Program.myReader == null) return;
             Program.myReader.Read();//doc tung dong cua reader,hàm Read() trả về true||false,
@@ -114,7 +136,18 @@ namespace TN_CSDLPT
             Program.myReader.Close();
             Program.conn.Close();
             Program.fmChinh.HienThiTTUser();
-            Program.fmChinh.ribPg_Tabbar.Visible = true;
+
+            if (Program.mlogin == "sv")
+            {
+                Program.fmChinh.ribPg_Tabbar.Visible = false;
+                Program.fmChinh.ribbonPage_Stu.Visible = true;
+                
+            }
+            else { 
+                Program.fmChinh.ribPg_Tabbar.Visible = true;
+                Program.fmChinh.ribbonPage_Stu.Visible = false;
+            }
+
             if (Program.mGroup == "Giangvien")
             {
                 Program.fmChinh.barBtn_Class.Enabled=

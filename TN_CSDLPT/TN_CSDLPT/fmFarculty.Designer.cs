@@ -71,12 +71,6 @@
             this.tENKHTextBox = new System.Windows.Forms.TextBox();
             this.mACSTextBox = new System.Windows.Forms.TextBox();
             this.gIAOVIENGridControl = new DevExpress.XtraGrid.GridControl();
-            this.MenuStrp_Teacher = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.thêmLớpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.xóaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.phụcHồiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.làmMớiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.hủyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gIAOVIENBindingSource_FK = new System.Windows.Forms.BindingSource(this.components);
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMAGV = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -84,6 +78,13 @@
             this.colTEN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colHOCVI = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMAKH1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.MenuStrp_Teacher = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.thêmLớpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.xóaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.phụcHồiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ghiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.làmMớiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hủyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gIAOVIENBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gIAOVIENTableAdapter = new TN_CSDLPT.DSTableAdapters.GIAOVIENTableAdapter();
             this.lOPBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -97,7 +98,6 @@
             this.lOPTableAdapter = new TN_CSDLPT.DSTableAdapters.LOPTableAdapter();
             this.bODEBindingSource_FK = new System.Windows.Forms.BindingSource(this.components);
             this.bODETableAdapter = new TN_CSDLPT.DSTableAdapters.BODETableAdapter();
-            this.ghiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             mAGVLabel = new System.Windows.Forms.Label();
             hOLabel = new System.Windows.Forms.Label();
             tENLabel = new System.Windows.Forms.Label();
@@ -115,9 +115,9 @@
             this.grpB_Farculty.SuspendLayout();
             this.grpB_txtFarculty.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gIAOVIENGridControl)).BeginInit();
-            this.MenuStrp_Teacher.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gIAOVIENBindingSource_FK)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            this.MenuStrp_Teacher.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gIAOVIENBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOPBindingSource)).BeginInit();
             this.grpB_Teacher.SuspendLayout();
@@ -315,7 +315,7 @@
             // 
             // barBtn_Exit
             // 
-            this.barBtn_Exit.Caption = "Thoát";
+            this.barBtn_Exit.Caption = "Đóng";
             this.barBtn_Exit.Id = 7;
             this.barBtn_Exit.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barBtn_Exit.ImageOptions.Image")));
             this.barBtn_Exit.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barBtn_Exit.ImageOptions.LargeImage")));
@@ -411,6 +411,7 @@
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.BAITHITableAdapter = null;
             this.tableAdapterManager.BANGDIEMTableAdapter = null;
             this.tableAdapterManager.BODETableAdapter = null;
             this.tableAdapterManager.CHITIETBAITHITableAdapter = null;
@@ -559,57 +560,6 @@
             this.gIAOVIENGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
             // 
-            // MenuStrp_Teacher
-            // 
-            this.MenuStrp_Teacher.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.MenuStrp_Teacher.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MenuStrp_Teacher.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.MenuStrp_Teacher.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.thêmLớpToolStripMenuItem,
-            this.xóaToolStripMenuItem,
-            this.phụcHồiToolStripMenuItem,
-            this.ghiToolStripMenuItem,
-            this.làmMớiToolStripMenuItem,
-            this.hủyToolStripMenuItem});
-            this.MenuStrp_Teacher.Name = "contextMenuStrip1";
-            this.MenuStrp_Teacher.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.MenuStrp_Teacher.Size = new System.Drawing.Size(182, 148);
-            // 
-            // thêmLớpToolStripMenuItem
-            // 
-            this.thêmLớpToolStripMenuItem.Name = "thêmLớpToolStripMenuItem";
-            this.thêmLớpToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
-            this.thêmLớpToolStripMenuItem.Text = "Thêm giáo viên";
-            this.thêmLớpToolStripMenuItem.Click += new System.EventHandler(this.thêmGVToolStripMenuItem_Click);
-            // 
-            // xóaToolStripMenuItem
-            // 
-            this.xóaToolStripMenuItem.Name = "xóaToolStripMenuItem";
-            this.xóaToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
-            this.xóaToolStripMenuItem.Text = "Xóa";
-            this.xóaToolStripMenuItem.Click += new System.EventHandler(this.xóaToolStripMenuItem_Click);
-            // 
-            // phụcHồiToolStripMenuItem
-            // 
-            this.phụcHồiToolStripMenuItem.Name = "phụcHồiToolStripMenuItem";
-            this.phụcHồiToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
-            this.phụcHồiToolStripMenuItem.Text = "Phục hồi";
-            this.phụcHồiToolStripMenuItem.Click += new System.EventHandler(this.phụcHồiToolStripMenuItem_Click);
-            // 
-            // làmMớiToolStripMenuItem
-            // 
-            this.làmMớiToolStripMenuItem.Name = "làmMớiToolStripMenuItem";
-            this.làmMớiToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
-            this.làmMớiToolStripMenuItem.Text = "Làm mới";
-            this.làmMớiToolStripMenuItem.Click += new System.EventHandler(this.làmMớiToolStripMenuItem_Click);
-            // 
-            // hủyToolStripMenuItem
-            // 
-            this.hủyToolStripMenuItem.Name = "hủyToolStripMenuItem";
-            this.hủyToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
-            this.hủyToolStripMenuItem.Text = "Hủy thao tác";
-            this.hủyToolStripMenuItem.Click += new System.EventHandler(this.hủyToolStripMenuItem_Click);
-            // 
             // gIAOVIENBindingSource_FK
             // 
             this.gIAOVIENBindingSource_FK.DataMember = "FK_GIAOVIEN_KHOA";
@@ -706,6 +656,64 @@
             this.colMAKH1.Visible = true;
             this.colMAKH1.VisibleIndex = 4;
             this.colMAKH1.Width = 94;
+            // 
+            // MenuStrp_Teacher
+            // 
+            this.MenuStrp_Teacher.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.MenuStrp_Teacher.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MenuStrp_Teacher.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.MenuStrp_Teacher.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.thêmLớpToolStripMenuItem,
+            this.xóaToolStripMenuItem,
+            this.phụcHồiToolStripMenuItem,
+            this.ghiToolStripMenuItem,
+            this.làmMớiToolStripMenuItem,
+            this.hủyToolStripMenuItem});
+            this.MenuStrp_Teacher.Name = "contextMenuStrip1";
+            this.MenuStrp_Teacher.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.MenuStrp_Teacher.Size = new System.Drawing.Size(182, 148);
+            // 
+            // thêmLớpToolStripMenuItem
+            // 
+            this.thêmLớpToolStripMenuItem.Name = "thêmLớpToolStripMenuItem";
+            this.thêmLớpToolStripMenuItem.Size = new System.Drawing.Size(181, 24);
+            this.thêmLớpToolStripMenuItem.Text = "Thêm giáo viên";
+            this.thêmLớpToolStripMenuItem.Click += new System.EventHandler(this.thêmGVToolStripMenuItem_Click);
+            // 
+            // xóaToolStripMenuItem
+            // 
+            this.xóaToolStripMenuItem.Name = "xóaToolStripMenuItem";
+            this.xóaToolStripMenuItem.Size = new System.Drawing.Size(181, 24);
+            this.xóaToolStripMenuItem.Text = "Xóa";
+            this.xóaToolStripMenuItem.Click += new System.EventHandler(this.xóaToolStripMenuItem_Click);
+            // 
+            // phụcHồiToolStripMenuItem
+            // 
+            this.phụcHồiToolStripMenuItem.Name = "phụcHồiToolStripMenuItem";
+            this.phụcHồiToolStripMenuItem.Size = new System.Drawing.Size(181, 24);
+            this.phụcHồiToolStripMenuItem.Text = "Phục hồi";
+            this.phụcHồiToolStripMenuItem.Click += new System.EventHandler(this.phụcHồiToolStripMenuItem_Click);
+            // 
+            // ghiToolStripMenuItem
+            // 
+            this.ghiToolStripMenuItem.Name = "ghiToolStripMenuItem";
+            this.ghiToolStripMenuItem.Size = new System.Drawing.Size(181, 24);
+            this.ghiToolStripMenuItem.Text = "Ghi";
+            this.ghiToolStripMenuItem.Click += new System.EventHandler(this.ghiToolStripMenuItem_Click);
+            // 
+            // làmMớiToolStripMenuItem
+            // 
+            this.làmMớiToolStripMenuItem.Name = "làmMớiToolStripMenuItem";
+            this.làmMớiToolStripMenuItem.Size = new System.Drawing.Size(181, 24);
+            this.làmMớiToolStripMenuItem.Text = "Làm mới";
+            this.làmMớiToolStripMenuItem.Click += new System.EventHandler(this.làmMớiToolStripMenuItem_Click);
+            // 
+            // hủyToolStripMenuItem
+            // 
+            this.hủyToolStripMenuItem.Name = "hủyToolStripMenuItem";
+            this.hủyToolStripMenuItem.Size = new System.Drawing.Size(181, 24);
+            this.hủyToolStripMenuItem.Text = "Hủy thao tác";
+            this.hủyToolStripMenuItem.Click += new System.EventHandler(this.hủyToolStripMenuItem_Click);
             // 
             // gIAOVIENBindingSource
             // 
@@ -821,13 +829,6 @@
             // 
             this.bODETableAdapter.ClearBeforeFill = true;
             // 
-            // ghiToolStripMenuItem
-            // 
-            this.ghiToolStripMenuItem.Name = "ghiToolStripMenuItem";
-            this.ghiToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
-            this.ghiToolStripMenuItem.Text = "Ghi";
-            this.ghiToolStripMenuItem.Click += new System.EventHandler(this.ghiToolStripMenuItem_Click);
-            // 
             // fmFarculty
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
@@ -857,9 +858,9 @@
             this.grpB_txtFarculty.ResumeLayout(false);
             this.grpB_txtFarculty.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gIAOVIENGridControl)).EndInit();
-            this.MenuStrp_Teacher.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gIAOVIENBindingSource_FK)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            this.MenuStrp_Teacher.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gIAOVIENBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOPBindingSource)).EndInit();
             this.grpB_Teacher.ResumeLayout(false);

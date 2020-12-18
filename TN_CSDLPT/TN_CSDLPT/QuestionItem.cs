@@ -20,6 +20,7 @@ namespace TN_CSDLPT
         private int idBaiThi;
         private int idde;
         private int cauSo;
+        private int cauBD;
         private string ndCauHoi;
         private string cauA;
         private string cauB;
@@ -27,7 +28,6 @@ namespace TN_CSDLPT
         private string cauD;
         private string daChon = "";
         private string dapAn = "";
-        private int maBD;
 
         [Category("Custom Props")]
         public int IDBaiThi
@@ -44,7 +44,7 @@ namespace TN_CSDLPT
         }
 
         [Category("Custom Props")]
-        public int CauSo
+        public int CauBaiThi
         {
             get { return cauSo; }
             set
@@ -53,6 +53,18 @@ namespace TN_CSDLPT
                 lb_IndexQuestion.Text = "Câu " + cauSo + ": ";
             }
         }
+
+
+        [Category("Custom Props")]
+        public int CauBoDe
+        {
+            get { return cauBD; }
+            set
+            {
+                cauBD = value;
+            }
+        }
+
         //câu hỏi
         [Category("Custom Props")]
         public string NDCauHoi
@@ -126,31 +138,31 @@ namespace TN_CSDLPT
             set { dapAn = value; }
         }
 
-        private void rbA_CheckedChanged(object sender, EventArgs e)
+        private void rBtn_AnswerA_CheckedChanged(object sender, EventArgs e)
         {
             daChon = "A";
-            var principalForm = Application.OpenForms.OfType<frmThi>().Single();
+            var principalForm = Application.OpenForms.OfType<fmDoExam>().Single();
             principalForm.capNhapDaChon(cauSo, "A");
         }
 
-        private void rbB_CheckedChanged(object sender, EventArgs e)
+        private void rBtn_AnswerB_CheckedChanged(object sender, EventArgs e)
         {
             daChon = "B";
-            var principalForm = Application.OpenForms.OfType<frmThi>().Single();
+            var principalForm = Application.OpenForms.OfType<fmDoExam>().Single();
             principalForm.capNhapDaChon(cauSo, "B");
         }
 
-        private void rbC_CheckedChanged(object sender, EventArgs e)
+        private void rBtn_AnswerC_CheckedChanged(object sender, EventArgs e)
         {
             daChon = "C";
-            var principalForm = Application.OpenForms.OfType<frmThi>().Single();
-            principalForm.capNhapDaChon(cauSo, "C");
+            var principalForm = Application.OpenForms.OfType<fmDoExam>().Single();
+            principalForm.capNhapDaChon(cauSo, "C");          
         }
 
-        private void rbD_CheckedChanged(object sender, EventArgs e)
+        private void rBtn_AnswerD_CheckedChanged(object sender, EventArgs e)
         {
             daChon = "D";
-            var principalForm = Application.OpenForms.OfType<frmThi>().Single();
+            var principalForm = Application.OpenForms.OfType<fmDoExam>().Single();
             principalForm.capNhapDaChon(cauSo, "D");
         }
     }

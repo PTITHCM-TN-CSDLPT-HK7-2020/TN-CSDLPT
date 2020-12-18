@@ -277,7 +277,7 @@
             // 
             // barBtn_Exit
             // 
-            this.barBtn_Exit.Caption = "Thoát";
+            this.barBtn_Exit.Caption = "Đóng";
             this.barBtn_Exit.Id = 7;
             this.barBtn_Exit.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barBtn_Exit.ImageOptions.Image")));
             this.barBtn_Exit.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barBtn_Exit.ImageOptions.LargeImage")));
@@ -739,6 +739,7 @@
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.BAITHITableAdapter = null;
             this.tableAdapterManager.BANGDIEMTableAdapter = null;
             this.tableAdapterManager.BODETableAdapter = null;
             this.tableAdapterManager.CHITIETBAITHITableAdapter = null;
