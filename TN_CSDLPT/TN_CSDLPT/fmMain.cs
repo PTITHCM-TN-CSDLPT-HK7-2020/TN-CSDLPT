@@ -21,6 +21,7 @@ namespace TN_CSDLPT
         {
             ribPg_Tabbar.Visible = false;
             ribbonPage_Stu.Visible = false;
+            ribbonPageGroup_CreateAccount.Visible = false;
         }
 
         private Form CheckExists(Type ftype)
@@ -146,5 +147,60 @@ namespace TN_CSDLPT
                 f.Show();
             }
         }
+
+        private void Xe_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form form = this.CheckExists(typeof(fmExamHistoryResult));
+            if (form != null)
+            {
+                form.Activate();
+            }
+            else
+            {
+                fmExamHistoryResult f = new fmExamHistoryResult();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void barButtonItem_ScoreTable_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form form = this.CheckExists(typeof(fmScoreTable));
+            if (form != null)
+            {
+                form.Activate();
+            }
+            else
+            {
+                fmScoreTable f = new fmScoreTable();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+        private void barButtonItem2_Createaccount_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form form = this.CheckExists(typeof(fmCreateAccount));
+            if (form != null)
+            {
+                form.Activate();
+            }
+            else
+            {
+                fmCreateAccount f = new fmCreateAccount();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+        //==========Lưu bài thi khi đóng cả form chính
+        private void fmMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Form form = this.CheckExists(typeof(fmDoExam));
+            if (form != null)
+            {
+
+            }
+        }
+
+      
     }
 }

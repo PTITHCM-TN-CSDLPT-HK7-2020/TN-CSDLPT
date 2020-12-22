@@ -60,6 +60,9 @@ namespace TN_CSDLPT
                 barBtn_Save.Enabled = false;
                 barBtn_forbid.Enabled = false;
                 grpB_Farculty.Enabled = false;
+                gridView1.OptionsBehavior.ReadOnly = true;
+                gridView2.OptionsBehavior.ReadOnly = true;
+                grpB_txtTeacher.Enabled = false;
             }
             else if(Program.mGroup == "Coso")
             {

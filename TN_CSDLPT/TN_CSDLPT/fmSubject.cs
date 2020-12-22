@@ -41,6 +41,8 @@ namespace TN_CSDLPT
                 barBtn_Save.Enabled = false;
                 barBtn_Forbid.Enabled = false;
                 grpB_Subjects.Enabled = false;
+                //mONHOCGridControl.Enabled = false;
+                gV_Subjects.OptionsBehavior.ReadOnly = true;
             }
             else cbB_Branch.Enabled = false;
         }

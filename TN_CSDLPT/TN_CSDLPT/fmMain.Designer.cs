@@ -39,12 +39,15 @@
             this.barBtn_Subject = new DevExpress.XtraBars.BarButtonItem();
             this.barBtn_RegisTest = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem_TestTeaccher = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem_ScoreTable = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
             this.barBtn_Question = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem_TestStu = new DevExpress.XtraBars.BarButtonItem();
+            this.Xe = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem2_Createaccount = new DevExpress.XtraBars.BarButtonItem();
             this.ribPage_System = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribPageGroup_Student = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup_CreateAccount = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribPg_Tabbar = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -56,6 +59,7 @@
             this.Stslb_ID = new System.Windows.Forms.ToolStripStatusLabel();
             this.Stslb_Name = new System.Windows.Forms.ToolStripStatusLabel();
             this.Stslb_Group = new System.Windows.Forms.ToolStripStatusLabel();
+            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -76,13 +80,16 @@
             this.barBtn_Subject,
             this.barBtn_RegisTest,
             this.barButtonItem_TestTeaccher,
-            this.barButtonItem9,
+            this.barButtonItem_ScoreTable,
             this.barButtonItem10,
             this.barBtn_Question,
-            this.barButtonItem_TestStu});
+            this.barButtonItem_TestStu,
+            this.Xe,
+            this.barButtonItem2_Createaccount,
+            this.barButtonItem2});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ribbonControl1.MaxItemId = 16;
+            this.ribbonControl1.MaxItemId = 19;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribPage_System,
@@ -158,13 +165,14 @@
             this.barButtonItem_TestTeaccher.Name = "barButtonItem_TestTeaccher";
             this.barButtonItem_TestTeaccher.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem8_ItemClick);
             // 
-            // barButtonItem9
+            // barButtonItem_ScoreTable
             // 
-            this.barButtonItem9.Caption = "Bảng điểm";
-            this.barButtonItem9.Id = 11;
-            this.barButtonItem9.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem9.ImageOptions.Image")));
-            this.barButtonItem9.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem9.ImageOptions.LargeImage")));
-            this.barButtonItem9.Name = "barButtonItem9";
+            this.barButtonItem_ScoreTable.Caption = "Bảng điểm";
+            this.barButtonItem_ScoreTable.Id = 11;
+            this.barButtonItem_ScoreTable.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem_ScoreTable.ImageOptions.Image")));
+            this.barButtonItem_ScoreTable.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem_ScoreTable.ImageOptions.LargeImage")));
+            this.barButtonItem_ScoreTable.Name = "barButtonItem_ScoreTable";
+            this.barButtonItem_ScoreTable.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem_ScoreTable_ItemClick);
             // 
             // barButtonItem10
             // 
@@ -192,10 +200,28 @@
             this.barButtonItem_TestStu.Name = "barButtonItem_TestStu";
             this.barButtonItem_TestStu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem_TestStu_ItemClick);
             // 
+            // Xe
+            // 
+            this.Xe.Caption = "Xem bài đã thi";
+            this.Xe.Id = 16;
+            this.Xe.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Xe.ImageOptions.Image")));
+            this.Xe.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Xe.ImageOptions.LargeImage")));
+            this.Xe.Name = "Xe";
+            this.Xe.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Xe_ItemClick);
+            // 
+            // barButtonItem2_Createaccount
+            // 
+            this.barButtonItem2_Createaccount.Caption = "Tạo tài khoản";
+            this.barButtonItem2_Createaccount.Id = 17;
+            this.barButtonItem2_Createaccount.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem2_Createaccount.ImageOptions.SvgImage")));
+            this.barButtonItem2_Createaccount.Name = "barButtonItem2_Createaccount";
+            this.barButtonItem2_Createaccount.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_Createaccount_ItemClick);
+            // 
             // ribPage_System
             // 
             this.ribPage_System.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribPageGroup_Student});
+            this.ribPageGroup_Student,
+            this.ribbonPageGroup_CreateAccount});
             this.ribPage_System.Name = "ribPage_System";
             this.ribPage_System.Text = "Hệ thống";
             // 
@@ -204,6 +230,11 @@
             this.ribPageGroup_Student.ItemLinks.Add(this.btn_Login);
             this.ribPageGroup_Student.ItemLinks.Add(this.barButtonItem1);
             this.ribPageGroup_Student.Name = "ribPageGroup_Student";
+            // 
+            // ribbonPageGroup_CreateAccount
+            // 
+            this.ribbonPageGroup_CreateAccount.ItemLinks.Add(this.barButtonItem2_Createaccount);
+            this.ribbonPageGroup_CreateAccount.Name = "ribbonPageGroup_CreateAccount";
             // 
             // ribPg_Tabbar
             // 
@@ -232,7 +263,7 @@
             // 
             // ribbonPageGroup4
             // 
-            this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItem9);
+            this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItem_ScoreTable);
             this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItem10);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
             this.ribbonPageGroup4.Text = "Xem báo cáo";
@@ -247,6 +278,7 @@
             // ribbonPageGroup1
             // 
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem_TestStu);
+            this.ribbonPageGroup1.ItemLinks.Add(this.Xe);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "Thi";
             // 
@@ -286,6 +318,11 @@
             this.Stslb_Group.Size = new System.Drawing.Size(50, 20);
             this.Stslb_Group.Text = "Nhóm";
             // 
+            // barButtonItem2
+            // 
+            this.barButtonItem2.Id = 18;
+            this.barButtonItem2.Name = "barButtonItem2";
+            // 
             // fmMain
             // 
             this.Appearance.Options.UseFont = true;
@@ -302,6 +339,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Phần mềm thi trắc nghiệm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.fmMain_FormClosed);
             this.Load += new System.EventHandler(this.fmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
@@ -327,10 +365,8 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
         private DevExpress.XtraBars.BarButtonItem barBtn_Subject;
-        private DevExpress.XtraBars.BarButtonItem barBtn_RegisTest;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem_TestTeaccher;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem9;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem_ScoreTable;
         private DevExpress.XtraBars.BarButtonItem barButtonItem10;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
         public DevExpress.XtraBars.Ribbon.RibbonPage ribPg_Tabbar;
@@ -340,6 +376,12 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem_TestStu;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         public DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage_Stu;
+        private DevExpress.XtraBars.BarButtonItem Xe;
+        public DevExpress.XtraBars.BarButtonItem barButtonItem_TestTeaccher;
+        public DevExpress.XtraBars.BarButtonItem barBtn_RegisTest;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem2_Createaccount;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
+        public DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup_CreateAccount;
     }
 }
 

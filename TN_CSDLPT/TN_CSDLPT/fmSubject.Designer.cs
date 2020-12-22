@@ -316,7 +316,7 @@
             this.tableAdapterManager.BAITHITableAdapter = null;
             this.tableAdapterManager.BANGDIEMTableAdapter = null;
             this.tableAdapterManager.BODETableAdapter = null;
-            this.tableAdapterManager.CHITIETBAITHITableAdapter = null;
+            this.tableAdapterManager.CHITIETBAITHISVTableAdapter = null;
             this.tableAdapterManager.COSOTableAdapter = null;
             this.tableAdapterManager.GIAOVIEN_DANGKYTableAdapter = null;
             this.tableAdapterManager.GIAOVIENTableAdapter = null;
@@ -337,7 +337,7 @@
             this.mONHOCGridControl.MainView = this.gV_Subjects;
             this.mONHOCGridControl.MenuManager = this.barManager1;
             this.mONHOCGridControl.Name = "mONHOCGridControl";
-            this.mONHOCGridControl.Size = new System.Drawing.Size(1053, 326);
+            this.mONHOCGridControl.Size = new System.Drawing.Size(1053, 282);
             this.mONHOCGridControl.TabIndex = 9;
             this.mONHOCGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gV_Subjects});
@@ -403,7 +403,7 @@
             this.grpB_Subjects.Controls.Add(mAMHLabel);
             this.grpB_Subjects.Controls.Add(this.mAMHTextEdit);
             this.grpB_Subjects.Dock = System.Windows.Forms.DockStyle.Top;
-            this.grpB_Subjects.Location = new System.Drawing.Point(0, 401);
+            this.grpB_Subjects.Location = new System.Drawing.Point(0, 357);
             this.grpB_Subjects.Name = "grpB_Subjects";
             this.grpB_Subjects.Size = new System.Drawing.Size(1053, 241);
             this.grpB_Subjects.TabIndex = 10;

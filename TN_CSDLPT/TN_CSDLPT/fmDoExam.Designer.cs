@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ColumnHeader columnHeader_Ques;
             System.Windows.Forms.Label mAMHLabel;
             System.Windows.Forms.Label tRINHDOLabel;
             System.Windows.Forms.Label tHOIGIANLabel1;
@@ -37,6 +36,7 @@
             System.Windows.Forms.Label nGAYTHILabel;
             System.Windows.Forms.Label lANLabel;
             this.grpB_txtExam = new System.Windows.Forms.GroupBox();
+            this.btn_Refresh = new System.Windows.Forms.Button();
             this.nGAYTHIDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.btn_Search = new System.Windows.Forms.Button();
             this.lANSpinEdit = new DevExpress.XtraEditors.SpinEdit();
@@ -46,8 +46,6 @@
             this.mONHOCBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dS = new TN_CSDLPT.DS();
             this.tRINHDOComboBox = new System.Windows.Forms.ComboBox();
-            this.listV_ChosenAnswer = new System.Windows.Forms.ListView();
-            this.columnHeader_Ans = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.barAndDockingController1 = new DevExpress.XtraBars.BarAndDockingController(this.components);
             this.pnl_InfoStu = new System.Windows.Forms.Panel();
             this.grpB_txtStudent = new System.Windows.Forms.GroupBox();
@@ -78,9 +76,6 @@
             this.bAITHIBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bAITHITableAdapter = new TN_CSDLPT.DSTableAdapters.BAITHITableAdapter();
             this.flowLayoutPanel_Question = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel_Question = new System.Windows.Forms.Panel();
-            this.btn_Refresh = new System.Windows.Forms.Button();
-            columnHeader_Ques = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             mAMHLabel = new System.Windows.Forms.Label();
             tRINHDOLabel = new System.Windows.Forms.Label();
             tHOIGIANLabel1 = new System.Windows.Forms.Label();
@@ -103,13 +98,7 @@
             this.pnl_S.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gIAOVIEN_DANGKYBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bAITHIBindingSource)).BeginInit();
-            this.panel_Question.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // columnHeader_Ques
-            // 
-            columnHeader_Ques.Text = "Câu hỏi";
-            columnHeader_Ques.Width = 84;
             // 
             // mAMHLabel
             // 
@@ -189,6 +178,17 @@
             this.grpB_txtExam.TabIndex = 0;
             this.grpB_txtExam.TabStop = false;
             this.grpB_txtExam.Text = "Thông tin bài thi";
+            // 
+            // btn_Refresh
+            // 
+            this.btn_Refresh.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Refresh.Location = new System.Drawing.Point(787, 96);
+            this.btn_Refresh.Name = "btn_Refresh";
+            this.btn_Refresh.Size = new System.Drawing.Size(104, 47);
+            this.btn_Refresh.TabIndex = 32;
+            this.btn_Refresh.Text = "Refresh";
+            this.btn_Refresh.UseVisualStyleBackColor = true;
+            this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
             // 
             // nGAYTHIDateTimePicker
             // 
@@ -328,27 +328,6 @@
             this.tRINHDOComboBox.Size = new System.Drawing.Size(214, 30);
             this.tRINHDOComboBox.TabIndex = 13;
             // 
-            // listV_ChosenAnswer
-            // 
-            this.listV_ChosenAnswer.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            columnHeader_Ques,
-            this.columnHeader_Ans});
-            this.listV_ChosenAnswer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listV_ChosenAnswer.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.listV_ChosenAnswer.HideSelection = false;
-            this.listV_ChosenAnswer.Location = new System.Drawing.Point(0, 0);
-            this.listV_ChosenAnswer.Name = "listV_ChosenAnswer";
-            this.listV_ChosenAnswer.Size = new System.Drawing.Size(212, 613);
-            this.listV_ChosenAnswer.TabIndex = 19;
-            this.listV_ChosenAnswer.UseCompatibleStateImageBehavior = false;
-            this.listV_ChosenAnswer.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader_Ans
-            // 
-            this.columnHeader_Ans.Text = "Đáp án chọn";
-            this.columnHeader_Ans.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader_Ans.Width = 115;
-            // 
             // pnl_InfoStu
             // 
             this.pnl_InfoStu.Controls.Add(this.grpB_txtStudent);
@@ -469,6 +448,7 @@
             this.dataGridView_Result.Location = new System.Drawing.Point(0, 0);
             this.dataGridView_Result.Name = "dataGridView_Result";
             this.dataGridView_Result.RowTemplate.Height = 24;
+            this.dataGridView_Result.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView_Result.Size = new System.Drawing.Size(1592, 106);
             this.dataGridView_Result.TabIndex = 0;
             this.dataGridView_Result.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Result_CellContentClick);
@@ -540,7 +520,6 @@
             this.tableAdapterManager.BAITHITableAdapter = null;
             this.tableAdapterManager.BANGDIEMTableAdapter = null;
             this.tableAdapterManager.BODETableAdapter = null;
-            this.tableAdapterManager.CHITIETBAITHITableAdapter = null;
             this.tableAdapterManager.COSOTableAdapter = null;
             this.tableAdapterManager.GIAOVIEN_DANGKYTableAdapter = null;
             this.tableAdapterManager.GIAOVIENTableAdapter = null;
@@ -598,33 +577,12 @@
             this.flowLayoutPanel_Question.Size = new System.Drawing.Size(1592, 613);
             this.flowLayoutPanel_Question.TabIndex = 19;
             // 
-            // panel_Question
-            // 
-            this.panel_Question.Controls.Add(this.listV_ChosenAnswer);
-            this.panel_Question.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel_Question.Location = new System.Drawing.Point(1380, 320);
-            this.panel_Question.Name = "panel_Question";
-            this.panel_Question.Size = new System.Drawing.Size(212, 613);
-            this.panel_Question.TabIndex = 5;
-            // 
-            // btn_Refresh
-            // 
-            this.btn_Refresh.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Refresh.Location = new System.Drawing.Point(787, 96);
-            this.btn_Refresh.Name = "btn_Refresh";
-            this.btn_Refresh.Size = new System.Drawing.Size(104, 47);
-            this.btn_Refresh.TabIndex = 32;
-            this.btn_Refresh.Text = "Refresh";
-            this.btn_Refresh.UseVisualStyleBackColor = true;
-            this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
-            // 
             // fmDoExam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1592, 933);
-            this.Controls.Add(this.panel_Question);
             this.Controls.Add(this.flowLayoutPanel_Question);
             this.Controls.Add(this.pnl_S);
             this.Controls.Add(this.pnl_Start);
@@ -634,6 +592,7 @@
             this.Name = "fmDoExam";
             this.Text = "Thi";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.fmDoExam_FormClosed);
             this.Load += new System.EventHandler(this.fmDoExam_Load);
             this.grpB_txtExam.ResumeLayout(false);
             this.grpB_txtExam.PerformLayout();
@@ -654,7 +613,6 @@
             this.pnl_S.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gIAOVIEN_DANGKYBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bAITHIBindingSource)).EndInit();
-            this.panel_Question.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -662,7 +620,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox grpB_txtExam;
-        private System.Windows.Forms.ColumnHeader columnHeader_Ans;
         private DevExpress.XtraBars.BarAndDockingController barAndDockingController1;
         private System.Windows.Forms.Panel pnl_InfoStu;
         private System.Windows.Forms.Panel pnl_Start;
@@ -687,7 +644,6 @@
         private DSTableAdapters.MONHOCTableAdapter mONHOCTableAdapter;
         private DSTableAdapters.TableAdapterManager tableAdapterManager;
         private DevExpress.XtraEditors.SpinEdit lANSpinEdit;
-        public System.Windows.Forms.ListView listV_ChosenAnswer;
         private System.Windows.Forms.Label lb_IDClass;
         private System.Windows.Forms.Button btn_Search;
         private System.Windows.Forms.Panel pnl_S;
@@ -703,7 +659,6 @@
         private System.Windows.Forms.BindingSource bAITHIBindingSource;
         private DSTableAdapters.BAITHITableAdapter bAITHITableAdapter;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_Question;
-        private System.Windows.Forms.Panel panel_Question;
         private System.Windows.Forms.Button btn_Refresh;
     }
 }

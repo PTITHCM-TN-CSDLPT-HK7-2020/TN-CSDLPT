@@ -20,6 +20,7 @@ namespace TN_CSDLPT
 
         private int dem = 0;
         public static Boolean checkThi = false;
+        private Boolean checkThiTiep = false;
         private Boolean isSinhVien = false;
         private int thoigianThi = 0;
         private int soCauThi = 0;
@@ -30,6 +31,10 @@ namespace TN_CSDLPT
         private DateTime ngayThi;
         private string ngayHienTai=DateTime.Now.ToString("yyyy-MM-dd");
         private int s = 1;//second of timer
+
+        private object SENDER;
+        private EventArgs Event;
+
 
         string MAMH = "";
         string MALOP = "";
@@ -66,11 +71,11 @@ namespace TN_CSDLPT
 
         public void capNhapDaChon(int cauSo, String daChon)
         {
-            String[] arr = new string[2];
-            arr[0] = (cauSo).ToString();
-            arr[1] = daChon;
-            ListViewItem baiThi = new ListViewItem(arr);
-            listV_ChosenAnswer.Items[cauSo - 1] = baiThi;
+            //String[] arr = new string[2];
+            //arr[0] = (cauSo).ToString();
+            //arr[1] = daChon;
+            //ListViewItem baiThi = new ListViewItem(arr);
+            //listV_ChosenAnswer.Items[cauSo - 1] = baiThi;
         }
 
         private void loadThongTinSInhVien()
@@ -85,7 +90,7 @@ namespace TN_CSDLPT
                 if (Program.myReader == null)
                 {
                     Program.myReader.Close();
-                    Program.conn.Close();
+                   Program.conn.Close();
                     return;
                 }
                 else
@@ -114,15 +119,42 @@ namespace TN_CSDLPT
                 listCauHoi[i].CauC = ((DataRowView)bAITHIBindingSource[i])["C"].ToString();
                 listCauHoi[i].CauD = ((DataRowView)bAITHIBindingSource[i])["D"].ToString();
                 listCauHoi[i].CauDapAn = ((DataRowView)bAITHIBindingSource[i])["DAP_AN"].ToString();
-                listCauHoi[i].CauDaChon = "";
+                if (checkThiTiep == true)
+                {                  
+                    listCauHoi[i].CauDaChon = ((DataRowView)bAITHIBindingSource[i])["DAP_AN_CHON"].ToString();
+                    if (listCauHoi[i].CauDaChon == "A")
+                    {
+                        //listCauHoi[i].rBtn_AnswerA_CheckedChanged(SENDER,Event);
 
+                        listCauHoi[i].rBtn_AnswerA.Checked = true;
+                    }
+                    else if (listCauHoi[i].CauDaChon == "B")
+                    {
+                        //listCauHoi[i].rBtn_AnswerB_CheckedChanged(SENDER, Event);
+                        listCauHoi[i].rBtn_AnswerB.Checked = true;
+                    }
+                    else if (listCauHoi[i].CauDaChon == "C")
+                    {
+                        //listCauHoi[i].rBtn_AnswerC_CheckedChanged(SENDER, Event);
+                        listCauHoi[i].rBtn_AnswerC.Checked = true;
+                    }
+                    else if (listCauHoi[i].CauDaChon == "D")
+                    {
+                        //listCauHoi[i].rBtn_AnswerD_CheckedChanged(SENDER, Event);
+                        listCauHoi[i].rBtn_AnswerD.Checked = true;
+                    }
+                }
+                else
+                {
+                    listCauHoi[i].CauDaChon = "";
+                }
                 String[] arr = new string[2];
                 arr[0] = (i + 1).ToString();
                 arr[1] = listCauHoi[i].CauDaChon;
 
                 baiThi = new ListViewItem(arr);
                 Console.WriteLine("cau: " + (i + 1) + ":" + listCauHoi[i].CauDapAn);
-                this.listV_ChosenAnswer.Items.Add(baiThi);
+                //this.listV_ChosenAnswer.Items.Add(baiThi);
 
 
                 if (flowLayoutPanel_Question.Controls.Count < 0)
@@ -139,10 +171,16 @@ namespace TN_CSDLPT
             String query = "";
             if (Program.mGroup=="Sinhvien")
             {
-                query = "exec SP_THITHU '"
-                    + MALOP.Trim() + "','"
-                    + MAMH.Trim() + "',"
-                    + LAN;
+                if (checkThiTiep == true)
+                {
+                    query = "exec SP_LAYBAITHISV_THITIEP '"+Program.mSV+"','"+MAMH.Trim()+"',"+LAN;
+                }
+                else if(checkThi == false){
+                    query = "exec SP_THITHU '"
+                        + MALOP.Trim() + "','"
+                        + MAMH.Trim() + "',"
+                        + LAN;
+                }
             }
             else
             {
@@ -165,18 +203,13 @@ namespace TN_CSDLPT
             bAITHIBindingSource.DataSource = dt;
             grpB_txtExam.Enabled = grpB_txtStudent.Enabled = false;
             listCauHoi = new QuestionItem[soCauThi];
-            checkThi = true;
-            if (Program.mGroup=="Sinhvien")
-            {
-                HienCHGiaoDien();
-            }
-            else
-            {
-                HienCHGiaoDien();
-            }
+            //checkThi = true;
+
+            HienCHGiaoDien();
+
         }
 
-        private void ghiDapAn()
+        public void ghiDapAn()
         {
             string sqlUpdate = "";
             for (int i = 0; i < listCauHoi.Length; i++)
@@ -201,7 +234,7 @@ namespace TN_CSDLPT
             }
         }
 
-        private void tinhdiem()
+        public void tinhdiem()
         {
             int caudung = 0;
             for (int i = 0; i < listCauHoi.Length; i++)
@@ -219,7 +252,7 @@ namespace TN_CSDLPT
             btn_Submit.Visible = true;
         }
 
-        private void luuBaithi()
+        public void luuBaithi()
         {
             string query = "";
 
@@ -230,8 +263,8 @@ namespace TN_CSDLPT
                 //   + listCauHoi[i].CauDaChon
                 //   + "' WHERE CauHoi = " + listCauHoi[i].IDBaiThi + "  ";
                 query +="exec SP_LUUBAITHI '" + Program.mSV + "','" + MAMH.Trim() + "'," + LAN + ","
-                    + listCauHoi[i].CauBaiThi + "," + listCauHoi[i].CauBoDe + ",'" + listCauHoi[i].CauDaChon + "','"+txtB_IDClass.Text.Trim()+"' ";
-
+                    + listCauHoi[i].CauBaiThi + "," + listCauHoi[i].CauBoDe + ",'" + listCauHoi[i].CauDaChon + "','"+txtB_IDClass.Text.Trim()+"',"+
+                    +thoigianThi+' ';
             }
 
             Console.WriteLine("câu lệnh: " + query);
@@ -249,21 +282,27 @@ namespace TN_CSDLPT
 
         }
 
-        private void themDiemsv()
+        public void themDiemsv()
         {
-            //String sql = "UPDATE dbo.BANGDIEM SET DIEM = " + diem +
-            //    "WHERE MASV = '" + Program.mSV
-            //    + "' AND MAMH = '" + MAMH.Trim()
-            //    + "' AND LAN = " + LAN
-            //    ;
-            string sql = "insert into BANGDIEM (MASV,MAMH,LAN, DIEM)" +
+            String sql = "";
+            if (checkThiTiep == true)
+            {
+                sql = "UPDATE dbo.BANGDIEM SET DIEM = " + diem +
+                    "WHERE MASV = '" + Program.mSV
+                    + "' AND MAMH = '" + MAMH.Trim()
+                    + "' AND LAN = " + LAN
+                    ;
+            }
+            else
+            {
+                sql = "insert into BANGDIEM (MASV,MAMH,LAN, DIEM)" +
                 "values('" + Program.mSV + "', '" + MAMH + "'," + LAN + ", " + diem + ")";
+            }
             try
             {
                 int kq = Program.ExecSqlNonQuery(sql);
                 Program.conn.Close();
-                //ghiDapAn();
-                luuBaithi();
+                
             }
             catch (Exception ex)
             {
@@ -302,7 +341,6 @@ namespace TN_CSDLPT
                 sOCAUTHISpinEdit.Enabled =
                 tHOIGIANSpinEdit.Enabled = false;
                 btn_Search.Enabled = true;
-                panel_Question.Enabled = false;
                 lb_Time.Visible = lb_TImer.Visible = false;
                 btn_Submit.Enabled =
                     btn_Submit.Visible= false;
@@ -315,7 +353,6 @@ namespace TN_CSDLPT
                 sOCAUTHISpinEdit.Enabled =
                 tHOIGIANSpinEdit.Enabled = true;
                 btn_Search.Enabled = true;
-                panel_Question.Enabled = true;
                 lb_Time.Visible = lb_TImer.Visible = false;
                 btn_Submit.Enabled = btn_Submit.Visible = false;
 
@@ -378,16 +415,16 @@ namespace TN_CSDLPT
 
         private void btn_StartTesting_Click(object sender, EventArgs e)
         {
-
+            string query = ""; int kq = -1;
             pnl_S.Enabled =
                btn_Submit.Enabled = true;
             dataGridView_Result.Enabled =dataGridView_Result.Visible = false;
-            //reset second of timer
+            //reset timer          
             s = 1;
             lb_TImer.Text = thoigianThi + ":00";
 
-            string query = "";
-            int kq = -1;
+            
+           
             if (Program.mGroup == "Sinhvien")
             {
                 //Kt sv đã thi chưa
@@ -402,12 +439,31 @@ namespace TN_CSDLPT
                 }
                 if (kq == 1)
                 {
-                    dataGridView_Result.Visible = dataGridView_Result.Enabled = true;
+                    checkThi = true;
+                    dataGridView_Result.Visible = dataGridView_Result.Enabled = true;                  
                     return;
+                }
+                //kt sv co phai thi tiep
+                query = "exec SP_KTSVTHITIEP '" + Program.mSV + "','" + MAMH.Trim() + "'," + LAN;
+                try
+                {
+                    kq = Program.ExecSqlNonQuery(query);
+                    if (kq == 1)
+                    {
+                        checkThiTiep = true;
+                        query = "Select THOIGIAN from CHITIETBAITHISV where MASV='" + Program.mSV + "' and MAMH='" + MAMH.Trim() + "' and LAN_THI=" + LAN;
+                        DataTable table = Program.ExecSqlDataTable(query);
+                        thoigianThi = int.Parse(table.Rows[0]["THOIGIAN"].ToString());
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
                 }
 
                 //Kiem tra đã đến ngày thi
-                query= "exec SP_KTDENNGAYTHI '"+MAMH.Trim()+"','"+MALOP.Trim()+"',"+LAN+",'"+ngayHienTai+"'";
+                query = "exec SP_KTDENNGAYTHI '"+MAMH.Trim()+"','"+MALOP.Trim()+"',"+LAN+",'"+ngayHienTai+"'";
                 try
                 {
                     kq = Program.ExecSqlNonQuery(query);
@@ -510,7 +566,7 @@ namespace TN_CSDLPT
                 soCauThi = int.Parse(row.Cells[6].Value.ToString());
                 thoigianThi = int.Parse(row.Cells[7].Value.ToString());
                 trinhdo = row.Cells[3].Value.ToString().Trim();
-                MessageBox.Show(MALOP + " " + MAMH + " " + LAN + " " + soCauThi + " " + thoigianThi);
+                MessageBox.Show(MALOP + " " + MAMH + " " + LAN + " " + soCauThi + " " + thoigianThi+ " |" +e.RowIndex+"|");
             }
         }
 
@@ -539,6 +595,7 @@ namespace TN_CSDLPT
                 }
                 btn_Submit.Enabled = false;
                 dataGridView_Result.Visible = dataGridView_Result.Enabled = true;
+                fmDoExam_Load(SENDER,Event);
             }
         }
 
@@ -553,13 +610,21 @@ namespace TN_CSDLPT
 
                 if (Program.mGroup.Equals("Sinhvien"))
                 {
-                    themDiemsv();
-
+                    if (checkThiTiep == true)
+                    {
+                        luuBaithi();
+                        themDiemsv();
+                    }
+                    else
+                    {
+                        themDiemsv();
+                        luuBaithi();
+                    }
                 }
                 dataGridView_Result.Visible = dataGridView_Result.Enabled = true;
                 btn_Submit.Visible = false;
                 btn_StartTesting.Visible = btn_StartTesting.Enabled = true;
-                listV_ChosenAnswer.Items.Clear();
+                //listV_ChosenAnswer.Items.Clear();
                 flowLayoutPanel_Question.Controls.Clear();
                 grpB_txtExam.Enabled = true;
                 lb_Time.Visible = lb_TImer.Visible = false;
@@ -570,6 +635,14 @@ namespace TN_CSDLPT
         private void btn_Refresh_Click(object sender, EventArgs e)
         {
             fmDoExam_Load(sender, e);
+        }
+
+        private void fmDoExam_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (Program.mGroup == "Sinhvien")
+            {
+                //luuBaithi();
+            }
         }
     }
 }

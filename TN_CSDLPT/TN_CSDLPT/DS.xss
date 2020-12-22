@@ -7,34 +7,22 @@
 <DiagramLayout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ex:showrelationlabel="False" ViewPortX="-10" ViewPortY="59" xmlns:ex="urn:schemas-microsoft-com:xml-msdatasource-layout-extended" xmlns="urn:schemas-microsoft-com:xml-msdatasource-layout">
   <Shapes>
     <Shape ID="DesignTable:BANGDIEM" ZOrder="27" X="378" Y="70" Height="204" Width="248" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="145" />
-    <Shape ID="DesignTable:BODE" ZOrder="12" X="1002" Y="69" Height="319" Width="206" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="260" />
-    <Shape ID="DesignTable:CHITIETBAITHI" ZOrder="6" X="378" Y="1099" Height="250" Width="274" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="191" />
-    <Shape ID="DesignTable:COSO" ZOrder="7" X="921" Y="848" Height="158" Width="207" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="99" />
-    <Shape ID="DesignTable:GIAOVIEN" ZOrder="11" X="1012" Y="481" Height="204" Width="239" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="145" />
-    <Shape ID="DesignTable:GIAOVIEN_DANGKY" ZOrder="10" X="642" Y="482" Height="273" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="214" />
-    <Shape ID="DesignTable:KHOA" ZOrder="8" X="642" Y="847" Height="158" Width="209" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="99" />
-    <Shape ID="DesignTable:LOP" ZOrder="9" X="378" Y="483" Height="158" Width="194" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="99" />
+    <Shape ID="DesignTable:BODE" ZOrder="13" X="1002" Y="69" Height="319" Width="206" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="260" />
+    <Shape ID="DesignTable:COSO" ZOrder="8" X="921" Y="848" Height="158" Width="207" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="99" />
+    <Shape ID="DesignTable:GIAOVIEN" ZOrder="12" X="1012" Y="481" Height="204" Width="239" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="145" />
+    <Shape ID="DesignTable:GIAOVIEN_DANGKY" ZOrder="11" X="642" Y="482" Height="273" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="214" />
+    <Shape ID="DesignTable:KHOA" ZOrder="9" X="642" Y="847" Height="158" Width="209" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="99" />
+    <Shape ID="DesignTable:LOP" ZOrder="10" X="378" Y="483" Height="158" Width="194" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="99" />
     <Shape ID="DesignTable:MONHOC" ZOrder="26" X="696" Y="70" Height="135" Width="237" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="76" />
     <Shape ID="DesignTable:SINHVIEN" ZOrder="25" X="70" Y="70" Height="227" Width="238" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="168" />
-    <Shape ID="DesignTable:SP_CHECKTRUNGKHOA" ZOrder="5" X="1321" Y="69" Height="112" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="54" />
-    <Shape ID="DesignTable:SP_CHECKXOAGVDK" ZOrder="4" X="1691" Y="69" Height="135" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="76" />
-    <Shape ID="DesignTable:SP_LISTBANGSVTHI" ZOrder="3" X="2061" Y="69" Height="181" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="122" />
-    <Shape ID="DesignTable:SP_THONGTINDANGNHAP" ZOrder="2" X="2431" Y="69" Height="158" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="99" />
-    <Shape ID="DesignTable:BAITHI" ZOrder="1" X="2801" Y="69" Height="342" Width="216" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="283" />
+    <Shape ID="DesignTable:SP_CHECKTRUNGKHOA" ZOrder="7" X="1321" Y="69" Height="112" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="54" />
+    <Shape ID="DesignTable:SP_CHECKXOAGVDK" ZOrder="6" X="1691" Y="69" Height="135" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="76" />
+    <Shape ID="DesignTable:SP_LISTBANGSVTHI" ZOrder="5" X="2061" Y="69" Height="181" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="122" />
+    <Shape ID="DesignTable:SP_THONGTINDANGNHAP" ZOrder="4" X="2431" Y="69" Height="158" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="99" />
+    <Shape ID="DesignTable:BAITHI" ZOrder="3" X="2801" Y="69" Height="342" Width="216" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="283" />
+    <Shape ID="DesignTable:CHITIETBAITHISV" ZOrder="2" X="3087" Y="69" Height="296" Width="293" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="237" />
   </Shapes>
   <Connectors>
-    <Connector ID="DesignRelation:FK_BANGDIEM_MONHOC" ZOrder="23" LineWidth="11">
-      <RoutePoints>
-        <Point>
-          <X>696</X>
-          <Y>149</Y>
-        </Point>
-        <Point>
-          <X>626</X>
-          <Y>149</Y>
-        </Point>
-      </RoutePoints>
-    </Connector>
     <Connector ID="DesignRelation:FK_BANGDIEM_SINHVIEN1" ZOrder="24" LineWidth="11">
       <RoutePoints>
         <Point>
@@ -47,15 +35,15 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_BODE_MONHOC" ZOrder="21" LineWidth="11">
+    <Connector ID="DesignRelation:FK_BANGDIEM_MONHOC" ZOrder="23" LineWidth="11">
       <RoutePoints>
         <Point>
-          <X>933</X>
-          <Y>148</Y>
+          <X>696</X>
+          <Y>149</Y>
         </Point>
         <Point>
-          <X>1002</X>
-          <Y>148</Y>
+          <X>626</X>
+          <Y>149</Y>
         </Point>
       </RoutePoints>
     </Connector>
@@ -71,23 +59,19 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_CHITIETBAITHI_SINHVIEN" ZOrder="20" LineWidth="11">
+    <Connector ID="DesignRelation:FK_BODE_MONHOC" ZOrder="21" LineWidth="11">
       <RoutePoints>
         <Point>
-          <X>283</X>
-          <Y>297</Y>
+          <X>933</X>
+          <Y>148</Y>
         </Point>
         <Point>
-          <X>283</X>
-          <Y>1116</Y>
-        </Point>
-        <Point>
-          <X>378</X>
-          <Y>1116</Y>
+          <X>1002</X>
+          <Y>148</Y>
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_GIAOVIEN_KHOA" ZOrder="19" LineWidth="11">
+    <Connector ID="DesignRelation:FK_GIAOVIEN_KHOA" ZOrder="20" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>834</X>
@@ -103,31 +87,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_GIAOVIEN_DANGKY_MONHOC1" ZOrder="16" LineWidth="11">
-      <RoutePoints>
-        <Point>
-          <X>814</X>
-          <Y>205</Y>
-        </Point>
-        <Point>
-          <X>814</X>
-          <Y>482</Y>
-        </Point>
-      </RoutePoints>
-    </Connector>
-    <Connector ID="DesignRelation:FK_GIAOVIEN_DANGKY_LOP" ZOrder="17" LineWidth="11">
-      <RoutePoints>
-        <Point>
-          <X>572</X>
-          <Y>573</Y>
-        </Point>
-        <Point>
-          <X>642</X>
-          <Y>573</Y>
-        </Point>
-      </RoutePoints>
-    </Connector>
-    <Connector ID="DesignRelation:FK_GIAOVIEN_DANGKY_GIAOVIEN1" ZOrder="18" LineWidth="11">
+    <Connector ID="DesignRelation:FK_GIAOVIEN_DANGKY_GIAOVIEN1" ZOrder="19" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>1012</X>
@@ -139,7 +99,31 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_KHOA_COSO" ZOrder="15" LineWidth="11">
+    <Connector ID="DesignRelation:FK_GIAOVIEN_DANGKY_LOP" ZOrder="18" LineWidth="11">
+      <RoutePoints>
+        <Point>
+          <X>572</X>
+          <Y>573</Y>
+        </Point>
+        <Point>
+          <X>642</X>
+          <Y>573</Y>
+        </Point>
+      </RoutePoints>
+    </Connector>
+    <Connector ID="DesignRelation:FK_GIAOVIEN_DANGKY_MONHOC1" ZOrder="17" LineWidth="11">
+      <RoutePoints>
+        <Point>
+          <X>814</X>
+          <Y>205</Y>
+        </Point>
+        <Point>
+          <X>814</X>
+          <Y>482</Y>
+        </Point>
+      </RoutePoints>
+    </Connector>
+    <Connector ID="DesignRelation:FK_KHOA_COSO" ZOrder="16" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>921</X>
@@ -151,7 +135,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_LOP_KHOA" ZOrder="14" LineWidth="11">
+    <Connector ID="DesignRelation:FK_LOP_KHOA" ZOrder="15" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>642</X>
@@ -167,7 +151,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_SINHVIEN_LOP" ZOrder="13" LineWidth="11">
+    <Connector ID="DesignRelation:FK_SINHVIEN_LOP" ZOrder="14" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>378</X>
@@ -180,6 +164,18 @@
         <Point>
           <X>291</X>
           <Y>297</Y>
+        </Point>
+      </RoutePoints>
+    </Connector>
+    <Connector ID="DesignRelation:FK_CHITIETBAITHISV_SINHVIEN" ZOrder="1" LineWidth="11">
+      <RoutePoints>
+        <Point>
+          <X>308</X>
+          <Y>175</Y>
+        </Point>
+        <Point>
+          <X>3087</X>
+          <Y>175</Y>
         </Point>
       </RoutePoints>
     </Connector>

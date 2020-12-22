@@ -157,7 +157,7 @@
             // cLabel
             // 
             cLabel.AutoSize = true;
-            cLabel.Location = new System.Drawing.Point(516, 231);
+            cLabel.Location = new System.Drawing.Point(1097, 134);
             cLabel.Name = "cLabel";
             cLabel.Size = new System.Drawing.Size(29, 22);
             cLabel.TabIndex = 10;
@@ -166,7 +166,7 @@
             // dLabel
             // 
             dLabel.AutoSize = true;
-            dLabel.Location = new System.Drawing.Point(516, 280);
+            dLabel.Location = new System.Drawing.Point(1097, 183);
             dLabel.Name = "dLabel";
             dLabel.Size = new System.Drawing.Size(30, 22);
             dLabel.TabIndex = 12;
@@ -175,7 +175,7 @@
             // dAP_ANLabel
             // 
             dAP_ANLabel.AutoSize = true;
-            dAP_ANLabel.Location = new System.Drawing.Point(473, 333);
+            dAP_ANLabel.Location = new System.Drawing.Point(1097, 50);
             dAP_ANLabel.Name = "dAP_ANLabel";
             dAP_ANLabel.Size = new System.Drawing.Size(72, 22);
             dAP_ANLabel.TabIndex = 14;
@@ -312,7 +312,7 @@
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
             this.barDockControlTop.Margin = new System.Windows.Forms.Padding(4);
-            this.barDockControlTop.Size = new System.Drawing.Size(1254, 30);
+            this.barDockControlTop.Size = new System.Drawing.Size(1697, 30);
             // 
             // barDockControlBottom
             // 
@@ -321,7 +321,7 @@
             this.barDockControlBottom.Location = new System.Drawing.Point(0, 1018);
             this.barDockControlBottom.Manager = this.barManager1;
             this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(4);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1254, 24);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1697, 24);
             // 
             // barDockControlLeft
             // 
@@ -336,7 +336,7 @@
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1254, 30);
+            this.barDockControlRight.Location = new System.Drawing.Point(1697, 30);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Margin = new System.Windows.Forms.Padding(4);
             this.barDockControlRight.Size = new System.Drawing.Size(0, 988);
@@ -368,7 +368,7 @@
             this.tableAdapterManager.BAITHITableAdapter = null;
             this.tableAdapterManager.BANGDIEMTableAdapter = null;
             this.tableAdapterManager.BODETableAdapter = this.bODETableAdapter;
-            this.tableAdapterManager.CHITIETBAITHITableAdapter = null;
+            this.tableAdapterManager.CHITIETBAITHISVTableAdapter = null;
             this.tableAdapterManager.COSOTableAdapter = null;
             this.tableAdapterManager.GIAOVIEN_DANGKYTableAdapter = null;
             this.tableAdapterManager.GIAOVIENTableAdapter = null;
@@ -386,7 +386,7 @@
             this.bODEGridControl.MainView = this.gridView_Question;
             this.bODEGridControl.MenuManager = this.barManager1;
             this.bODEGridControl.Name = "bODEGridControl";
-            this.bODEGridControl.Size = new System.Drawing.Size(1254, 203);
+            this.bODEGridControl.Size = new System.Drawing.Size(1697, 203);
             this.bODEGridControl.TabIndex = 5;
             this.bODEGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView_Question});
@@ -592,7 +592,7 @@
             this.grpB_txtQuestion.Dock = System.Windows.Forms.DockStyle.Top;
             this.grpB_txtQuestion.Location = new System.Drawing.Point(0, 233);
             this.grpB_txtQuestion.Name = "grpB_txtQuestion";
-            this.grpB_txtQuestion.Size = new System.Drawing.Size(1254, 460);
+            this.grpB_txtQuestion.Size = new System.Drawing.Size(1697, 268);
             this.grpB_txtQuestion.TabIndex = 6;
             this.grpB_txtQuestion.TabStop = false;
             // 
@@ -630,7 +630,7 @@
             "B",
             "C",
             "D"});
-            this.dAP_ANComboBox.Location = new System.Drawing.Point(552, 330);
+            this.dAP_ANComboBox.Location = new System.Drawing.Point(1176, 47);
             this.dAP_ANComboBox.Name = "dAP_ANComboBox";
             this.dAP_ANComboBox.Size = new System.Drawing.Size(151, 30);
             this.dAP_ANComboBox.TabIndex = 9;
@@ -638,7 +638,7 @@
             // dTextBox
             // 
             this.dTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bODEBindingSource, "D", true));
-            this.dTextBox.Location = new System.Drawing.Point(552, 277);
+            this.dTextBox.Location = new System.Drawing.Point(1133, 180);
             this.dTextBox.Name = "dTextBox";
             this.dTextBox.Size = new System.Drawing.Size(520, 30);
             this.dTextBox.TabIndex = 8;
@@ -646,7 +646,7 @@
             // cTextBox
             // 
             this.cTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bODEBindingSource, "C", true));
-            this.cTextBox.Location = new System.Drawing.Point(552, 228);
+            this.cTextBox.Location = new System.Drawing.Point(1133, 131);
             this.cTextBox.Name = "cTextBox";
             this.cTextBox.Size = new System.Drawing.Size(520, 30);
             this.cTextBox.TabIndex = 7;
@@ -686,6 +686,8 @@
             // 
             // bODEDataGridView
             // 
+            this.bODEDataGridView.AllowUserToAddRows = false;
+            this.bODEDataGridView.AllowUserToDeleteRows = false;
             this.bODEDataGridView.AutoGenerateColumns = false;
             this.bODEDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.bODEDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -701,10 +703,11 @@
             this.dataGridViewTextBoxColumn10});
             this.bODEDataGridView.DataSource = this.bODEBindingSource;
             this.bODEDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bODEDataGridView.Location = new System.Drawing.Point(0, 693);
+            this.bODEDataGridView.Location = new System.Drawing.Point(0, 501);
             this.bODEDataGridView.Name = "bODEDataGridView";
+            this.bODEDataGridView.ReadOnly = true;
             this.bODEDataGridView.RowTemplate.Height = 24;
-            this.bODEDataGridView.Size = new System.Drawing.Size(1254, 325);
+            this.bODEDataGridView.Size = new System.Drawing.Size(1697, 517);
             this.bODEDataGridView.TabIndex = 10;
             // 
             // dataGridViewTextBoxColumn1
@@ -719,61 +722,70 @@
             this.dataGridViewTextBoxColumn2.DataPropertyName = "MAMH";
             this.dataGridViewTextBoxColumn2.HeaderText = "MAMH";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "TRINHDO";
             this.dataGridViewTextBoxColumn3.HeaderText = "TRINHDO";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "NOIDUNG";
             this.dataGridViewTextBoxColumn4.HeaderText = "NOIDUNG";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "A";
             this.dataGridViewTextBoxColumn5.HeaderText = "A";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.DataPropertyName = "B";
             this.dataGridViewTextBoxColumn6.HeaderText = "B";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn7
             // 
             this.dataGridViewTextBoxColumn7.DataPropertyName = "C";
             this.dataGridViewTextBoxColumn7.HeaderText = "C";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn8
             // 
             this.dataGridViewTextBoxColumn8.DataPropertyName = "D";
             this.dataGridViewTextBoxColumn8.HeaderText = "D";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn9
             // 
             this.dataGridViewTextBoxColumn9.DataPropertyName = "DAP_AN";
             this.dataGridViewTextBoxColumn9.HeaderText = "DAP_AN";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn10
             // 
             this.dataGridViewTextBoxColumn10.DataPropertyName = "MAGV";
             this.dataGridViewTextBoxColumn10.HeaderText = "MAGV";
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
             // 
             // fmQuestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1254, 1042);
+            this.ClientSize = new System.Drawing.Size(1697, 1042);
             this.Controls.Add(this.bODEDataGridView);
             this.Controls.Add(this.grpB_txtQuestion);
             this.Controls.Add(this.bODEGridControl);

@@ -66,16 +66,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DS.cs">
+      <DependentUpon>DS.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="fmCreateAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmCreateAccount.Designer.cs">
+      <DependentUpon>fmCreateAccount.cs</DependentUpon>
     </Compile>
     <Compile Include="fmDoExam.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="fmDoExam.Designer.cs">
       <DependentUpon>fmDoExam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmExamHistoryResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmExamHistoryResult.Designer.cs">
+      <DependentUpon>fmExamHistoryResult.cs</DependentUpon>
     </Compile>
     <Compile Include="fmFarculty.cs">
       <SubType>Form</SubType>
@@ -139,13 +154,31 @@
     <Compile Include="QuestionItem.Designer.cs">
       <DependentUpon>QuestionItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="fmScoreTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmScoreTable.Designer.cs">
+      <DependentUpon>fmScoreTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="TN_CSDLPTDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TN_CSDLPTDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="XtraForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XtraForm1.Designer.cs">
+      <DependentUpon>XtraForm1.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="fmCreateAccount.resx">
+      <DependentUpon>fmCreateAccount.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fmDoExam.resx">
       <DependentUpon>fmDoExam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmExamHistoryResult.resx">
+      <DependentUpon>fmExamHistoryResult.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fmFarculty.resx">
       <DependentUpon>fmFarculty.cs</DependentUpon>
@@ -173,6 +206,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fmClass.resx">
       <DependentUpon>fmClass.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -186,6 +220,18 @@
     </Compile>
     <EmbeddedResource Include="QuestionItem.resx">
       <DependentUpon>QuestionItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmScoreTable.dua.resx">
+      <DependentUpon>fmScoreTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmScoreTable.en.resx">
+      <DependentUpon>fmScoreTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmScoreTable.resx">
+      <DependentUpon>fmScoreTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraForm1.resx">
+      <DependentUpon>XtraForm1.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="DS.xsc">

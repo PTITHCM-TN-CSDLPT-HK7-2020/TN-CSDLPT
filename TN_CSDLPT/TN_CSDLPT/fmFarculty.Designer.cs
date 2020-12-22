@@ -346,7 +346,7 @@
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 930);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 823);
             this.barDockControlBottom.Manager = this.barManager1;
             this.barDockControlBottom.Size = new System.Drawing.Size(1723, 24);
             // 
@@ -356,7 +356,7 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 31);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 899);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 792);
             // 
             // barDockControlRight
             // 
@@ -364,7 +364,7 @@
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControlRight.Location = new System.Drawing.Point(1723, 31);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 899);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 792);
             // 
             // barButtonItem1
             // 
@@ -414,7 +414,7 @@
             this.tableAdapterManager.BAITHITableAdapter = null;
             this.tableAdapterManager.BANGDIEMTableAdapter = null;
             this.tableAdapterManager.BODETableAdapter = null;
-            this.tableAdapterManager.CHITIETBAITHITableAdapter = null;
+            this.tableAdapterManager.CHITIETBAITHISVTableAdapter = null;
             this.tableAdapterManager.COSOTableAdapter = null;
             this.tableAdapterManager.GIAOVIEN_DANGKYTableAdapter = null;
             this.tableAdapterManager.GIAOVIENTableAdapter = null;
@@ -445,7 +445,6 @@
             this.colMACS});
             this.gridView1.GridControl = this.kHOAGridControl;
             this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // colMAKH
@@ -503,7 +502,7 @@
             this.grpB_Farculty.Dock = System.Windows.Forms.DockStyle.Left;
             this.grpB_Farculty.Location = new System.Drawing.Point(0, 90);
             this.grpB_Farculty.Name = "grpB_Farculty";
-            this.grpB_Farculty.Size = new System.Drawing.Size(940, 840);
+            this.grpB_Farculty.Size = new System.Drawing.Size(940, 733);
             this.grpB_Farculty.TabIndex = 11;
             this.grpB_Farculty.TabStop = false;
             // 
@@ -518,7 +517,7 @@
             this.grpB_txtFarculty.Dock = System.Windows.Forms.DockStyle.Top;
             this.grpB_txtFarculty.Location = new System.Drawing.Point(3, 353);
             this.grpB_txtFarculty.Name = "grpB_txtFarculty";
-            this.grpB_txtFarculty.Size = new System.Drawing.Size(934, 373);
+            this.grpB_txtFarculty.Size = new System.Drawing.Size(934, 292);
             this.grpB_txtFarculty.TabIndex = 6;
             this.grpB_txtFarculty.TabStop = false;
             // 
@@ -737,7 +736,7 @@
             this.grpB_Teacher.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grpB_Teacher.Location = new System.Drawing.Point(940, 90);
             this.grpB_Teacher.Name = "grpB_Teacher";
-            this.grpB_Teacher.Size = new System.Drawing.Size(783, 840);
+            this.grpB_Teacher.Size = new System.Drawing.Size(783, 733);
             this.grpB_Teacher.TabIndex = 16;
             this.grpB_Teacher.TabStop = false;
             // 
@@ -756,7 +755,7 @@
             this.grpB_txtTeacher.Dock = System.Windows.Forms.DockStyle.Top;
             this.grpB_txtTeacher.Location = new System.Drawing.Point(3, 353);
             this.grpB_txtTeacher.Name = "grpB_txtTeacher";
-            this.grpB_txtTeacher.Size = new System.Drawing.Size(777, 373);
+            this.grpB_txtTeacher.Size = new System.Drawing.Size(777, 292);
             this.grpB_txtTeacher.TabIndex = 13;
             this.grpB_txtTeacher.TabStop = false;
             // 
@@ -834,7 +833,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1723, 954);
+            this.ClientSize = new System.Drawing.Size(1723, 847);
             this.Controls.Add(this.grpB_Teacher);
             this.Controls.Add(this.grpB_Farculty);
             this.Controls.Add(this.panel1);

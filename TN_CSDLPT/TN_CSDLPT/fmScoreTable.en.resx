@@ -117,70 +117,115 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="mAMHLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="tRINHDOLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="tHOIGIANLabel1.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="sOCAUTHILabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="nGAYTHILabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="lANLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="mONHOCBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>782, 17</value>
-  </metadata>
-  <metadata name="dS.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>708, 17</value>
-  </metadata>
-  <metadata name="dS.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>708, 17</value>
-  </metadata>
-  <metadata name="barAndDockingController1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>368, 17</value>
-  </metadata>
-  <metadata name="lOPBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="sP_LISTBANGSVTHIBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 60</value>
-  </metadata>
-  <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>607, 17</value>
-  </metadata>
-  <metadata name="mONHOCTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1006, 17</value>
-  </metadata>
-  <metadata name="tableAdapterManager.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1223, 17</value>
-  </metadata>
-  <metadata name="sP_LISTBANGSVTHITableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>303, 60</value>
-  </metadata>
-  <metadata name="gIAOVIEN_DANGKYBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>578, 59</value>
-  </metadata>
-  <metadata name="gIAOVIEN_DANGKYTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>835, 56</value>
-  </metadata>
-  <metadata name="lOPTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>196, 17</value>
-  </metadata>
-  <metadata name="bAITHIBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 103</value>
-  </metadata>
-  <metadata name="bAITHITableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>218, 103</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>93</value>
-  </metadata>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="mALOPLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="mALOPLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 22</value>
+  </data>
+  <data name="mALOPLabel.Text" xml:space="preserve">
+    <value>Mã lớp:</value>
+  </data>
+  <data name="mALOPComboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>214, 30</value>
+  </data>
+  <data name="btn_Refresh.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 13.8pt</value>
+  </data>
+  <data name="btn_Refresh.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1202, 103</value>
+  </data>
+  <data name="btn_Refresh.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 47</value>
+  </data>
+  <data name="btn_Refresh.Text" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="btn_Search.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 13.8pt</value>
+  </data>
+  <data name="btn_Search.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1086, 103</value>
+  </data>
+  <data name="btn_Search.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 47</value>
+  </data>
+  <data name="btn_Search.Text" xml:space="preserve">
+    <value>Tìm</value>
+  </data>
+  <data name="lANLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lANLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lANLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>870, 35</value>
+  </data>
+  <data name="lANLabel.Text" xml:space="preserve">
+    <value>Lần thi thứ:</value>
+  </data>
+  <data name="lANSpinEdit.EditValue" type="System.Decimal, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="lANSpinEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>976, 34</value>
+  </data>
+  <data name="lANSpinEdit.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
+  </data>
+  <data name="lANSpinEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>214, 28</value>
+  </data>
+  <data name="mAMHComboBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>552, 37</value>
+  </data>
+  <data name="mAMHComboBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>214, 30</value>
+  </data>
+  <data name="mAMHLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mAMHLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>461, 40</value>
+  </data>
+  <data name="mAMHLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 22</value>
+  </data>
+  <data name="mAMHLabel.Text" xml:space="preserve">
+    <value>Môn học:</value>
+  </data>
+  <data name="grpB_txtExam.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="grpB_txtExam.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
+  </data>
+  <data name="grpB_txtExam.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1335, 156</value>
+  </data>
+  <data name="grpB_txtExam.Text" xml:space="preserve">
+    <value>Thông tin bảng điểm</value>
+  </data>
+  <data name="pnl_InfoStu.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="pnl_InfoStu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1335, 156</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>11, 22</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1335, 619</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Bảng điểm</value>
+  </data>
 </root>

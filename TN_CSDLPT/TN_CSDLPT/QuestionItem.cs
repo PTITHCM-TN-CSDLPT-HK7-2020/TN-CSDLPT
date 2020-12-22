@@ -138,32 +138,32 @@ namespace TN_CSDLPT
             set { dapAn = value; }
         }
 
-        private void rBtn_AnswerA_CheckedChanged(object sender, EventArgs e)
+        public void rBtn_AnswerA_CheckedChanged(object sender, EventArgs e)
         {
             daChon = "A";
             var principalForm = Application.OpenForms.OfType<fmDoExam>().Single();
-            principalForm.capNhapDaChon(cauSo, "A");
+            //principalForm.capNhapDaChon(cauSo, "A");
         }
 
-        private void rBtn_AnswerB_CheckedChanged(object sender, EventArgs e)
+        public void rBtn_AnswerB_CheckedChanged(object sender, EventArgs e)
         {
             daChon = "B";
             var principalForm = Application.OpenForms.OfType<fmDoExam>().Single();
-            principalForm.capNhapDaChon(cauSo, "B");
+            //principalForm.capNhapDaChon(cauSo, "B");
         }
 
-        private void rBtn_AnswerC_CheckedChanged(object sender, EventArgs e)
+        public void rBtn_AnswerC_CheckedChanged(object sender, EventArgs e)
         {
             daChon = "C";
             var principalForm = Application.OpenForms.OfType<fmDoExam>().Single();
-            principalForm.capNhapDaChon(cauSo, "C");          
+            //principalForm.capNhapDaChon(cauSo, "C");
         }
 
-        private void rBtn_AnswerD_CheckedChanged(object sender, EventArgs e)
+        public void rBtn_AnswerD_CheckedChanged(object sender, EventArgs e)
         {
             daChon = "D";
             var principalForm = Application.OpenForms.OfType<fmDoExam>().Single();
-            principalForm.capNhapDaChon(cauSo, "D");
+            //principalForm.capNhapDaChon(cauSo, "D");
         }
     }
 }

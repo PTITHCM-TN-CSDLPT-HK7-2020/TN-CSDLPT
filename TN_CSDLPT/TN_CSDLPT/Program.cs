@@ -17,6 +17,13 @@ namespace TN_CSDLPT
         /// 
         public static SqlConnection conn = new SqlConnection();
         public static String connstr;
+
+        public static SqlConnection conn1 = new SqlConnection();
+        public static String connstr1;
+        public static String servername1 = "";
+        //public static String mlogin1 = "HTKN";
+        //public static String password1 = "123";
+
         public static SqlDataReader myReader;
         public static String servername="";//chon sever ket noi toi
         public static String username = "";//manv
@@ -35,6 +42,28 @@ namespace TN_CSDLPT
 
         public static BindingSource bds_dspm = new BindingSource();  // giữ bdsPM khi đăng nhập
         public static fmMain fmChinh;
+
+        public static int KetNoiCosoKhac()
+        {
+            if (Program.conn1 != null && Program.conn1.State == ConnectionState.Open)
+                Program.conn1.Close();
+            try
+            {
+                Program.connstr1 = "Data Source=" + Program.servername1 + ";Initial Catalog=" +
+                      Program.database + ";User ID=" +
+                      Program.remotelogin + ";password=" + Program.remotepassword;
+                Program.conn1.ConnectionString = Program.connstr1;
+                Program.conn1.Open();
+                return 1;
+            }
+
+            catch (Exception e)
+            {
+                MessageBox.Show("Lỗi kết nối cơ sở dữ liệu.\nBạn xem lại user name và password.\n "
+                    + e.Message, "", MessageBoxButtons.OK);
+                return 0;
+            }
+        }
 
         public static int KetNoi()
         {

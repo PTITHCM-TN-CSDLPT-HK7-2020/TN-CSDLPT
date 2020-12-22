@@ -173,13 +173,13 @@
 
         private System.Windows.Forms.Label lb_IndexQuestion;
         private System.Windows.Forms.Label lb_ContentQuestion;
-        private System.Windows.Forms.RadioButton rBtn_AnswerA;
-        private System.Windows.Forms.RadioButton rBtn_AnswerB;
-        private System.Windows.Forms.RadioButton rBtn_AnswerC;
-        private System.Windows.Forms.RadioButton rBtn_AnswerD;
         private System.Windows.Forms.Label lb_A;
         private System.Windows.Forms.Label lb_B;
         private System.Windows.Forms.Label lb_C;
         private System.Windows.Forms.Label lb_D;
+        public System.Windows.Forms.RadioButton rBtn_AnswerA;
+        public System.Windows.Forms.RadioButton rBtn_AnswerB;
+        public System.Windows.Forms.RadioButton rBtn_AnswerC;
+        public System.Windows.Forms.RadioButton rBtn_AnswerD;
     }
 }

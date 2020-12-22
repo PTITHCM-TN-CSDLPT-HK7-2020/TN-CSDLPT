@@ -141,17 +141,30 @@ namespace TN_CSDLPT
             {
                 Program.fmChinh.ribPg_Tabbar.Visible = false;
                 Program.fmChinh.ribbonPage_Stu.Visible = true;
-                
+                Program.fmChinh.ribbonPageGroup_CreateAccount.Visible = false;
+
             }
-            else { 
+            else if (Program.mGroup == "Truong")
+            {
                 Program.fmChinh.ribPg_Tabbar.Visible = true;
                 Program.fmChinh.ribbonPage_Stu.Visible = false;
+                Program.fmChinh.barButtonItem_TestTeaccher.Enabled = false;
+                Program.fmChinh.barBtn_RegisTest.Enabled = false;
+                Program.fmChinh.ribbonPageGroup_CreateAccount.Visible = true;
             }
 
-            if (Program.mGroup == "Giangvien")
+            else if (Program.mGroup == "Giangvien")
             {
-                Program.fmChinh.barBtn_Class.Enabled=
+                Program.fmChinh.barBtn_Class.Enabled =
                 Program.fmChinh.barBtn_Farculty.Enabled = false;
+                Program.fmChinh.ribbonPageGroup_CreateAccount.Visible = false;
+                Program.fmChinh.ribPg_Tabbar.Visible = true;
+            }
+            else if (Program.mGroup == "Coso")
+            {
+                Program.fmChinh.ribPg_Tabbar.Visible = true;
+                Program.fmChinh.ribbonPage_Stu.Visible= false;
+                Program.fmChinh.ribbonPageGroup_CreateAccount.Visible = true;
 
             }
         }
