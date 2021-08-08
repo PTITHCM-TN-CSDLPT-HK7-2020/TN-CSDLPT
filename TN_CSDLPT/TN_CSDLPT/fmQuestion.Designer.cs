@@ -80,17 +80,6 @@
             this.aTextBox = new System.Windows.Forms.TextBox();
             this.nOIDUNGTextBox = new System.Windows.Forms.TextBox();
             this.mAMHTextBox = new System.Windows.Forms.TextBox();
-            this.bODEDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             mAMHLabel = new System.Windows.Forms.Label();
             tRINHDOLabel = new System.Windows.Forms.Label();
             nOIDUNGLabel = new System.Windows.Forms.Label();
@@ -106,7 +95,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.bODEGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView_Question)).BeginInit();
             this.grpB_txtQuestion.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bODEDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // mAMHLabel
@@ -386,7 +374,7 @@
             this.bODEGridControl.MainView = this.gridView_Question;
             this.bODEGridControl.MenuManager = this.barManager1;
             this.bODEGridControl.Name = "bODEGridControl";
-            this.bODEGridControl.Size = new System.Drawing.Size(1697, 203);
+            this.bODEGridControl.Size = new System.Drawing.Size(1697, 416);
             this.bODEGridControl.TabIndex = 5;
             this.bODEGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView_Question});
@@ -589,16 +577,16 @@
             this.grpB_txtQuestion.Controls.Add(tRINHDOLabel);
             this.grpB_txtQuestion.Controls.Add(mAMHLabel);
             this.grpB_txtQuestion.Controls.Add(this.mAMHTextBox);
-            this.grpB_txtQuestion.Dock = System.Windows.Forms.DockStyle.Top;
-            this.grpB_txtQuestion.Location = new System.Drawing.Point(0, 233);
+            this.grpB_txtQuestion.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grpB_txtQuestion.Location = new System.Drawing.Point(0, 446);
             this.grpB_txtQuestion.Name = "grpB_txtQuestion";
-            this.grpB_txtQuestion.Size = new System.Drawing.Size(1697, 268);
+            this.grpB_txtQuestion.Size = new System.Drawing.Size(1697, 572);
             this.grpB_txtQuestion.TabIndex = 6;
             this.grpB_txtQuestion.TabStop = false;
             // 
             // tRINHDOComboBox
             // 
-            this.tRINHDOComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bODEBindingSource, "TRINHDO", true));
+            this.tRINHDOComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.bODEBindingSource, "TRINHDO", true));
             this.tRINHDOComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.tRINHDOComboBox.FormattingEnabled = true;
             this.tRINHDOComboBox.Items.AddRange(new object[] {
@@ -684,109 +672,12 @@
             this.mAMHTextBox.Size = new System.Drawing.Size(251, 30);
             this.mAMHTextBox.TabIndex = 1;
             // 
-            // bODEDataGridView
-            // 
-            this.bODEDataGridView.AllowUserToAddRows = false;
-            this.bODEDataGridView.AllowUserToDeleteRows = false;
-            this.bODEDataGridView.AutoGenerateColumns = false;
-            this.bODEDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.bODEDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10});
-            this.bODEDataGridView.DataSource = this.bODEBindingSource;
-            this.bODEDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bODEDataGridView.Location = new System.Drawing.Point(0, 501);
-            this.bODEDataGridView.Name = "bODEDataGridView";
-            this.bODEDataGridView.ReadOnly = true;
-            this.bODEDataGridView.RowTemplate.Height = 24;
-            this.bODEDataGridView.Size = new System.Drawing.Size(1697, 517);
-            this.bODEDataGridView.TabIndex = 10;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "CAUHOI";
-            this.dataGridViewTextBoxColumn1.HeaderText = "CAUHOI";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "MAMH";
-            this.dataGridViewTextBoxColumn2.HeaderText = "MAMH";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "TRINHDO";
-            this.dataGridViewTextBoxColumn3.HeaderText = "TRINHDO";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "NOIDUNG";
-            this.dataGridViewTextBoxColumn4.HeaderText = "NOIDUNG";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "A";
-            this.dataGridViewTextBoxColumn5.HeaderText = "A";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "B";
-            this.dataGridViewTextBoxColumn6.HeaderText = "B";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "C";
-            this.dataGridViewTextBoxColumn7.HeaderText = "C";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "D";
-            this.dataGridViewTextBoxColumn8.HeaderText = "D";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "DAP_AN";
-            this.dataGridViewTextBoxColumn9.HeaderText = "DAP_AN";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "MAGV";
-            this.dataGridViewTextBoxColumn10.HeaderText = "MAGV";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            // 
             // fmQuestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1697, 1042);
-            this.Controls.Add(this.bODEDataGridView);
             this.Controls.Add(this.grpB_txtQuestion);
             this.Controls.Add(this.bODEGridControl);
             this.Controls.Add(this.barDockControlLeft);
@@ -805,7 +696,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView_Question)).EndInit();
             this.grpB_txtQuestion.ResumeLayout(false);
             this.grpB_txtQuestion.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bODEDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -853,17 +743,6 @@
         private System.Windows.Forms.TextBox nOIDUNGTextBox;
         private System.Windows.Forms.TextBox mAMHTextBox;
         private System.Windows.Forms.ComboBox tRINHDOComboBox;
-        private System.Windows.Forms.DataGridView bODEDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
     }
 }

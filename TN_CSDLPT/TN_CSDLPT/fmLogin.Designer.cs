@@ -56,33 +56,38 @@
             // branch_Lb
             // 
             branch_Lb.AutoSize = true;
-            branch_Lb.Location = new System.Drawing.Point(41, 107);
+            branch_Lb.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            branch_Lb.ForeColor = System.Drawing.Color.Yellow;
+            branch_Lb.Location = new System.Drawing.Point(41, 106);
             branch_Lb.Name = "branch_Lb";
-            branch_Lb.Size = new System.Drawing.Size(56, 21);
+            branch_Lb.Size = new System.Drawing.Size(59, 22);
             branch_Lb.TabIndex = 3;
             branch_Lb.Text = "Cơ sở";
             // 
             // lb_Login
             // 
             this.lb_Login.AutoSize = true;
-            this.lb_Login.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Login.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Login.ForeColor = System.Drawing.Color.Yellow;
             this.lb_Login.Location = new System.Drawing.Point(41, 164);
             this.lb_Login.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_Login.Name = "lb_Login";
-            this.lb_Login.Size = new System.Drawing.Size(91, 21);
+            this.lb_Login.Size = new System.Drawing.Size(99, 22);
             this.lb_Login.TabIndex = 1;
             this.lb_Login.Text = "Đăng nhập";
             // 
             // lb_Password
             // 
             this.lb_Password.AutoSize = true;
-            this.lb_Password.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Password.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Password.ForeColor = System.Drawing.Color.Yellow;
             this.lb_Password.Location = new System.Drawing.Point(41, 228);
             this.lb_Password.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_Password.Name = "lb_Password";
-            this.lb_Password.Size = new System.Drawing.Size(79, 21);
+            this.lb_Password.Size = new System.Drawing.Size(90, 22);
             this.lb_Password.TabIndex = 2;
             this.lb_Password.Text = "Mật khẩu";
+            this.lb_Password.Click += new System.EventHandler(this.lb_Password_Click);
             // 
             // txtBox_LgName
             // 
@@ -101,35 +106,45 @@
             // 
             // btn_Login
             // 
+            this.btn_Login.BackColor = System.Drawing.Color.Aqua;
+            this.btn_Login.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Login.ForeColor = System.Drawing.SystemColors.Desktop;
             this.btn_Login.Location = new System.Drawing.Point(166, 300);
             this.btn_Login.Name = "btn_Login";
             this.btn_Login.Size = new System.Drawing.Size(121, 46);
             this.btn_Login.TabIndex = 6;
             this.btn_Login.Text = "Đăng nhập";
-            this.btn_Login.UseVisualStyleBackColor = true;
+            this.btn_Login.UseVisualStyleBackColor = false;
             this.btn_Login.Click += new System.EventHandler(this.btn_Login_Click_1);
             // 
             // btn_Exit
             // 
+            this.btn_Exit.BackColor = System.Drawing.Color.Aqua;
+            this.btn_Exit.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Exit.ForeColor = System.Drawing.SystemColors.Desktop;
             this.btn_Exit.Location = new System.Drawing.Point(362, 300);
             this.btn_Exit.Name = "btn_Exit";
             this.btn_Exit.Size = new System.Drawing.Size(121, 46);
             this.btn_Exit.TabIndex = 7;
-            this.btn_Exit.Text = "Thoát";
-            this.btn_Exit.UseVisualStyleBackColor = true;
+            this.btn_Exit.Text = "Đóng";
+            this.btn_Exit.UseVisualStyleBackColor = false;
             this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
             // 
             // lb_IDStudent
             // 
             this.lb_IDStudent.AutoSize = true;
-            this.lb_IDStudent.Location = new System.Drawing.Point(41, 164);
+            this.lb_IDStudent.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_IDStudent.ForeColor = System.Drawing.Color.Yellow;
+            this.lb_IDStudent.Location = new System.Drawing.Point(41, 167);
             this.lb_IDStudent.Name = "lb_IDStudent";
-            this.lb_IDStudent.Size = new System.Drawing.Size(104, 21);
+            this.lb_IDStudent.Size = new System.Drawing.Size(114, 22);
             this.lb_IDStudent.TabIndex = 7;
             this.lb_IDStudent.Text = "Mã sinh viên";
+            this.lb_IDStudent.Click += new System.EventHandler(this.lb_IDStudent_Click);
             // 
             // grpBox_Login
             // 
+            this.grpBox_Login.BackColor = System.Drawing.Color.Teal;
             this.grpBox_Login.Controls.Add(branch_Lb);
             this.grpBox_Login.Controls.Add(this.lb_IDStudent);
             this.grpBox_Login.Controls.Add(this.btn_Exit);
@@ -148,6 +163,7 @@
             // 
             // cbBox_Branch
             // 
+            this.cbBox_Branch.BackColor = System.Drawing.Color.Gold;
             this.cbBox_Branch.DataSource = this.vDSPHANMANHBindingSource;
             this.cbBox_Branch.DisplayMember = "TENCOSO";
             this.cbBox_Branch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -172,6 +188,7 @@
             // grpBox_User
             // 
             this.grpBox_User.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+            this.grpBox_User.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.grpBox_User.Controls.Add(this.radBtn_Student);
             this.grpBox_User.Controls.Add(this.radBtn_Teacher);
             this.grpBox_User.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -184,9 +201,11 @@
             // radBtn_Student
             // 
             this.radBtn_Student.AutoSize = true;
-            this.radBtn_Student.Location = new System.Drawing.Point(134, 21);
+            this.radBtn_Student.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radBtn_Student.ForeColor = System.Drawing.Color.LightSkyBlue;
+            this.radBtn_Student.Location = new System.Drawing.Point(153, 21);
             this.radBtn_Student.Name = "radBtn_Student";
-            this.radBtn_Student.Size = new System.Drawing.Size(99, 25);
+            this.radBtn_Student.Size = new System.Drawing.Size(105, 26);
             this.radBtn_Student.TabIndex = 2;
             this.radBtn_Student.TabStop = true;
             this.radBtn_Student.Text = "Sinh viên";
@@ -196,9 +215,11 @@
             // radBtn_Teacher
             // 
             this.radBtn_Teacher.AutoSize = true;
-            this.radBtn_Teacher.Location = new System.Drawing.Point(0, 21);
+            this.radBtn_Teacher.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radBtn_Teacher.ForeColor = System.Drawing.Color.SpringGreen;
+            this.radBtn_Teacher.Location = new System.Drawing.Point(6, 21);
             this.radBtn_Teacher.Name = "radBtn_Teacher";
-            this.radBtn_Teacher.Size = new System.Drawing.Size(110, 25);
+            this.radBtn_Teacher.Size = new System.Drawing.Size(119, 26);
             this.radBtn_Teacher.TabIndex = 1;
             this.radBtn_Teacher.TabStop = true;
             this.radBtn_Teacher.Text = "Giảng viên";

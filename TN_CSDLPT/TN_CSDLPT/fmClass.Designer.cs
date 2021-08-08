@@ -271,6 +271,7 @@
             this.bar_Del.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bar_Del.ImageOptions.Image")));
             this.bar_Del.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bar_Del.ImageOptions.LargeImage")));
             this.bar_Del.Name = "bar_Del";
+            this.bar_Del.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_Del_ItemClick);
             // 
             // bar_Undo
             // 
@@ -279,6 +280,7 @@
             this.bar_Undo.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bar_Undo.ImageOptions.Image")));
             this.bar_Undo.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bar_Undo.ImageOptions.LargeImage")));
             this.bar_Undo.Name = "bar_Undo";
+            this.bar_Undo.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_Undo_ItemClick);
             // 
             // bar_Save
             // 
@@ -287,6 +289,7 @@
             this.bar_Save.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bar_Save.ImageOptions.Image")));
             this.bar_Save.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bar_Save.ImageOptions.LargeImage")));
             this.bar_Save.Name = "bar_Save";
+            this.bar_Save.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_Save_ItemClick);
             // 
             // bar_New
             // 
@@ -295,6 +298,7 @@
             this.bar_New.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bar_New.ImageOptions.Image")));
             this.bar_New.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bar_New.ImageOptions.LargeImage")));
             this.bar_New.Name = "bar_New";
+            this.bar_New.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_New_ItemClick);
             // 
             // bar_forbit
             // 
@@ -302,6 +306,7 @@
             this.bar_forbit.Id = 5;
             this.bar_forbit.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("bar_forbit.ImageOptions.SvgImage")));
             this.bar_forbit.Name = "bar_forbit";
+            this.bar_forbit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_forbit_ItemClick);
             // 
             // bar_exit
             // 
@@ -309,6 +314,7 @@
             this.bar_exit.Id = 6;
             this.bar_exit.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("bar_exit.ImageOptions.SvgImage")));
             this.bar_exit.Name = "bar_exit";
+            this.bar_exit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_exit_ItemClick);
             // 
             // bar3
             // 
@@ -466,6 +472,7 @@
             this.lOPGridControl.TabIndex = 0;
             this.lOPGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            this.lOPGridControl.Click += new System.EventHandler(this.lOPGridControl_Click);
             // 
             // gridView1
             // 
@@ -822,5 +829,10 @@
         private DevExpress.XtraEditors.TextEdit hOTextEdit;
         private DevExpress.XtraEditors.TextEdit mASVTextEdit;
         private System.Windows.Forms.TextBox mALOPTextBox;
+        private System.Windows.Forms.ToolStripMenuItem thêmLớpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem xóaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem phụcHồiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem làmMớiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ghiToolStripMenuItem;
     }
 }

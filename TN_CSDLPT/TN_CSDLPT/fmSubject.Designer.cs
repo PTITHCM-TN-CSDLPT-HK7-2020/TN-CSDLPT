@@ -65,6 +65,7 @@
             this.bODETableAdapter = new TN_CSDLPT.DSTableAdapters.BODETableAdapter();
             this.bODEBindingSource_FK = new System.Windows.Forms.BindingSource(this.components);
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.label1 = new System.Windows.Forms.Label();
             mAMHLabel = new System.Windows.Forms.Label();
             tENMHLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
@@ -83,7 +84,7 @@
             // mAMHLabel
             // 
             mAMHLabel.AutoSize = true;
-            mAMHLabel.Location = new System.Drawing.Point(43, 26);
+            mAMHLabel.Location = new System.Drawing.Point(83, 115);
             mAMHLabel.Name = "mAMHLabel";
             mAMHLabel.Size = new System.Drawing.Size(113, 22);
             mAMHLabel.TabIndex = 0;
@@ -92,7 +93,7 @@
             // tENMHLabel
             // 
             tENMHLabel.AutoSize = true;
-            tENMHLabel.Location = new System.Drawing.Point(43, 68);
+            tENMHLabel.Location = new System.Drawing.Point(542, 115);
             tENMHLabel.Name = "tENMHLabel";
             tENMHLabel.Size = new System.Drawing.Size(117, 22);
             tENMHLabel.TabIndex = 2;
@@ -398,6 +399,7 @@
             // 
             // grpB_Subjects
             // 
+            this.grpB_Subjects.Controls.Add(this.label1);
             this.grpB_Subjects.Controls.Add(tENMHLabel);
             this.grpB_Subjects.Controls.Add(this.tENMHTextEdit);
             this.grpB_Subjects.Controls.Add(mAMHLabel);
@@ -413,20 +415,24 @@
             // 
             this.tENMHTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.mONHOCBindingSource, "TENMH", true));
             this.tENMHTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mONHOCBindingSource, "TENMH", true));
-            this.tENMHTextEdit.Location = new System.Drawing.Point(175, 68);
+            this.tENMHTextEdit.Location = new System.Drawing.Point(656, 112);
             this.tENMHTextEdit.MenuManager = this.barManager1;
             this.tENMHTextEdit.Name = "tENMHTextEdit";
-            this.tENMHTextEdit.Size = new System.Drawing.Size(340, 22);
+            this.tENMHTextEdit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tENMHTextEdit.Properties.Appearance.Options.UseFont = true;
+            this.tENMHTextEdit.Size = new System.Drawing.Size(236, 28);
             this.tENMHTextEdit.TabIndex = 2;
             // 
             // mAMHTextEdit
             // 
             this.mAMHTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.mONHOCBindingSource, "MAMH", true));
             this.mAMHTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mONHOCBindingSource, "MAMH", true));
-            this.mAMHTextEdit.Location = new System.Drawing.Point(175, 26);
+            this.mAMHTextEdit.Location = new System.Drawing.Point(202, 112);
             this.mAMHTextEdit.MenuManager = this.barManager1;
             this.mAMHTextEdit.Name = "mAMHTextEdit";
-            this.mAMHTextEdit.Size = new System.Drawing.Size(340, 22);
+            this.mAMHTextEdit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mAMHTextEdit.Properties.Appearance.Options.UseFont = true;
+            this.mAMHTextEdit.Size = new System.Drawing.Size(234, 28);
             this.mAMHTextEdit.TabIndex = 1;
             // 
             // bODEBindingSource
@@ -449,6 +455,17 @@
             this.barButtonItem2.Id = 8;
             this.barButtonItem2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem2.ImageOptions.SvgImage")));
             this.barButtonItem2.Name = "barButtonItem2";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Blue;
+            this.label1.Location = new System.Drawing.Point(387, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(272, 39);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Thông tin môn học";
             // 
             // fmSubject
             // 
@@ -523,5 +540,6 @@
         private System.Windows.Forms.BindingSource bODEBindingSource_FK;
         private DevExpress.XtraBars.BarButtonItem barBtn_Forbid;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
+        private System.Windows.Forms.Label label1;
     }
 }

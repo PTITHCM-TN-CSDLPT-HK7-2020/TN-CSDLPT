@@ -1713,6 +1713,9 @@
         mvXm/n+kspBZBjINSwAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="sP_MA_GV_CHUA_TAO_TKBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>97, 17</value>
+  </metadata>
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAoghJREFUeF7t
@@ -2410,9 +2413,6 @@
         6QT8QuBE6kPewMD/D/EeABGdqwoZAAAAAElFTkSuQmCC
 </value>
   </data>
-  <metadata name="sP_MA_GV_CHUA_TAO_TKBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>97, 17</value>
-  </metadata>
   <metadata name="sP_MA_GV_CHUA_TAO_TKTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>431, 17</value>
   </metadata>

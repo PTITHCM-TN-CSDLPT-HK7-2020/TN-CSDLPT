@@ -21,8 +21,8 @@ namespace TN_CSDLPT
         public static SqlConnection conn1 = new SqlConnection();
         public static String connstr1;
         public static String servername1 = "";
-        //public static String mlogin1 = "HTKN";
-        //public static String password1 = "123";
+        public static String mlogin1 = "sa";
+        public static String password1 = "123";
 
         public static SqlDataReader myReader;
         public static String servername="";//chon sever ket noi toi
@@ -38,7 +38,7 @@ namespace TN_CSDLPT
         public static String passwordDN = "";
         public static String mGroup = "";
         public static String mHoten = "";
-        public static int mCoso = 0;//luu vi tri co so trên combox box branch
+        public static int mCoso = 0;//luu vi tri co so trên combobox branch
 
         public static BindingSource bds_dspm = new BindingSource();  // giữ bdsPM khi đăng nhập
         public static fmMain fmChinh;

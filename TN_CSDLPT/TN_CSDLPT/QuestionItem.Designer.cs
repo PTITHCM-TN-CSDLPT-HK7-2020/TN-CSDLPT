@@ -57,9 +57,9 @@
             this.lb_ContentQuestion.Location = new System.Drawing.Point(163, 38);
             this.lb_ContentQuestion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_ContentQuestion.Name = "lb_ContentQuestion";
-            this.lb_ContentQuestion.Size = new System.Drawing.Size(135, 22);
+            this.lb_ContentQuestion.Size = new System.Drawing.Size(144, 22);
             this.lb_ContentQuestion.TabIndex = 1;
-            this.lb_ContentQuestion.Text = "Nội dug câu hỏi";
+            this.lb_ContentQuestion.Text = "Nội dung câu hỏi";
             // 
             // rBtn_AnswerA
             // 

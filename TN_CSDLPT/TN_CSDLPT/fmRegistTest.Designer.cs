@@ -60,6 +60,8 @@
             this.lANSpinEdit = new DevExpress.XtraEditors.SpinEdit();
             this.sOCAUTHISpinEdit = new DevExpress.XtraEditors.SpinEdit();
             this.grpB_txtRegistTest = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.mAGVTextBox = new System.Windows.Forms.TextBox();
             this.nGAYTHIDateEdit = new DevExpress.XtraEditors.DateEdit();
             this.mAMHComboBox1 = new System.Windows.Forms.ComboBox();
@@ -99,6 +101,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.lANSpinEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sOCAUTHISpinEdit.Properties)).BeginInit();
             this.grpB_txtRegistTest.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nGAYTHIDateEdit.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nGAYTHIDateEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOPBindingSource)).BeginInit();
@@ -112,7 +115,8 @@
             // mALOPLabel
             // 
             mALOPLabel.AutoSize = true;
-            mALOPLabel.Location = new System.Drawing.Point(12, 26);
+            mALOPLabel.ForeColor = System.Drawing.Color.Yellow;
+            mALOPLabel.Location = new System.Drawing.Point(272, 58);
             mALOPLabel.Name = "mALOPLabel";
             mALOPLabel.Size = new System.Drawing.Size(74, 22);
             mALOPLabel.TabIndex = 5;
@@ -121,7 +125,8 @@
             // mAGVLabel
             // 
             mAGVLabel.AutoSize = true;
-            mAGVLabel.Location = new System.Drawing.Point(12, 80);
+            mAGVLabel.ForeColor = System.Drawing.Color.Yellow;
+            mAGVLabel.Location = new System.Drawing.Point(272, 113);
             mAGVLabel.Name = "mAGVLabel";
             mAGVLabel.Size = new System.Drawing.Size(120, 22);
             mAGVLabel.TabIndex = 7;
@@ -130,7 +135,8 @@
             // mAMHLabel
             // 
             mAMHLabel.AutoSize = true;
-            mAMHLabel.Location = new System.Drawing.Point(12, 134);
+            mAMHLabel.ForeColor = System.Drawing.Color.Yellow;
+            mAMHLabel.Location = new System.Drawing.Point(272, 168);
             mAMHLabel.Name = "mAMHLabel";
             mAMHLabel.Size = new System.Drawing.Size(113, 22);
             mAMHLabel.TabIndex = 9;
@@ -139,7 +145,8 @@
             // tRINHDOLabel
             // 
             tRINHDOLabel.AutoSize = true;
-            tRINHDOLabel.Location = new System.Drawing.Point(12, 193);
+            tRINHDOLabel.ForeColor = System.Drawing.Color.Yellow;
+            tRINHDOLabel.Location = new System.Drawing.Point(272, 223);
             tRINHDOLabel.Name = "tRINHDOLabel";
             tRINHDOLabel.Size = new System.Drawing.Size(83, 22);
             tRINHDOLabel.TabIndex = 11;
@@ -148,7 +155,8 @@
             // lANLabel
             // 
             lANLabel.AutoSize = true;
-            lANLabel.Location = new System.Drawing.Point(553, 31);
+            lANLabel.ForeColor = System.Drawing.Color.Yellow;
+            lANLabel.Location = new System.Drawing.Point(769, 58);
             lANLabel.Name = "lANLabel";
             lANLabel.Size = new System.Drawing.Size(100, 22);
             lANLabel.TabIndex = 13;
@@ -157,7 +165,8 @@
             // sOCAUTHILabel
             // 
             sOCAUTHILabel.AutoSize = true;
-            sOCAUTHILabel.Location = new System.Drawing.Point(553, 85);
+            sOCAUTHILabel.ForeColor = System.Drawing.Color.Yellow;
+            sOCAUTHILabel.Location = new System.Drawing.Point(769, 113);
             sOCAUTHILabel.Name = "sOCAUTHILabel";
             sOCAUTHILabel.Size = new System.Drawing.Size(94, 22);
             sOCAUTHILabel.TabIndex = 14;
@@ -166,7 +175,8 @@
             // tHOIGIANLabel1
             // 
             tHOIGIANLabel1.AutoSize = true;
-            tHOIGIANLabel1.Location = new System.Drawing.Point(553, 188);
+            tHOIGIANLabel1.ForeColor = System.Drawing.Color.Yellow;
+            tHOIGIANLabel1.Location = new System.Drawing.Point(769, 225);
             tHOIGIANLabel1.Name = "tHOIGIANLabel1";
             tHOIGIANLabel1.Size = new System.Drawing.Size(92, 22);
             tHOIGIANLabel1.TabIndex = 17;
@@ -175,7 +185,8 @@
             // nGAYTHILabel
             // 
             nGAYTHILabel.AutoSize = true;
-            nGAYTHILabel.Location = new System.Drawing.Point(553, 137);
+            nGAYTHILabel.ForeColor = System.Drawing.Color.Yellow;
+            nGAYTHILabel.Location = new System.Drawing.Point(769, 168);
             nGAYTHILabel.Name = "nGAYTHILabel";
             nGAYTHILabel.Size = new System.Drawing.Size(82, 22);
             nGAYTHILabel.TabIndex = 17;
@@ -356,7 +367,7 @@
             "A",
             "B",
             "C"});
-            this.tRINHDOComboBox.Location = new System.Drawing.Point(142, 190);
+            this.tRINHDOComboBox.Location = new System.Drawing.Point(402, 220);
             this.tRINHDOComboBox.Name = "tRINHDOComboBox";
             this.tRINHDOComboBox.Size = new System.Drawing.Size(214, 30);
             this.tRINHDOComboBox.TabIndex = 3;
@@ -369,10 +380,10 @@
             0,
             0,
             0});
-            this.lANSpinEdit.Location = new System.Drawing.Point(672, 30);
+            this.lANSpinEdit.Location = new System.Drawing.Point(888, 57);
             this.lANSpinEdit.MenuManager = this.barManager1;
             this.lANSpinEdit.Name = "lANSpinEdit";
-            this.lANSpinEdit.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lANSpinEdit.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lANSpinEdit.Properties.Appearance.Options.UseFont = true;
             this.lANSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -386,7 +397,7 @@
             0,
             0,
             0});
-            this.lANSpinEdit.Size = new System.Drawing.Size(287, 26);
+            this.lANSpinEdit.Size = new System.Drawing.Size(214, 28);
             this.lANSpinEdit.TabIndex = 4;
             // 
             // sOCAUTHISpinEdit
@@ -397,10 +408,10 @@
             0,
             0,
             0});
-            this.sOCAUTHISpinEdit.Location = new System.Drawing.Point(672, 82);
+            this.sOCAUTHISpinEdit.Location = new System.Drawing.Point(888, 112);
             this.sOCAUTHISpinEdit.MenuManager = this.barManager1;
             this.sOCAUTHISpinEdit.Name = "sOCAUTHISpinEdit";
-            this.sOCAUTHISpinEdit.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sOCAUTHISpinEdit.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sOCAUTHISpinEdit.Properties.Appearance.Options.UseFont = true;
             this.sOCAUTHISpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -414,11 +425,14 @@
             0,
             0,
             0});
-            this.sOCAUTHISpinEdit.Size = new System.Drawing.Size(287, 26);
+            this.sOCAUTHISpinEdit.Size = new System.Drawing.Size(214, 28);
             this.sOCAUTHISpinEdit.TabIndex = 5;
             // 
             // grpB_txtRegistTest
             // 
+            this.grpB_txtRegistTest.BackColor = System.Drawing.Color.Teal;
+            this.grpB_txtRegistTest.Controls.Add(this.pictureBox1);
+            this.grpB_txtRegistTest.Controls.Add(this.label2);
             this.grpB_txtRegistTest.Controls.Add(this.mAGVTextBox);
             this.grpB_txtRegistTest.Controls.Add(this.nGAYTHIDateEdit);
             this.grpB_txtRegistTest.Controls.Add(this.mAMHComboBox1);
@@ -442,11 +456,31 @@
             this.grpB_txtRegistTest.TabIndex = 18;
             this.grpB_txtRegistTest.TabStop = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::TN_CSDLPT.Properties.Resources.exam;
+            this.pictureBox1.Location = new System.Drawing.Point(61, 77);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(132, 132);
+            this.pictureBox1.TabIndex = 29;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Yellow;
+            this.label2.Location = new System.Drawing.Point(567, 3);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(360, 32);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Thông tin về chi tiết về ca thi";
+            // 
             // mAGVTextBox
             // 
             this.mAGVTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.gIAOVIEN_DANGKYBindingSource, "MAGV", true));
             this.mAGVTextBox.Enabled = false;
-            this.mAGVTextBox.Location = new System.Drawing.Point(142, 73);
+            this.mAGVTextBox.Location = new System.Drawing.Point(402, 110);
             this.mAGVTextBox.Name = "mAGVTextBox";
             this.mAGVTextBox.Size = new System.Drawing.Size(214, 30);
             this.mAGVTextBox.TabIndex = 28;
@@ -456,16 +490,16 @@
             // 
             this.nGAYTHIDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.gIAOVIEN_DANGKYBindingSource, "NGAYTHI", true));
             this.nGAYTHIDateEdit.EditValue = null;
-            this.nGAYTHIDateEdit.Location = new System.Drawing.Point(672, 133);
+            this.nGAYTHIDateEdit.Location = new System.Drawing.Point(888, 167);
             this.nGAYTHIDateEdit.MenuManager = this.barManager1;
             this.nGAYTHIDateEdit.Name = "nGAYTHIDateEdit";
-            this.nGAYTHIDateEdit.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nGAYTHIDateEdit.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nGAYTHIDateEdit.Properties.Appearance.Options.UseFont = true;
             this.nGAYTHIDateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.nGAYTHIDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.nGAYTHIDateEdit.Size = new System.Drawing.Size(287, 26);
+            this.nGAYTHIDateEdit.Size = new System.Drawing.Size(214, 28);
             this.nGAYTHIDateEdit.TabIndex = 6;
             // 
             // mAMHComboBox1
@@ -476,7 +510,7 @@
             this.mAMHComboBox1.DataSource = this.mONHOCBindingSource;
             this.mAMHComboBox1.DisplayMember = "MAMH";
             this.mAMHComboBox1.FormattingEnabled = true;
-            this.mAMHComboBox1.Location = new System.Drawing.Point(142, 131);
+            this.mAMHComboBox1.Location = new System.Drawing.Point(402, 165);
             this.mAMHComboBox1.Name = "mAMHComboBox1";
             this.mAMHComboBox1.Size = new System.Drawing.Size(214, 30);
             this.mAMHComboBox1.TabIndex = 2;
@@ -490,7 +524,7 @@
             this.mALOPComboBox.DataSource = this.lOPBindingSource;
             this.mALOPComboBox.DisplayMember = "MALOP";
             this.mALOPComboBox.FormattingEnabled = true;
-            this.mALOPComboBox.Location = new System.Drawing.Point(142, 23);
+            this.mALOPComboBox.Location = new System.Drawing.Point(402, 55);
             this.mALOPComboBox.Name = "mALOPComboBox";
             this.mALOPComboBox.Size = new System.Drawing.Size(214, 30);
             this.mALOPComboBox.TabIndex = 1;
@@ -509,10 +543,10 @@
             0,
             0,
             0});
-            this.tHOIGIANSpinEdit.Location = new System.Drawing.Point(672, 184);
+            this.tHOIGIANSpinEdit.Location = new System.Drawing.Point(888, 222);
             this.tHOIGIANSpinEdit.MenuManager = this.barManager1;
             this.tHOIGIANSpinEdit.Name = "tHOIGIANSpinEdit";
-            this.tHOIGIANSpinEdit.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tHOIGIANSpinEdit.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tHOIGIANSpinEdit.Properties.Appearance.Options.UseFont = true;
             this.tHOIGIANSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -526,7 +560,7 @@
             0,
             0,
             0});
-            this.tHOIGIANSpinEdit.Size = new System.Drawing.Size(287, 26);
+            this.tHOIGIANSpinEdit.Size = new System.Drawing.Size(214, 28);
             this.tHOIGIANSpinEdit.TabIndex = 7;
             // 
             // gIAOVIENBindingSource
@@ -536,6 +570,7 @@
             // 
             // grpB_Branch
             // 
+            this.grpB_Branch.BackColor = System.Drawing.Color.Blue;
             this.grpB_Branch.Controls.Add(this.label1);
             this.grpB_Branch.Controls.Add(this.cbBox_Branch);
             this.grpB_Branch.Dock = System.Windows.Forms.DockStyle.Top;
@@ -548,9 +583,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(183, 26);
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Yellow;
+            this.label1.Location = new System.Drawing.Point(498, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 22);
+            this.label1.Size = new System.Drawing.Size(85, 32);
             this.label1.TabIndex = 5;
             this.label1.Text = "Cơ sở";
             // 
@@ -558,8 +595,9 @@
             // 
             this.cbBox_Branch.DisplayMember = "TENCOSO";
             this.cbBox_Branch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbBox_Branch.ForeColor = System.Drawing.Color.Yellow;
             this.cbBox_Branch.FormattingEnabled = true;
-            this.cbBox_Branch.Location = new System.Drawing.Point(247, 23);
+            this.cbBox_Branch.Location = new System.Drawing.Point(589, 23);
             this.cbBox_Branch.Name = "cbBox_Branch";
             this.cbBox_Branch.Size = new System.Drawing.Size(317, 30);
             this.cbBox_Branch.TabIndex = 4;
@@ -598,12 +636,16 @@
             // 
             // colMAGV
             // 
+            this.colMAGV.AppearanceCell.BackColor = System.Drawing.Color.Silver;
             this.colMAGV.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colMAGV.AppearanceCell.Options.UseBackColor = true;
             this.colMAGV.AppearanceCell.Options.UseFont = true;
-            this.colMAGV.AppearanceHeader.BackColor = System.Drawing.Color.Aqua;
+            this.colMAGV.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Primary;
             this.colMAGV.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colMAGV.AppearanceHeader.ForeColor = System.Drawing.Color.White;
             this.colMAGV.AppearanceHeader.Options.UseBackColor = true;
             this.colMAGV.AppearanceHeader.Options.UseFont = true;
+            this.colMAGV.AppearanceHeader.Options.UseForeColor = true;
             this.colMAGV.Caption = "Mã giáo viên";
             this.colMAGV.FieldName = "MAGV";
             this.colMAGV.MinWidth = 25;
@@ -614,12 +656,16 @@
             // 
             // colMAMH
             // 
+            this.colMAMH.AppearanceCell.BackColor = System.Drawing.Color.Silver;
             this.colMAMH.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colMAMH.AppearanceCell.Options.UseBackColor = true;
             this.colMAMH.AppearanceCell.Options.UseFont = true;
-            this.colMAMH.AppearanceHeader.BackColor = System.Drawing.Color.Aqua;
+            this.colMAMH.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Primary;
             this.colMAMH.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colMAMH.AppearanceHeader.ForeColor = System.Drawing.Color.White;
             this.colMAMH.AppearanceHeader.Options.UseBackColor = true;
             this.colMAMH.AppearanceHeader.Options.UseFont = true;
+            this.colMAMH.AppearanceHeader.Options.UseForeColor = true;
             this.colMAMH.Caption = "Mã môn học";
             this.colMAMH.FieldName = "MAMH";
             this.colMAMH.MinWidth = 25;
@@ -630,12 +676,16 @@
             // 
             // colMALOP
             // 
+            this.colMALOP.AppearanceCell.BackColor = System.Drawing.Color.Silver;
             this.colMALOP.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colMALOP.AppearanceCell.Options.UseBackColor = true;
             this.colMALOP.AppearanceCell.Options.UseFont = true;
-            this.colMALOP.AppearanceHeader.BackColor = System.Drawing.Color.Aqua;
+            this.colMALOP.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Primary;
             this.colMALOP.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colMALOP.AppearanceHeader.ForeColor = System.Drawing.Color.White;
             this.colMALOP.AppearanceHeader.Options.UseBackColor = true;
             this.colMALOP.AppearanceHeader.Options.UseFont = true;
+            this.colMALOP.AppearanceHeader.Options.UseForeColor = true;
             this.colMALOP.Caption = "Mã lớp";
             this.colMALOP.FieldName = "MALOP";
             this.colMALOP.MinWidth = 25;
@@ -646,12 +696,16 @@
             // 
             // colTRINHDO
             // 
+            this.colTRINHDO.AppearanceCell.BackColor = System.Drawing.Color.Silver;
             this.colTRINHDO.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colTRINHDO.AppearanceCell.Options.UseBackColor = true;
             this.colTRINHDO.AppearanceCell.Options.UseFont = true;
-            this.colTRINHDO.AppearanceHeader.BackColor = System.Drawing.Color.Aqua;
+            this.colTRINHDO.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Primary;
             this.colTRINHDO.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colTRINHDO.AppearanceHeader.ForeColor = System.Drawing.Color.White;
             this.colTRINHDO.AppearanceHeader.Options.UseBackColor = true;
             this.colTRINHDO.AppearanceHeader.Options.UseFont = true;
+            this.colTRINHDO.AppearanceHeader.Options.UseForeColor = true;
             this.colTRINHDO.Caption = "Trình độ";
             this.colTRINHDO.FieldName = "TRINHDO";
             this.colTRINHDO.MinWidth = 25;
@@ -662,12 +716,16 @@
             // 
             // colNGAYTHI
             // 
+            this.colNGAYTHI.AppearanceCell.BackColor = System.Drawing.Color.Silver;
             this.colNGAYTHI.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colNGAYTHI.AppearanceCell.Options.UseBackColor = true;
             this.colNGAYTHI.AppearanceCell.Options.UseFont = true;
-            this.colNGAYTHI.AppearanceHeader.BackColor = System.Drawing.Color.Aqua;
+            this.colNGAYTHI.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Primary;
             this.colNGAYTHI.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colNGAYTHI.AppearanceHeader.ForeColor = System.Drawing.Color.White;
             this.colNGAYTHI.AppearanceHeader.Options.UseBackColor = true;
             this.colNGAYTHI.AppearanceHeader.Options.UseFont = true;
+            this.colNGAYTHI.AppearanceHeader.Options.UseForeColor = true;
             this.colNGAYTHI.Caption = "Ngày thi";
             this.colNGAYTHI.FieldName = "NGAYTHI";
             this.colNGAYTHI.MinWidth = 25;
@@ -678,12 +736,16 @@
             // 
             // colLAN
             // 
+            this.colLAN.AppearanceCell.BackColor = System.Drawing.Color.Silver;
             this.colLAN.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colLAN.AppearanceCell.Options.UseBackColor = true;
             this.colLAN.AppearanceCell.Options.UseFont = true;
-            this.colLAN.AppearanceHeader.BackColor = System.Drawing.Color.Aqua;
+            this.colLAN.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Primary;
             this.colLAN.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colLAN.AppearanceHeader.ForeColor = System.Drawing.Color.White;
             this.colLAN.AppearanceHeader.Options.UseBackColor = true;
             this.colLAN.AppearanceHeader.Options.UseFont = true;
+            this.colLAN.AppearanceHeader.Options.UseForeColor = true;
             this.colLAN.Caption = "Lần thi";
             this.colLAN.FieldName = "LAN";
             this.colLAN.MinWidth = 25;
@@ -694,13 +756,17 @@
             // 
             // colSOCAUTHI
             // 
+            this.colSOCAUTHI.AppearanceCell.BackColor = System.Drawing.Color.Silver;
             this.colSOCAUTHI.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colSOCAUTHI.AppearanceCell.Options.UseBackColor = true;
             this.colSOCAUTHI.AppearanceCell.Options.UseFont = true;
-            this.colSOCAUTHI.AppearanceHeader.BackColor = System.Drawing.Color.Aqua;
+            this.colSOCAUTHI.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Primary;
             this.colSOCAUTHI.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colSOCAUTHI.AppearanceHeader.ForeColor = System.Drawing.Color.White;
             this.colSOCAUTHI.AppearanceHeader.Options.UseBackColor = true;
             this.colSOCAUTHI.AppearanceHeader.Options.UseFont = true;
-            this.colSOCAUTHI.Caption = "Câu thi";
+            this.colSOCAUTHI.AppearanceHeader.Options.UseForeColor = true;
+            this.colSOCAUTHI.Caption = "Số câu thi";
             this.colSOCAUTHI.FieldName = "SOCAUTHI";
             this.colSOCAUTHI.MinWidth = 25;
             this.colSOCAUTHI.Name = "colSOCAUTHI";
@@ -710,12 +776,16 @@
             // 
             // colTHOIGIAN
             // 
+            this.colTHOIGIAN.AppearanceCell.BackColor = System.Drawing.Color.Silver;
             this.colTHOIGIAN.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colTHOIGIAN.AppearanceCell.Options.UseBackColor = true;
             this.colTHOIGIAN.AppearanceCell.Options.UseFont = true;
-            this.colTHOIGIAN.AppearanceHeader.BackColor = System.Drawing.Color.Aqua;
+            this.colTHOIGIAN.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Primary;
             this.colTHOIGIAN.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colTHOIGIAN.AppearanceHeader.ForeColor = System.Drawing.Color.White;
             this.colTHOIGIAN.AppearanceHeader.Options.UseBackColor = true;
             this.colTHOIGIAN.AppearanceHeader.Options.UseFont = true;
+            this.colTHOIGIAN.AppearanceHeader.Options.UseForeColor = true;
             this.colTHOIGIAN.Caption = "Thời gian";
             this.colTHOIGIAN.FieldName = "THOIGIAN";
             this.colTHOIGIAN.MinWidth = 25;
@@ -742,6 +812,7 @@
             this.tableAdapterManager.BAITHITableAdapter = null;
             this.tableAdapterManager.BANGDIEMTableAdapter = null;
             this.tableAdapterManager.BODETableAdapter = null;
+            this.tableAdapterManager.CHITIETBAITHISVTableAdapter = null;
             this.tableAdapterManager.COSOTableAdapter = null;
             this.tableAdapterManager.GIAOVIEN_DANGKYTableAdapter = this.gIAOVIEN_DANGKYTableAdapter;
             this.tableAdapterManager.GIAOVIENTableAdapter = null;
@@ -777,6 +848,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.sOCAUTHISpinEdit.Properties)).EndInit();
             this.grpB_txtRegistTest.ResumeLayout(false);
             this.grpB_txtRegistTest.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nGAYTHIDateEdit.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nGAYTHIDateEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOPBindingSource)).EndInit();
@@ -839,5 +911,7 @@
         private DevExpress.XtraEditors.DateEdit nGAYTHIDateEdit;
         private System.Windows.Forms.TextBox mAGVTextBox;
         private DSTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

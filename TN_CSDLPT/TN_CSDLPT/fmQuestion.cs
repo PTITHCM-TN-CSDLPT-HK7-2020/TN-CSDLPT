@@ -91,6 +91,7 @@ namespace TN_CSDLPT
             bODEBindingSource.AddNew();
 
             mAGVTextBox.Text = Program.username;
+            tRINHDOComboBox.SelectedIndex = 0;
 
             barBtn_Add.Enabled = barBtn_Delete.Enabled = barBtn_Refresh.Enabled = false;
             barBtn_Save.Enabled = barBtn_Undo.Enabled = barBtn_Exit.Enabled =barBtn_Forbid.Enabled = true;
@@ -139,6 +140,12 @@ namespace TN_CSDLPT
 
         private void barBtn_Save_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            if (tRINHDOComboBox.SelectedIndex == -1)
+            {
+                MessageBox.Show("trình độ đang để trống!", "", MessageBoxButtons.OK);
+                tRINHDOComboBox.Focus();
+                return;
+            }
             try
             {
                 bODEBindingSource.EndEdit();

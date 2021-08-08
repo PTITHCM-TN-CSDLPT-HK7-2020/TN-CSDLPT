@@ -67,6 +67,8 @@
             this.colMACS = new DevExpress.XtraGrid.Columns.GridColumn();
             this.grpB_Farculty = new System.Windows.Forms.GroupBox();
             this.grpB_txtFarculty = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.mAKHTextBox = new System.Windows.Forms.TextBox();
             this.tENKHTextBox = new System.Windows.Forms.TextBox();
             this.mACSTextBox = new System.Windows.Forms.TextBox();
@@ -90,6 +92,8 @@
             this.lOPBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.grpB_Teacher = new System.Windows.Forms.GroupBox();
             this.grpB_txtTeacher = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.mAGVTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.mAKHTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.hOTextEdit = new DevExpress.XtraEditors.TextEdit();
@@ -114,6 +118,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.grpB_Farculty.SuspendLayout();
             this.grpB_txtFarculty.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gIAOVIENGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gIAOVIENBindingSource_FK)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
@@ -122,6 +127,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.lOPBindingSource)).BeginInit();
             this.grpB_Teacher.SuspendLayout();
             this.grpB_txtTeacher.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mAGVTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mAKHTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hOTextEdit.Properties)).BeginInit();
@@ -133,7 +139,8 @@
             // mAGVLabel
             // 
             mAGVLabel.AutoSize = true;
-            mAGVLabel.Location = new System.Drawing.Point(6, 33);
+            mAGVLabel.ForeColor = System.Drawing.Color.Cyan;
+            mAGVLabel.Location = new System.Drawing.Point(222, 74);
             mAGVLabel.Name = "mAGVLabel";
             mAGVLabel.Size = new System.Drawing.Size(120, 22);
             mAGVLabel.TabIndex = 7;
@@ -142,7 +149,8 @@
             // hOLabel
             // 
             hOLabel.AutoSize = true;
-            hOLabel.Location = new System.Drawing.Point(6, 77);
+            hOLabel.ForeColor = System.Drawing.Color.Cyan;
+            hOLabel.Location = new System.Drawing.Point(222, 117);
             hOLabel.Name = "hOLabel";
             hOLabel.Size = new System.Drawing.Size(40, 22);
             hOLabel.TabIndex = 8;
@@ -151,7 +159,8 @@
             // tENLabel
             // 
             tENLabel.AutoSize = true;
-            tENLabel.Location = new System.Drawing.Point(6, 122);
+            tENLabel.ForeColor = System.Drawing.Color.Cyan;
+            tENLabel.Location = new System.Drawing.Point(222, 160);
             tENLabel.Name = "tENLabel";
             tENLabel.Size = new System.Drawing.Size(46, 22);
             tENLabel.TabIndex = 9;
@@ -160,7 +169,8 @@
             // hOCVILabel
             // 
             hOCVILabel.AutoSize = true;
-            hOCVILabel.Location = new System.Drawing.Point(6, 168);
+            hOCVILabel.ForeColor = System.Drawing.Color.Cyan;
+            hOCVILabel.Location = new System.Drawing.Point(222, 203);
             hOCVILabel.Name = "hOCVILabel";
             hOCVILabel.Size = new System.Drawing.Size(70, 22);
             hOCVILabel.TabIndex = 10;
@@ -169,7 +179,8 @@
             // mAKHLabel1
             // 
             mAKHLabel1.AutoSize = true;
-            mAKHLabel1.Location = new System.Drawing.Point(6, 211);
+            mAKHLabel1.ForeColor = System.Drawing.Color.Cyan;
+            mAKHLabel1.Location = new System.Drawing.Point(222, 246);
             mAKHLabel1.Name = "mAKHLabel1";
             mAKHLabel1.Size = new System.Drawing.Size(84, 22);
             mAKHLabel1.TabIndex = 11;
@@ -178,7 +189,8 @@
             // mACSLabel
             // 
             mACSLabel.AutoSize = true;
-            mACSLabel.Location = new System.Drawing.Point(9, 121);
+            mACSLabel.ForeColor = System.Drawing.Color.Cyan;
+            mACSLabel.Location = new System.Drawing.Point(204, 197);
             mACSLabel.Name = "mACSLabel";
             mACSLabel.Size = new System.Drawing.Size(91, 22);
             mACSLabel.TabIndex = 11;
@@ -187,7 +199,8 @@
             // mAKHLabel
             // 
             mAKHLabel.AutoSize = true;
-            mAKHLabel.Location = new System.Drawing.Point(9, 26);
+            mAKHLabel.ForeColor = System.Drawing.Color.Cyan;
+            mAKHLabel.Location = new System.Drawing.Point(204, 103);
             mAKHLabel.Name = "mAKHLabel";
             mAKHLabel.Size = new System.Drawing.Size(84, 22);
             mAKHLabel.TabIndex = 6;
@@ -196,7 +209,8 @@
             // tENKHLabel
             // 
             tENKHLabel.AutoSize = true;
-            tENKHLabel.Location = new System.Drawing.Point(9, 77);
+            tENKHLabel.ForeColor = System.Drawing.Color.Cyan;
+            tENKHLabel.Location = new System.Drawing.Point(204, 150);
             tENKHLabel.Name = "tENKHLabel";
             tENKHLabel.Size = new System.Drawing.Size(88, 22);
             tENKHLabel.TabIndex = 15;
@@ -374,6 +388,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Blue;
             this.panel1.Controls.Add(this.lb_Branch);
             this.panel1.Controls.Add(this.cbB_Branch);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -388,17 +403,21 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_Branch.AutoSize = true;
-            this.lb_Branch.Location = new System.Drawing.Point(119, 18);
+            this.lb_Branch.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Branch.ForeColor = System.Drawing.Color.Yellow;
+            this.lb_Branch.Location = new System.Drawing.Point(92, 14);
             this.lb_Branch.Name = "lb_Branch";
-            this.lb_Branch.Size = new System.Drawing.Size(58, 22);
+            this.lb_Branch.Size = new System.Drawing.Size(85, 32);
             this.lb_Branch.TabIndex = 3;
             this.lb_Branch.Text = "Cơ sở";
             // 
             // cbB_Branch
             // 
+            this.cbB_Branch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.cbB_Branch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbB_Branch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbB_Branch.FormattingEnabled = true;
-            this.cbB_Branch.Location = new System.Drawing.Point(183, 15);
+            this.cbB_Branch.Location = new System.Drawing.Point(184, 16);
             this.cbB_Branch.Name = "cbB_Branch";
             this.cbB_Branch.Size = new System.Drawing.Size(324, 30);
             this.cbB_Branch.TabIndex = 2;
@@ -436,6 +455,7 @@
             this.kHOAGridControl.TabIndex = 5;
             this.kHOAGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            this.kHOAGridControl.Click += new System.EventHandler(this.kHOAGridControl_Click);
             // 
             // gridView1
             // 
@@ -449,14 +469,19 @@
             // 
             // colMAKH
             // 
+            this.colMAKH.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.colMAKH.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colMAKH.AppearanceCell.Options.UseBackColor = true;
             this.colMAKH.AppearanceCell.Options.UseFont = true;
-            this.colMAKH.AppearanceHeader.BackColor = System.Drawing.Color.Aqua;
+            this.colMAKH.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Primary;
             this.colMAKH.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colMAKH.AppearanceHeader.ForeColor = System.Drawing.Color.White;
             this.colMAKH.AppearanceHeader.Options.UseBackColor = true;
             this.colMAKH.AppearanceHeader.Options.UseFont = true;
+            this.colMAKH.AppearanceHeader.Options.UseForeColor = true;
             this.colMAKH.Caption = "Mã khoa";
             this.colMAKH.FieldName = "MAKH";
+            this.colMAKH.GroupInterval = DevExpress.XtraGrid.ColumnGroupInterval.Date;
             this.colMAKH.MinWidth = 25;
             this.colMAKH.Name = "colMAKH";
             this.colMAKH.Visible = true;
@@ -465,12 +490,16 @@
             // 
             // colTENKH
             // 
+            this.colTENKH.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.colTENKH.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colTENKH.AppearanceCell.Options.UseBackColor = true;
             this.colTENKH.AppearanceCell.Options.UseFont = true;
-            this.colTENKH.AppearanceHeader.BackColor = System.Drawing.Color.Aqua;
+            this.colTENKH.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Primary;
             this.colTENKH.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colTENKH.AppearanceHeader.ForeColor = System.Drawing.Color.White;
             this.colTENKH.AppearanceHeader.Options.UseBackColor = true;
             this.colTENKH.AppearanceHeader.Options.UseFont = true;
+            this.colTENKH.AppearanceHeader.Options.UseForeColor = true;
             this.colTENKH.Caption = "Tên khoa";
             this.colTENKH.FieldName = "TENKH";
             this.colTENKH.MinWidth = 25;
@@ -481,12 +510,16 @@
             // 
             // colMACS
             // 
+            this.colMACS.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.colMACS.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colMACS.AppearanceCell.Options.UseBackColor = true;
             this.colMACS.AppearanceCell.Options.UseFont = true;
-            this.colMACS.AppearanceHeader.BackColor = System.Drawing.Color.Aqua;
+            this.colMACS.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Primary;
             this.colMACS.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colMACS.AppearanceHeader.ForeColor = System.Drawing.Color.White;
             this.colMACS.AppearanceHeader.Options.UseBackColor = true;
             this.colMACS.AppearanceHeader.Options.UseFont = true;
+            this.colMACS.AppearanceHeader.Options.UseForeColor = true;
             this.colMACS.Caption = "Mã cơ sở";
             this.colMACS.FieldName = "MACS";
             this.colMACS.MinWidth = 25;
@@ -508,6 +541,9 @@
             // 
             // grpB_txtFarculty
             // 
+            this.grpB_txtFarculty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.grpB_txtFarculty.Controls.Add(this.pictureBox1);
+            this.grpB_txtFarculty.Controls.Add(this.label1);
             this.grpB_txtFarculty.Controls.Add(tENKHLabel);
             this.grpB_txtFarculty.Controls.Add(this.mAKHTextBox);
             this.grpB_txtFarculty.Controls.Add(this.tENKHTextBox);
@@ -521,29 +557,51 @@
             this.grpB_txtFarculty.TabIndex = 6;
             this.grpB_txtFarculty.TabStop = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::TN_CSDLPT.Properties.Resources.department;
+            this.pictureBox1.Location = new System.Drawing.Point(45, 92);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(129, 133);
+            this.pictureBox1.TabIndex = 17;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.label1.Location = new System.Drawing.Point(316, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(232, 32);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Thông tin về khoa";
+            // 
             // mAKHTextBox
             // 
             this.mAKHTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kHOABindingSource, "MAKH", true));
-            this.mAKHTextBox.Location = new System.Drawing.Point(106, 23);
+            this.mAKHTextBox.Location = new System.Drawing.Point(301, 100);
             this.mAKHTextBox.Name = "mAKHTextBox";
-            this.mAKHTextBox.Size = new System.Drawing.Size(472, 30);
+            this.mAKHTextBox.Size = new System.Drawing.Size(366, 30);
             this.mAKHTextBox.TabIndex = 1;
+            this.mAKHTextBox.TextChanged += new System.EventHandler(this.mAKHTextBox_TextChanged);
             // 
             // tENKHTextBox
             // 
             this.tENKHTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kHOABindingSource, "TENKH", true));
-            this.tENKHTextBox.Location = new System.Drawing.Point(106, 74);
+            this.tENKHTextBox.Location = new System.Drawing.Point(301, 147);
             this.tENKHTextBox.Name = "tENKHTextBox";
-            this.tENKHTextBox.Size = new System.Drawing.Size(472, 30);
+            this.tENKHTextBox.Size = new System.Drawing.Size(366, 30);
             this.tENKHTextBox.TabIndex = 2;
+            this.tENKHTextBox.TextChanged += new System.EventHandler(this.tENKHTextBox_TextChanged);
             // 
             // mACSTextBox
             // 
             this.mACSTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kHOABindingSource, "MACS", true));
             this.mACSTextBox.Enabled = false;
-            this.mACSTextBox.Location = new System.Drawing.Point(106, 118);
+            this.mACSTextBox.Location = new System.Drawing.Point(301, 194);
             this.mACSTextBox.Name = "mACSTextBox";
-            this.mACSTextBox.Size = new System.Drawing.Size(472, 30);
+            this.mACSTextBox.Size = new System.Drawing.Size(366, 30);
             this.mACSTextBox.TabIndex = 3;
             // 
             // gIAOVIENGridControl
@@ -558,6 +616,7 @@
             this.gIAOVIENGridControl.TabIndex = 7;
             this.gIAOVIENGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
+            this.gIAOVIENGridControl.Click += new System.EventHandler(this.gIAOVIENGridControl_Click);
             // 
             // gIAOVIENBindingSource_FK
             // 
@@ -578,12 +637,16 @@
             // 
             // colMAGV
             // 
+            this.colMAGV.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.colMAGV.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colMAGV.AppearanceCell.Options.UseBackColor = true;
             this.colMAGV.AppearanceCell.Options.UseFont = true;
-            this.colMAGV.AppearanceHeader.BackColor = System.Drawing.Color.Aqua;
+            this.colMAGV.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Question;
             this.colMAGV.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colMAGV.AppearanceHeader.ForeColor = System.Drawing.Color.White;
             this.colMAGV.AppearanceHeader.Options.UseBackColor = true;
             this.colMAGV.AppearanceHeader.Options.UseFont = true;
+            this.colMAGV.AppearanceHeader.Options.UseForeColor = true;
             this.colMAGV.Caption = "Mã giáo viên";
             this.colMAGV.FieldName = "MAGV";
             this.colMAGV.MinWidth = 25;
@@ -594,12 +657,16 @@
             // 
             // colHO
             // 
+            this.colHO.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.colHO.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colHO.AppearanceCell.Options.UseBackColor = true;
             this.colHO.AppearanceCell.Options.UseFont = true;
-            this.colHO.AppearanceHeader.BackColor = System.Drawing.Color.Aqua;
+            this.colHO.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Question;
             this.colHO.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colHO.AppearanceHeader.ForeColor = System.Drawing.Color.White;
             this.colHO.AppearanceHeader.Options.UseBackColor = true;
             this.colHO.AppearanceHeader.Options.UseFont = true;
+            this.colHO.AppearanceHeader.Options.UseForeColor = true;
             this.colHO.Caption = "Họ";
             this.colHO.FieldName = "HO";
             this.colHO.MinWidth = 25;
@@ -610,12 +677,16 @@
             // 
             // colTEN
             // 
+            this.colTEN.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.colTEN.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colTEN.AppearanceCell.Options.UseBackColor = true;
             this.colTEN.AppearanceCell.Options.UseFont = true;
-            this.colTEN.AppearanceHeader.BackColor = System.Drawing.Color.Aqua;
+            this.colTEN.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Question;
             this.colTEN.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colTEN.AppearanceHeader.ForeColor = System.Drawing.Color.White;
             this.colTEN.AppearanceHeader.Options.UseBackColor = true;
             this.colTEN.AppearanceHeader.Options.UseFont = true;
+            this.colTEN.AppearanceHeader.Options.UseForeColor = true;
             this.colTEN.Caption = "Tên";
             this.colTEN.FieldName = "TEN";
             this.colTEN.MinWidth = 25;
@@ -626,12 +697,16 @@
             // 
             // colHOCVI
             // 
+            this.colHOCVI.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.colHOCVI.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colHOCVI.AppearanceCell.Options.UseBackColor = true;
             this.colHOCVI.AppearanceCell.Options.UseFont = true;
-            this.colHOCVI.AppearanceHeader.BackColor = System.Drawing.Color.Aqua;
+            this.colHOCVI.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Question;
             this.colHOCVI.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colHOCVI.AppearanceHeader.ForeColor = System.Drawing.Color.White;
             this.colHOCVI.AppearanceHeader.Options.UseBackColor = true;
             this.colHOCVI.AppearanceHeader.Options.UseFont = true;
+            this.colHOCVI.AppearanceHeader.Options.UseForeColor = true;
             this.colHOCVI.Caption = "Học vị";
             this.colHOCVI.FieldName = "HOCVI";
             this.colHOCVI.MinWidth = 25;
@@ -642,12 +717,16 @@
             // 
             // colMAKH1
             // 
+            this.colMAKH1.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.colMAKH1.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colMAKH1.AppearanceCell.Options.UseBackColor = true;
             this.colMAKH1.AppearanceCell.Options.UseFont = true;
-            this.colMAKH1.AppearanceHeader.BackColor = System.Drawing.Color.Aqua;
+            this.colMAKH1.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Question;
             this.colMAKH1.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colMAKH1.AppearanceHeader.ForeColor = System.Drawing.Color.White;
             this.colMAKH1.AppearanceHeader.Options.UseBackColor = true;
             this.colMAKH1.AppearanceHeader.Options.UseFont = true;
+            this.colMAKH1.AppearanceHeader.Options.UseForeColor = true;
             this.colMAKH1.Caption = "Mã khoa";
             this.colMAKH1.FieldName = "MAKH";
             this.colMAKH1.MinWidth = 25;
@@ -739,9 +818,13 @@
             this.grpB_Teacher.Size = new System.Drawing.Size(783, 733);
             this.grpB_Teacher.TabIndex = 16;
             this.grpB_Teacher.TabStop = false;
+            this.grpB_Teacher.Enter += new System.EventHandler(this.grpB_Teacher_Enter);
             // 
             // grpB_txtTeacher
             // 
+            this.grpB_txtTeacher.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.grpB_txtTeacher.Controls.Add(this.label2);
+            this.grpB_txtTeacher.Controls.Add(this.pictureBox2);
             this.grpB_txtTeacher.Controls.Add(mAGVLabel);
             this.grpB_txtTeacher.Controls.Add(mAKHLabel1);
             this.grpB_txtTeacher.Controls.Add(this.mAGVTextEdit);
@@ -759,60 +842,80 @@
             this.grpB_txtTeacher.TabIndex = 13;
             this.grpB_txtTeacher.TabStop = false;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.label2.Location = new System.Drawing.Point(243, 13);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(296, 32);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Thông tin về giảng viên";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::TN_CSDLPT.Properties.Resources.teacher__1_;
+            this.pictureBox2.Location = new System.Drawing.Point(42, 103);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(129, 133);
+            this.pictureBox2.TabIndex = 18;
+            this.pictureBox2.TabStop = false;
+            // 
             // mAGVTextEdit
             // 
             this.mAGVTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.gIAOVIENBindingSource_FK, "MAGV", true));
-            this.mAGVTextEdit.Location = new System.Drawing.Point(129, 27);
+            this.mAGVTextEdit.Location = new System.Drawing.Point(345, 68);
             this.mAGVTextEdit.MenuManager = this.barManager1;
             this.mAGVTextEdit.Name = "mAGVTextEdit";
             this.mAGVTextEdit.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mAGVTextEdit.Properties.Appearance.Options.UseFont = true;
-            this.mAGVTextEdit.Size = new System.Drawing.Size(450, 28);
+            this.mAGVTextEdit.Size = new System.Drawing.Size(339, 28);
             this.mAGVTextEdit.TabIndex = 1;
             // 
             // mAKHTextEdit
             // 
             this.mAKHTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.gIAOVIENBindingSource_FK, "MAKH", true));
             this.mAKHTextEdit.Enabled = false;
-            this.mAKHTextEdit.Location = new System.Drawing.Point(129, 208);
+            this.mAKHTextEdit.Location = new System.Drawing.Point(345, 244);
             this.mAKHTextEdit.MenuManager = this.barManager1;
             this.mAKHTextEdit.Name = "mAKHTextEdit";
             this.mAKHTextEdit.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mAKHTextEdit.Properties.Appearance.Options.UseFont = true;
-            this.mAKHTextEdit.Size = new System.Drawing.Size(450, 28);
+            this.mAKHTextEdit.Size = new System.Drawing.Size(339, 28);
             this.mAKHTextEdit.TabIndex = 5;
             // 
             // hOTextEdit
             // 
             this.hOTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.gIAOVIENBindingSource_FK, "HO", true));
-            this.hOTextEdit.Location = new System.Drawing.Point(129, 70);
+            this.hOTextEdit.Location = new System.Drawing.Point(345, 112);
             this.hOTextEdit.MenuManager = this.barManager1;
             this.hOTextEdit.Name = "hOTextEdit";
             this.hOTextEdit.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hOTextEdit.Properties.Appearance.Options.UseFont = true;
-            this.hOTextEdit.Size = new System.Drawing.Size(450, 28);
+            this.hOTextEdit.Size = new System.Drawing.Size(339, 28);
             this.hOTextEdit.TabIndex = 2;
             // 
             // hOCVITextEdit
             // 
             this.hOCVITextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.gIAOVIENBindingSource_FK, "HOCVI", true));
-            this.hOCVITextEdit.Location = new System.Drawing.Point(129, 165);
+            this.hOCVITextEdit.Location = new System.Drawing.Point(345, 200);
             this.hOCVITextEdit.MenuManager = this.barManager1;
             this.hOCVITextEdit.Name = "hOCVITextEdit";
             this.hOCVITextEdit.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hOCVITextEdit.Properties.Appearance.Options.UseFont = true;
-            this.hOCVITextEdit.Size = new System.Drawing.Size(450, 28);
+            this.hOCVITextEdit.Size = new System.Drawing.Size(339, 28);
             this.hOCVITextEdit.TabIndex = 4;
             // 
             // tENTextEdit
             // 
             this.tENTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.gIAOVIENBindingSource_FK, "TEN", true));
-            this.tENTextEdit.Location = new System.Drawing.Point(129, 119);
+            this.tENTextEdit.Location = new System.Drawing.Point(345, 156);
             this.tENTextEdit.MenuManager = this.barManager1;
             this.tENTextEdit.Name = "tENTextEdit";
             this.tENTextEdit.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tENTextEdit.Properties.Appearance.Options.UseFont = true;
-            this.tENTextEdit.Size = new System.Drawing.Size(450, 28);
+            this.tENTextEdit.Size = new System.Drawing.Size(339, 28);
             this.tENTextEdit.TabIndex = 3;
             // 
             // lOPTableAdapter
@@ -856,6 +959,7 @@
             this.grpB_Farculty.ResumeLayout(false);
             this.grpB_txtFarculty.ResumeLayout(false);
             this.grpB_txtFarculty.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gIAOVIENGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gIAOVIENBindingSource_FK)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
@@ -865,6 +969,7 @@
             this.grpB_Teacher.ResumeLayout(false);
             this.grpB_txtTeacher.ResumeLayout(false);
             this.grpB_txtTeacher.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mAGVTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mAKHTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hOTextEdit.Properties)).EndInit();
@@ -938,5 +1043,9 @@
         private System.Windows.Forms.BindingSource bODEBindingSource_FK;
         private DSTableAdapters.BODETableAdapter bODETableAdapter;
         private System.Windows.Forms.ToolStripMenuItem ghiToolStripMenuItem;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label2;
     }
 }

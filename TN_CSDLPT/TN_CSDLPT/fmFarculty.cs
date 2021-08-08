@@ -435,6 +435,31 @@ namespace TN_CSDLPT
             {
                 kHOABindingSource.Position = vitriKH;
             }
-        }       
+        }
+
+        private void mAKHTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tENKHTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kHOAGridControl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gIAOVIENGridControl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void grpB_Teacher_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

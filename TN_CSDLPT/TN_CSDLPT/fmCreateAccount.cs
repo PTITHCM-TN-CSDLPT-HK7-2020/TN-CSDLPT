@@ -16,16 +16,35 @@ namespace TN_CSDLPT
         public static Boolean checkSave = true;
         private Boolean checkThem = false;
         private int dem = 0;
+        string loginCu = "";
+        string passwordCu = "";
 
         public fmCreateAccount()
         {
             InitializeComponent();
         }
 
+        private void DNTK_SA_TAOTK(string login, string password)
+        {
+            Program.mlogin = login;
+            Program.password = password;
+
+            if (Program.KetNoi() == 0)
+            {
+                return;
+            }
+            MessageBox.Show(Program.connstr);
+        }
+
         private void fmCreateAccount_Load(object sender, EventArgs e)
         {
             this.ControlBox = false;
             Program.connstr1 = Program.connstr;
+            MessageBox.Show(Program.connstr1);
+            //lấy login cũ để quay lại sau khi tạo tài khoản
+            loginCu = Program.mlogin;
+            passwordCu = Program.password;
+
             ds1.EnforceConstraints = false;
 
             try
@@ -64,6 +83,8 @@ namespace TN_CSDLPT
 
         private void btnDangKy_Click(object sender, EventArgs e)
         {
+
+            //Check trường rỗng
             if (edtTenDN.Text.Trim().Equals(""))
             {
                 MessageBox.Show("Bạn chưa nhập tên đăng nhập", "", MessageBoxButtons.OK);
@@ -83,7 +104,7 @@ namespace TN_CSDLPT
                 if (Program.conn.State == ConnectionState.Closed) Program.conn.Open();
                 sqlcmd = Program.conn.CreateCommand();
             }
-            else
+            else//trường
             {
                 if (cbbCoSo.SelectedIndex != Program.mCoso)
                 {
@@ -105,6 +126,7 @@ namespace TN_CSDLPT
             }
 
 
+
             sqlcmd.CommandType = CommandType.StoredProcedure;
             sqlcmd.CommandText = "sp_TaoTaiKhoan";
             sqlcmd.Parameters.Add(new SqlParameter("@LGNAME", edtTenDN.Text.Trim()));
@@ -119,6 +141,7 @@ namespace TN_CSDLPT
             int result = -1;
             try
             {
+                DNTK_SA_TAOTK("sa","123");
                 sqlcmd.ExecuteNonQuery();
                 result = (int)sqlcmd.Parameters["@return"].Value;
             }
@@ -135,6 +158,7 @@ namespace TN_CSDLPT
                     Program.conn.Close();
                     MessageBox.Show("Tên đăng nhập đã tồn tại", "Lỗi", MessageBoxButtons.OK);
                     edtTenDN.Focus();
+                    DNTK_SA_TAOTK(loginCu,passwordCu);
                     return;
                 }
                 if (result == 2)
@@ -142,6 +166,7 @@ namespace TN_CSDLPT
                     Program.conn.Close();
                     MessageBox.Show("Mã giảng viên đã tồn tại", "Lỗi", MessageBoxButtons.OK);
                     cbbMaGV.Focus();
+                    DNTK_SA_TAOTK(loginCu, passwordCu);
                     return;
                 }
                 //tao tk thành công
@@ -153,18 +178,21 @@ namespace TN_CSDLPT
                     edtTenDN.Text = "";
                     this.sP_MA_GV_CHUA_TAO_TKTableAdapter.Connection.ConnectionString = Program.connstr1;
                     this.sP_MA_GV_CHUA_TAO_TKTableAdapter.Fill(this.ds1.SP_MA_GV_CHUA_TAO_TK);
+                    DNTK_SA_TAOTK(loginCu, passwordCu);
                     return;
                 }
                 else
                 {
                     Program.conn.Close();
                     MessageBox.Show("Tạo tài khoản thất bại", "Lỗi", MessageBoxButtons.OK);
+                    DNTK_SA_TAOTK(loginCu, passwordCu);
                     return;
                 }
             }
             else
             {
                 MessageBox.Show("Tạo tài khoản thất bại", "Lỗi", MessageBoxButtons.OK);
+                DNTK_SA_TAOTK(loginCu, passwordCu);
                 return;
             }
         }

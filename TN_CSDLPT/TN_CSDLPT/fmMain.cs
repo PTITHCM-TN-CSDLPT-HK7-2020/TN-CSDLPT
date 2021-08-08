@@ -176,6 +176,17 @@ namespace TN_CSDLPT
                 f.MdiParent = this;
                 f.Show();
             }
+            //Form form = this.CheckExists(typeof(Xfm_BangDiem));
+            //if (form != null)
+            //{
+            //    form.Activate();
+            //}
+            //else
+            //{
+            //    Xfm_BangDiem f = new Xfm_BangDiem();
+            //    f.MdiParent = this;
+            //    f.Show();
+            //}
         }
         private void barButtonItem2_Createaccount_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {

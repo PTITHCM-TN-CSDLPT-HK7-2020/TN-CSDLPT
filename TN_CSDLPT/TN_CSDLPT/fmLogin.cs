@@ -130,7 +130,14 @@ namespace TN_CSDLPT
                 MessageBox.Show("Login bạn nhập không có quyền truy cập dữ liệu","Thông báo", MessageBoxButtons.OK);
                 return;
             }
-            Program.mHoten = Program.myReader.GetString(1);
+            try
+            {
+                Program.mHoten = Program.myReader.GetString(1);
+            }
+            catch
+            {
+
+            }
             Program.mGroup = Program.myReader.GetString(2);
             
             Program.myReader.Close();
@@ -151,6 +158,8 @@ namespace TN_CSDLPT
                 Program.fmChinh.barButtonItem_TestTeaccher.Enabled = false;
                 Program.fmChinh.barBtn_RegisTest.Enabled = false;
                 Program.fmChinh.ribbonPageGroup_CreateAccount.Visible = true;
+                Program.fmChinh.ribbonPageGroup3.Enabled=Program.fmChinh.ribbonPageGroup2.Enabled = false;
+
             }
 
             else if (Program.mGroup == "Giangvien")
@@ -159,6 +168,8 @@ namespace TN_CSDLPT
                 Program.fmChinh.barBtn_Farculty.Enabled = false;
                 Program.fmChinh.ribbonPageGroup_CreateAccount.Visible = false;
                 Program.fmChinh.ribPg_Tabbar.Visible = true;
+                Program.fmChinh.barBtn_Subject.Enabled = false;
+                Program.fmChinh.ribbonPageGroup4.Enabled = false;
             }
             else if (Program.mGroup == "Coso")
             {
@@ -172,6 +183,16 @@ namespace TN_CSDLPT
         private void btn_Exit_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void lb_IDStudent_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lb_Password_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

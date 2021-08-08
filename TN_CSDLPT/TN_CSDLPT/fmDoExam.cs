@@ -20,7 +20,7 @@ namespace TN_CSDLPT
 
         private int dem = 0;
         public static Boolean checkThi = false;
-        private Boolean checkThiTiep = false;
+        private Boolean checkThiTiep = false;// Biến lưu nếu sv này thi t
         private Boolean isSinhVien = false;
         private int thoigianThi = 0;
         private int soCauThi = 0;
@@ -364,19 +364,6 @@ namespace TN_CSDLPT
                 dataGridView_Result.DataSource = Program.ExecSqlDataTable(queryLoadBangGVDK);
             }
         }
-
-        //private void fillToolStripButton_Click(object sender, EventArgs e)
-        //{
-        //    try
-        //    {
-        //        this.sP_LISTBANGSVTHITableAdapter.Fill(this.dS.SP_LISTBANGSVTHI, mAMHToolStripTextBox.Text, new System.Nullable<short>(((short)(System.Convert.ChangeType(lANToolStripTextBox.Text, typeof(short))))), new System.Nullable<System.DateTime>(((System.DateTime)(System.Convert.ChangeType(nGAYToolStripTextBox.Text, typeof(System.DateTime))))), mALOPToolStripTextBox.Text, mASVToolStripTextBox.Text);
-        //    }
-        //    catch (System.Exception ex)
-        //    {
-        //        System.Windows.Forms.MessageBox.Show(ex.Message);
-        //    }
-
-        //}
 
         private void btn_Search_Click(object sender, EventArgs e)
         {

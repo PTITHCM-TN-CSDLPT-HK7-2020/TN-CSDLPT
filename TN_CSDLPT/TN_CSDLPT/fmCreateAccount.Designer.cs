@@ -134,7 +134,7 @@
             // 
             // cbbMaGV
             // 
-            this.cbbMaGV.DisplayMember = "TEN";
+            this.cbbMaGV.DataSource = this.sP_MA_GV_CHUA_TAO_TKBindingSource;
             this.cbbMaGV.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbMaGV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbMaGV.FormattingEnabled = true;

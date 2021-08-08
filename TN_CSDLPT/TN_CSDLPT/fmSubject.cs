@@ -63,12 +63,13 @@ namespace TN_CSDLPT
                 {
                     return;
                 }
+                Program.servername = cbB_Branch.SelectedValue.ToString();//server name sẽ được đổi qua sever name mới vừa chọn ở combo box
             }
             catch
             {
 
             }
-            Program.servername = cbB_Branch.SelectedValue.ToString();//server name sẽ được đổi qua sever name mới vừa chọn ở combo box
+            
             //Nếu chi nhánh được chọn khác chi nhánh lúc đầu thì đăng nhập bằng tài khoản HTKN
             if (cbB_Branch.SelectedIndex!=Program.mCoso)
             {
