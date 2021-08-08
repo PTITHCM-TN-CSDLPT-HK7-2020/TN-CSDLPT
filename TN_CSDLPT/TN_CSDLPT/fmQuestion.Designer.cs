@@ -71,6 +71,8 @@
             this.colDAP_AN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMAGV = new DevExpress.XtraGrid.Columns.GridColumn();
             this.grpB_txtQuestion = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.tRINHDOComboBox = new System.Windows.Forms.ComboBox();
             this.mAGVTextBox = new System.Windows.Forms.TextBox();
             this.dAP_ANComboBox = new System.Windows.Forms.ComboBox();
@@ -95,39 +97,47 @@
             ((System.ComponentModel.ISupportInitialize)(this.bODEGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView_Question)).BeginInit();
             this.grpB_txtQuestion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // mAMHLabel
             // 
             mAMHLabel.AutoSize = true;
-            mAMHLabel.Location = new System.Drawing.Point(15, 47);
+            mAMHLabel.ForeColor = System.Drawing.Color.Yellow;
+            mAMHLabel.Location = new System.Drawing.Point(207, 128);
             mAMHLabel.Name = "mAMHLabel";
             mAMHLabel.Size = new System.Drawing.Size(113, 22);
             mAMHLabel.TabIndex = 0;
             mAMHLabel.Text = "Mã môn học:";
+            mAMHLabel.Click += new System.EventHandler(this.mAMHLabel_Click);
             // 
             // tRINHDOLabel
             // 
             tRINHDOLabel.AutoSize = true;
-            tRINHDOLabel.Location = new System.Drawing.Point(15, 116);
+            tRINHDOLabel.ForeColor = System.Drawing.Color.Yellow;
+            tRINHDOLabel.Location = new System.Drawing.Point(233, 198);
             tRINHDOLabel.Name = "tRINHDOLabel";
             tRINHDOLabel.Size = new System.Drawing.Size(83, 22);
             tRINHDOLabel.TabIndex = 2;
             tRINHDOLabel.Text = "Trình độ:";
+            tRINHDOLabel.Click += new System.EventHandler(this.tRINHDOLabel_Click);
             // 
             // nOIDUNGLabel
             // 
             nOIDUNGLabel.AutoSize = true;
-            nOIDUNGLabel.Location = new System.Drawing.Point(458, 47);
+            nOIDUNGLabel.ForeColor = System.Drawing.Color.Yellow;
+            nOIDUNGLabel.Location = new System.Drawing.Point(232, 330);
             nOIDUNGLabel.Name = "nOIDUNGLabel";
             nOIDUNGLabel.Size = new System.Drawing.Size(88, 22);
             nOIDUNGLabel.TabIndex = 4;
             nOIDUNGLabel.Text = "Nội dung:";
+            nOIDUNGLabel.Click += new System.EventHandler(this.nOIDUNGLabel_Click);
             // 
             // aLabel
             // 
             aLabel.AutoSize = true;
-            aLabel.Location = new System.Drawing.Point(516, 134);
+            aLabel.ForeColor = System.Drawing.Color.Yellow;
+            aLabel.Location = new System.Drawing.Point(290, 418);
             aLabel.Name = "aLabel";
             aLabel.Size = new System.Drawing.Size(30, 22);
             aLabel.TabIndex = 6;
@@ -136,7 +146,8 @@
             // bLabel
             // 
             bLabel.AutoSize = true;
-            bLabel.Location = new System.Drawing.Point(516, 180);
+            bLabel.ForeColor = System.Drawing.Color.Yellow;
+            bLabel.Location = new System.Drawing.Point(290, 464);
             bLabel.Name = "bLabel";
             bLabel.Size = new System.Drawing.Size(29, 22);
             bLabel.TabIndex = 8;
@@ -145,7 +156,8 @@
             // cLabel
             // 
             cLabel.AutoSize = true;
-            cLabel.Location = new System.Drawing.Point(1097, 134);
+            cLabel.ForeColor = System.Drawing.Color.Yellow;
+            cLabel.Location = new System.Drawing.Point(914, 413);
             cLabel.Name = "cLabel";
             cLabel.Size = new System.Drawing.Size(29, 22);
             cLabel.TabIndex = 10;
@@ -154,7 +166,8 @@
             // dLabel
             // 
             dLabel.AutoSize = true;
-            dLabel.Location = new System.Drawing.Point(1097, 183);
+            dLabel.ForeColor = System.Drawing.Color.Yellow;
+            dLabel.Location = new System.Drawing.Point(914, 462);
             dLabel.Name = "dLabel";
             dLabel.Size = new System.Drawing.Size(30, 22);
             dLabel.TabIndex = 12;
@@ -163,7 +176,8 @@
             // dAP_ANLabel
             // 
             dAP_ANLabel.AutoSize = true;
-            dAP_ANLabel.Location = new System.Drawing.Point(1097, 50);
+            dAP_ANLabel.ForeColor = System.Drawing.Color.Yellow;
+            dAP_ANLabel.Location = new System.Drawing.Point(871, 334);
             dAP_ANLabel.Name = "dAP_ANLabel";
             dAP_ANLabel.Size = new System.Drawing.Size(72, 22);
             dAP_ANLabel.TabIndex = 14;
@@ -172,11 +186,13 @@
             // mAGVLabel
             // 
             mAGVLabel.AutoSize = true;
-            mAGVLabel.Location = new System.Drawing.Point(15, 183);
+            mAGVLabel.ForeColor = System.Drawing.Color.Yellow;
+            mAGVLabel.Location = new System.Drawing.Point(207, 268);
             mAGVLabel.Name = "mAGVLabel";
             mAGVLabel.Size = new System.Drawing.Size(120, 22);
             mAGVLabel.TabIndex = 16;
             mAGVLabel.Text = "Mã giáo viên:";
+            mAGVLabel.Click += new System.EventHandler(this.mAGVLabel_Click);
             // 
             // barManager1
             // 
@@ -399,9 +415,11 @@
             // 
             // colCAUHOI
             // 
+            this.colCAUHOI.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.colCAUHOI.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colCAUHOI.AppearanceCell.Options.UseBackColor = true;
             this.colCAUHOI.AppearanceCell.Options.UseFont = true;
-            this.colCAUHOI.AppearanceHeader.BackColor = System.Drawing.Color.Aqua;
+            this.colCAUHOI.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Primary;
             this.colCAUHOI.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colCAUHOI.AppearanceHeader.Options.UseBackColor = true;
             this.colCAUHOI.AppearanceHeader.Options.UseFont = true;
@@ -415,9 +433,11 @@
             // 
             // colMAMH
             // 
+            this.colMAMH.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.colMAMH.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colMAMH.AppearanceCell.Options.UseBackColor = true;
             this.colMAMH.AppearanceCell.Options.UseFont = true;
-            this.colMAMH.AppearanceHeader.BackColor = System.Drawing.Color.Aqua;
+            this.colMAMH.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Primary;
             this.colMAMH.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colMAMH.AppearanceHeader.Options.UseBackColor = true;
             this.colMAMH.AppearanceHeader.Options.UseFont = true;
@@ -431,9 +451,11 @@
             // 
             // colTRINHDO
             // 
+            this.colTRINHDO.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.colTRINHDO.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colTRINHDO.AppearanceCell.Options.UseBackColor = true;
             this.colTRINHDO.AppearanceCell.Options.UseFont = true;
-            this.colTRINHDO.AppearanceHeader.BackColor = System.Drawing.Color.Aqua;
+            this.colTRINHDO.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Primary;
             this.colTRINHDO.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colTRINHDO.AppearanceHeader.Options.UseBackColor = true;
             this.colTRINHDO.AppearanceHeader.Options.UseFont = true;
@@ -447,9 +469,11 @@
             // 
             // colNOIDUNG
             // 
+            this.colNOIDUNG.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.colNOIDUNG.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colNOIDUNG.AppearanceCell.Options.UseBackColor = true;
             this.colNOIDUNG.AppearanceCell.Options.UseFont = true;
-            this.colNOIDUNG.AppearanceHeader.BackColor = System.Drawing.Color.Aqua;
+            this.colNOIDUNG.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Primary;
             this.colNOIDUNG.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colNOIDUNG.AppearanceHeader.Options.UseBackColor = true;
             this.colNOIDUNG.AppearanceHeader.Options.UseFont = true;
@@ -463,9 +487,11 @@
             // 
             // colA
             // 
+            this.colA.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.colA.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colA.AppearanceCell.Options.UseBackColor = true;
             this.colA.AppearanceCell.Options.UseFont = true;
-            this.colA.AppearanceHeader.BackColor = System.Drawing.Color.Aqua;
+            this.colA.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Primary;
             this.colA.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colA.AppearanceHeader.Options.UseBackColor = true;
             this.colA.AppearanceHeader.Options.UseFont = true;
@@ -479,9 +505,11 @@
             // 
             // colB
             // 
+            this.colB.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.colB.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colB.AppearanceCell.Options.UseBackColor = true;
             this.colB.AppearanceCell.Options.UseFont = true;
-            this.colB.AppearanceHeader.BackColor = System.Drawing.Color.Aqua;
+            this.colB.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Primary;
             this.colB.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colB.AppearanceHeader.Options.UseBackColor = true;
             this.colB.AppearanceHeader.Options.UseFont = true;
@@ -495,9 +523,11 @@
             // 
             // colC
             // 
+            this.colC.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.colC.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colC.AppearanceCell.Options.UseBackColor = true;
             this.colC.AppearanceCell.Options.UseFont = true;
-            this.colC.AppearanceHeader.BackColor = System.Drawing.Color.Aqua;
+            this.colC.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Primary;
             this.colC.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colC.AppearanceHeader.Options.UseBackColor = true;
             this.colC.AppearanceHeader.Options.UseFont = true;
@@ -511,9 +541,11 @@
             // 
             // colD
             // 
+            this.colD.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.colD.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colD.AppearanceCell.Options.UseBackColor = true;
             this.colD.AppearanceCell.Options.UseFont = true;
-            this.colD.AppearanceHeader.BackColor = System.Drawing.Color.Aqua;
+            this.colD.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Primary;
             this.colD.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colD.AppearanceHeader.Options.UseBackColor = true;
             this.colD.AppearanceHeader.Options.UseFont = true;
@@ -527,9 +559,11 @@
             // 
             // colDAP_AN
             // 
+            this.colDAP_AN.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.colDAP_AN.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colDAP_AN.AppearanceCell.Options.UseBackColor = true;
             this.colDAP_AN.AppearanceCell.Options.UseFont = true;
-            this.colDAP_AN.AppearanceHeader.BackColor = System.Drawing.Color.Aqua;
+            this.colDAP_AN.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Primary;
             this.colDAP_AN.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colDAP_AN.AppearanceHeader.Options.UseBackColor = true;
             this.colDAP_AN.AppearanceHeader.Options.UseFont = true;
@@ -543,9 +577,11 @@
             // 
             // colMAGV
             // 
+            this.colMAGV.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.colMAGV.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colMAGV.AppearanceCell.Options.UseBackColor = true;
             this.colMAGV.AppearanceCell.Options.UseFont = true;
-            this.colMAGV.AppearanceHeader.BackColor = System.Drawing.Color.Aqua;
+            this.colMAGV.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Primary;
             this.colMAGV.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colMAGV.AppearanceHeader.Options.UseBackColor = true;
             this.colMAGV.AppearanceHeader.Options.UseFont = true;
@@ -559,6 +595,9 @@
             // 
             // grpB_txtQuestion
             // 
+            this.grpB_txtQuestion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.grpB_txtQuestion.Controls.Add(this.pictureBox1);
+            this.grpB_txtQuestion.Controls.Add(this.label1);
             this.grpB_txtQuestion.Controls.Add(this.tRINHDOComboBox);
             this.grpB_txtQuestion.Controls.Add(mAGVLabel);
             this.grpB_txtQuestion.Controls.Add(this.mAGVTextBox);
@@ -578,11 +617,33 @@
             this.grpB_txtQuestion.Controls.Add(mAMHLabel);
             this.grpB_txtQuestion.Controls.Add(this.mAMHTextBox);
             this.grpB_txtQuestion.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grpB_txtQuestion.ForeColor = System.Drawing.Color.Yellow;
             this.grpB_txtQuestion.Location = new System.Drawing.Point(0, 446);
             this.grpB_txtQuestion.Name = "grpB_txtQuestion";
             this.grpB_txtQuestion.Size = new System.Drawing.Size(1697, 572);
             this.grpB_txtQuestion.TabIndex = 6;
             this.grpB_txtQuestion.TabStop = false;
+            this.grpB_txtQuestion.Enter += new System.EventHandler(this.grpB_txtQuestion_Enter);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::TN_CSDLPT.Properties.Resources.question_mark;
+            this.pictureBox1.Location = new System.Drawing.Point(47, 154);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(132, 132);
+            this.pictureBox1.TabIndex = 31;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Yellow;
+            this.label1.Location = new System.Drawing.Point(589, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(260, 32);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Thông tin về câu hỏi";
             // 
             // tRINHDOComboBox
             // 
@@ -593,7 +654,7 @@
             "A",
             "B",
             "C"});
-            this.tRINHDOComboBox.Location = new System.Drawing.Point(143, 116);
+            this.tRINHDOComboBox.Location = new System.Drawing.Point(335, 194);
             this.tRINHDOComboBox.Name = "tRINHDOComboBox";
             this.tRINHDOComboBox.Size = new System.Drawing.Size(251, 30);
             this.tRINHDOComboBox.TabIndex = 2;
@@ -601,7 +662,7 @@
             // mAGVTextBox
             // 
             this.mAGVTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bODEBindingSource, "MAGV", true));
-            this.mAGVTextBox.Location = new System.Drawing.Point(143, 183);
+            this.mAGVTextBox.Location = new System.Drawing.Point(335, 260);
             this.mAGVTextBox.Name = "mAGVTextBox";
             this.mAGVTextBox.Size = new System.Drawing.Size(251, 30);
             this.mAGVTextBox.TabIndex = 3;
@@ -618,7 +679,7 @@
             "B",
             "C",
             "D"});
-            this.dAP_ANComboBox.Location = new System.Drawing.Point(1176, 47);
+            this.dAP_ANComboBox.Location = new System.Drawing.Point(950, 331);
             this.dAP_ANComboBox.Name = "dAP_ANComboBox";
             this.dAP_ANComboBox.Size = new System.Drawing.Size(151, 30);
             this.dAP_ANComboBox.TabIndex = 9;
@@ -626,7 +687,7 @@
             // dTextBox
             // 
             this.dTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bODEBindingSource, "D", true));
-            this.dTextBox.Location = new System.Drawing.Point(1133, 180);
+            this.dTextBox.Location = new System.Drawing.Point(950, 459);
             this.dTextBox.Name = "dTextBox";
             this.dTextBox.Size = new System.Drawing.Size(520, 30);
             this.dTextBox.TabIndex = 8;
@@ -634,7 +695,7 @@
             // cTextBox
             // 
             this.cTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bODEBindingSource, "C", true));
-            this.cTextBox.Location = new System.Drawing.Point(1133, 131);
+            this.cTextBox.Location = new System.Drawing.Point(950, 410);
             this.cTextBox.Name = "cTextBox";
             this.cTextBox.Size = new System.Drawing.Size(520, 30);
             this.cTextBox.TabIndex = 7;
@@ -642,7 +703,7 @@
             // bTextBox
             // 
             this.bTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bODEBindingSource, "B", true));
-            this.bTextBox.Location = new System.Drawing.Point(552, 177);
+            this.bTextBox.Location = new System.Drawing.Point(334, 461);
             this.bTextBox.Name = "bTextBox";
             this.bTextBox.Size = new System.Drawing.Size(520, 30);
             this.bTextBox.TabIndex = 6;
@@ -650,7 +711,7 @@
             // aTextBox
             // 
             this.aTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bODEBindingSource, "A", true));
-            this.aTextBox.Location = new System.Drawing.Point(552, 131);
+            this.aTextBox.Location = new System.Drawing.Point(334, 415);
             this.aTextBox.Name = "aTextBox";
             this.aTextBox.Size = new System.Drawing.Size(520, 30);
             this.aTextBox.TabIndex = 5;
@@ -658,7 +719,7 @@
             // nOIDUNGTextBox
             // 
             this.nOIDUNGTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bODEBindingSource, "NOIDUNG", true));
-            this.nOIDUNGTextBox.Location = new System.Drawing.Point(552, 44);
+            this.nOIDUNGTextBox.Location = new System.Drawing.Point(334, 326);
             this.nOIDUNGTextBox.Multiline = true;
             this.nOIDUNGTextBox.Name = "nOIDUNGTextBox";
             this.nOIDUNGTextBox.Size = new System.Drawing.Size(520, 67);
@@ -667,7 +728,7 @@
             // mAMHTextBox
             // 
             this.mAMHTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bODEBindingSource, "MAMH", true));
-            this.mAMHTextBox.Location = new System.Drawing.Point(143, 47);
+            this.mAMHTextBox.Location = new System.Drawing.Point(335, 128);
             this.mAMHTextBox.Name = "mAMHTextBox";
             this.mAMHTextBox.Size = new System.Drawing.Size(251, 30);
             this.mAMHTextBox.TabIndex = 1;
@@ -696,6 +757,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView_Question)).EndInit();
             this.grpB_txtQuestion.ResumeLayout(false);
             this.grpB_txtQuestion.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -744,5 +806,7 @@
         private System.Windows.Forms.TextBox mAMHTextBox;
         private System.Windows.Forms.ComboBox tRINHDOComboBox;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

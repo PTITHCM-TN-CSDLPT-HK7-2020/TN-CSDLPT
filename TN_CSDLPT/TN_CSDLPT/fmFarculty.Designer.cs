@@ -405,7 +405,7 @@
             this.lb_Branch.AutoSize = true;
             this.lb_Branch.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_Branch.ForeColor = System.Drawing.Color.Yellow;
-            this.lb_Branch.Location = new System.Drawing.Point(92, 14);
+            this.lb_Branch.Location = new System.Drawing.Point(403, 14);
             this.lb_Branch.Name = "lb_Branch";
             this.lb_Branch.Size = new System.Drawing.Size(85, 32);
             this.lb_Branch.TabIndex = 3;
@@ -417,7 +417,7 @@
             this.cbB_Branch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbB_Branch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbB_Branch.FormattingEnabled = true;
-            this.cbB_Branch.Location = new System.Drawing.Point(184, 16);
+            this.cbB_Branch.Location = new System.Drawing.Point(494, 16);
             this.cbB_Branch.Name = "cbB_Branch";
             this.cbB_Branch.Size = new System.Drawing.Size(324, 30);
             this.cbB_Branch.TabIndex = 2;

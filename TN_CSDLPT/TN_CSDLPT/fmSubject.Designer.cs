@@ -59,13 +59,14 @@
             this.colTENMH = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colrowguid = new DevExpress.XtraGrid.Columns.GridColumn();
             this.grpB_Subjects = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.tENMHTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.mAMHTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.bODEBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bODETableAdapter = new TN_CSDLPT.DSTableAdapters.BODETableAdapter();
             this.bODEBindingSource_FK = new System.Windows.Forms.BindingSource(this.components);
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
-            this.label1 = new System.Windows.Forms.Label();
             mAMHLabel = new System.Windows.Forms.Label();
             tENMHLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
@@ -75,6 +76,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.mONHOCGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gV_Subjects)).BeginInit();
             this.grpB_Subjects.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tENMHTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mAMHTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bODEBindingSource)).BeginInit();
@@ -84,7 +86,8 @@
             // mAMHLabel
             // 
             mAMHLabel.AutoSize = true;
-            mAMHLabel.Location = new System.Drawing.Point(83, 115);
+            mAMHLabel.ForeColor = System.Drawing.Color.Yellow;
+            mAMHLabel.Location = new System.Drawing.Point(297, 109);
             mAMHLabel.Name = "mAMHLabel";
             mAMHLabel.Size = new System.Drawing.Size(113, 22);
             mAMHLabel.TabIndex = 0;
@@ -93,7 +96,8 @@
             // tENMHLabel
             // 
             tENMHLabel.AutoSize = true;
-            tENMHLabel.Location = new System.Drawing.Point(542, 115);
+            tENMHLabel.ForeColor = System.Drawing.Color.Yellow;
+            tENMHLabel.Location = new System.Drawing.Point(293, 165);
             tENMHLabel.Name = "tENMHLabel";
             tENMHLabel.Size = new System.Drawing.Size(117, 22);
             tENMHLabel.TabIndex = 2;
@@ -272,6 +276,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Blue;
             this.panel1.Controls.Add(this.lb_Branch);
             this.panel1.Controls.Add(this.cbB_Branch);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -286,17 +291,20 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_Branch.AutoSize = true;
-            this.lb_Branch.Location = new System.Drawing.Point(96, 12);
+            this.lb_Branch.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Branch.ForeColor = System.Drawing.Color.Yellow;
+            this.lb_Branch.Location = new System.Drawing.Point(260, 7);
             this.lb_Branch.Name = "lb_Branch";
-            this.lb_Branch.Size = new System.Drawing.Size(58, 22);
+            this.lb_Branch.Size = new System.Drawing.Size(85, 32);
             this.lb_Branch.TabIndex = 1;
             this.lb_Branch.Text = "Cơ sở";
             // 
             // cbB_Branch
             // 
             this.cbB_Branch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbB_Branch.ForeColor = System.Drawing.Color.Yellow;
             this.cbB_Branch.FormattingEnabled = true;
-            this.cbB_Branch.Location = new System.Drawing.Point(160, 9);
+            this.cbB_Branch.Location = new System.Drawing.Point(351, 7);
             this.cbB_Branch.Name = "cbB_Branch";
             this.cbB_Branch.Size = new System.Drawing.Size(324, 30);
             this.cbB_Branch.TabIndex = 0;
@@ -356,14 +364,18 @@
             // 
             // colMAMH
             // 
-            this.colMAMH.AppearanceCell.BackColor = System.Drawing.Color.White;
+            this.colMAMH.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.colMAMH.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colMAMH.AppearanceCell.ForeColor = System.Drawing.Color.Black;
             this.colMAMH.AppearanceCell.Options.UseBackColor = true;
             this.colMAMH.AppearanceCell.Options.UseFont = true;
-            this.colMAMH.AppearanceHeader.BackColor = System.Drawing.Color.Aqua;
+            this.colMAMH.AppearanceCell.Options.UseForeColor = true;
+            this.colMAMH.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Primary;
             this.colMAMH.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colMAMH.AppearanceHeader.ForeColor = System.Drawing.Color.White;
             this.colMAMH.AppearanceHeader.Options.UseBackColor = true;
             this.colMAMH.AppearanceHeader.Options.UseFont = true;
+            this.colMAMH.AppearanceHeader.Options.UseForeColor = true;
             this.colMAMH.Caption = "Mã môn học";
             this.colMAMH.FieldName = "MAMH";
             this.colMAMH.MinWidth = 27;
@@ -374,14 +386,18 @@
             // 
             // colTENMH
             // 
-            this.colTENMH.AppearanceCell.BackColor = System.Drawing.Color.White;
+            this.colTENMH.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.colTENMH.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colTENMH.AppearanceCell.ForeColor = System.Drawing.Color.Black;
             this.colTENMH.AppearanceCell.Options.UseBackColor = true;
             this.colTENMH.AppearanceCell.Options.UseFont = true;
-            this.colTENMH.AppearanceHeader.BackColor = System.Drawing.Color.Aqua;
+            this.colTENMH.AppearanceCell.Options.UseForeColor = true;
+            this.colTENMH.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Primary;
             this.colTENMH.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colTENMH.AppearanceHeader.ForeColor = System.Drawing.Color.White;
             this.colTENMH.AppearanceHeader.Options.UseBackColor = true;
             this.colTENMH.AppearanceHeader.Options.UseFont = true;
+            this.colTENMH.AppearanceHeader.Options.UseForeColor = true;
             this.colTENMH.Caption = "Tên môn học";
             this.colTENMH.FieldName = "TENMH";
             this.colTENMH.MinWidth = 27;
@@ -392,6 +408,12 @@
             // 
             // colrowguid
             // 
+            this.colrowguid.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.colrowguid.AppearanceCell.ForeColor = System.Drawing.Color.Black;
+            this.colrowguid.AppearanceCell.Options.UseBackColor = true;
+            this.colrowguid.AppearanceCell.Options.UseForeColor = true;
+            this.colrowguid.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Primary;
+            this.colrowguid.AppearanceHeader.Options.UseBackColor = true;
             this.colrowguid.FieldName = "rowguid";
             this.colrowguid.MinWidth = 27;
             this.colrowguid.Name = "colrowguid";
@@ -399,6 +421,8 @@
             // 
             // grpB_Subjects
             // 
+            this.grpB_Subjects.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.grpB_Subjects.Controls.Add(this.pictureBox1);
             this.grpB_Subjects.Controls.Add(this.label1);
             this.grpB_Subjects.Controls.Add(tENMHLabel);
             this.grpB_Subjects.Controls.Add(this.tENMHTextEdit);
@@ -411,23 +435,43 @@
             this.grpB_Subjects.TabIndex = 10;
             this.grpB_Subjects.TabStop = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::TN_CSDLPT.Properties.Resources.book;
+            this.pictureBox1.Location = new System.Drawing.Point(81, 71);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(132, 132);
+            this.pictureBox1.TabIndex = 30;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Yellow;
+            this.label1.Location = new System.Drawing.Point(387, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(263, 37);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Thông tin môn học";
+            // 
             // tENMHTextEdit
             // 
             this.tENMHTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.mONHOCBindingSource, "TENMH", true));
             this.tENMHTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mONHOCBindingSource, "TENMH", true));
-            this.tENMHTextEdit.Location = new System.Drawing.Point(656, 112);
+            this.tENMHTextEdit.Location = new System.Drawing.Point(416, 163);
             this.tENMHTextEdit.MenuManager = this.barManager1;
             this.tENMHTextEdit.Name = "tENMHTextEdit";
             this.tENMHTextEdit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tENMHTextEdit.Properties.Appearance.Options.UseFont = true;
-            this.tENMHTextEdit.Size = new System.Drawing.Size(236, 28);
+            this.tENMHTextEdit.Size = new System.Drawing.Size(234, 28);
             this.tENMHTextEdit.TabIndex = 2;
             // 
             // mAMHTextEdit
             // 
             this.mAMHTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.mONHOCBindingSource, "MAMH", true));
             this.mAMHTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mONHOCBindingSource, "MAMH", true));
-            this.mAMHTextEdit.Location = new System.Drawing.Point(202, 112);
+            this.mAMHTextEdit.Location = new System.Drawing.Point(416, 105);
             this.mAMHTextEdit.MenuManager = this.barManager1;
             this.mAMHTextEdit.Name = "mAMHTextEdit";
             this.mAMHTextEdit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -455,17 +499,6 @@
             this.barButtonItem2.Id = 8;
             this.barButtonItem2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem2.ImageOptions.SvgImage")));
             this.barButtonItem2.Name = "barButtonItem2";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Blue;
-            this.label1.Location = new System.Drawing.Point(387, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(272, 39);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Thông tin môn học";
             // 
             // fmSubject
             // 
@@ -496,6 +529,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gV_Subjects)).EndInit();
             this.grpB_Subjects.ResumeLayout(false);
             this.grpB_Subjects.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tENMHTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mAMHTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bODEBindingSource)).EndInit();
@@ -541,5 +575,6 @@
         private DevExpress.XtraBars.BarButtonItem barBtn_Forbid;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
