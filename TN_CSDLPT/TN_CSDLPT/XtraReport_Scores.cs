@@ -11,10 +11,10 @@ namespace TN_CSDLPT
         public XtraReport_Scores(string malop, string mamh, int lan)
         {
             InitializeComponent();
-            this.sqlDataSource1.Queries[0].Parameters[0].Value = mamh;
-            this.sqlDataSource1.Queries[0].Parameters[1].Value = malop;
-            this.sqlDataSource1.Queries[0].Parameters[2].Value = lan;
-            this.sqlDataSource1.Fill();
+            this.sqlDataSource3.Queries[0].Parameters[0].Value = mamh;
+            this.sqlDataSource3.Queries[0].Parameters[1].Value = malop;
+            this.sqlDataSource3.Queries[0].Parameters[2].Value = lan;
+            this.sqlDataSource3.Fill();
         }
 
     }

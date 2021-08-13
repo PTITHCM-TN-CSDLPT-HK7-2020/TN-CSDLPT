@@ -165,5 +165,25 @@ namespace TN_CSDLPT
             var principalForm = Application.OpenForms.OfType<fmDoExam>().Single();
             //principalForm.capNhapDaChon(cauSo, "D");
         }
+
+        private void lb_A_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lb_B_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lb_C_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lb_D_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

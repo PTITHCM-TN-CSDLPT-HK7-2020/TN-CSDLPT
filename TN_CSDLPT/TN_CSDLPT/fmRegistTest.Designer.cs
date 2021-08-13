@@ -53,22 +53,19 @@
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.dS = new TN_CSDLPT.DS();
-            this.gIAOVIEN_DANGKYBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gIAOVIEN_DANGKYTableAdapter = new TN_CSDLPT.DSTableAdapters.GIAOVIEN_DANGKYTableAdapter();
-            this.mONHOCBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tRINHDOComboBox = new System.Windows.Forms.ComboBox();
-            this.lANSpinEdit = new DevExpress.XtraEditors.SpinEdit();
+            this.gIAOVIEN_DANGKYBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.mONHOCBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sOCAUTHISpinEdit = new DevExpress.XtraEditors.SpinEdit();
+            this.gIAOVIEN_DANGKYBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.grpB_txtRegistTest = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.mAGVTextBox = new System.Windows.Forms.TextBox();
             this.nGAYTHIDateEdit = new DevExpress.XtraEditors.DateEdit();
             this.mAMHComboBox1 = new System.Windows.Forms.ComboBox();
             this.mALOPComboBox = new System.Windows.Forms.ComboBox();
             this.lOPBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tHOIGIANSpinEdit = new DevExpress.XtraEditors.SpinEdit();
-            this.gIAOVIENBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.grpB_Branch = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cbBox_Branch = new System.Windows.Forms.ComboBox();
@@ -77,15 +74,18 @@
             this.colMAGV = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMAMH = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMALOP = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colTRINHDO = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNGAYTHI = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colLAN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSOCAUTHI = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTHOIGIAN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.mONHOCTableAdapter = new TN_CSDLPT.DSTableAdapters.MONHOCTableAdapter();
-            this.lOPTableAdapter = new TN_CSDLPT.DSTableAdapters.LOPTableAdapter();
-            this.gIAOVIENTableAdapter = new TN_CSDLPT.DSTableAdapters.GIAOVIENTableAdapter();
             this.tableAdapterManager = new TN_CSDLPT.DSTableAdapters.TableAdapterManager();
+            this.gIAOVIEN_DANGKYTableAdapter = new TN_CSDLPT.DSTableAdapters.GIAOVIEN_DANGKYTableAdapter();
+            this.lOPTableAdapter = new TN_CSDLPT.DSTableAdapters.LOPTableAdapter();
+            this.fKGIAOVIENDANGKYMONHOC1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lANNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.mAGVTextBox = new System.Windows.Forms.TextBox();
+            this.label_TD = new System.Windows.Forms.Label();
             mALOPLabel = new System.Windows.Forms.Label();
             mAGVLabel = new System.Windows.Forms.Label();
             mAMHLabel = new System.Windows.Forms.Label();
@@ -96,20 +96,21 @@
             nGAYTHILabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dS)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gIAOVIEN_DANGKYBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gIAOVIEN_DANGKYBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mONHOCBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lANSpinEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sOCAUTHISpinEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gIAOVIEN_DANGKYBindingSource)).BeginInit();
             this.grpB_txtRegistTest.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nGAYTHIDateEdit.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nGAYTHIDateEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOPBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tHOIGIANSpinEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gIAOVIENBindingSource)).BeginInit();
             this.grpB_Branch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gIAOVIEN_DANGKYGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKGIAOVIENDANGKYMONHOC1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lANNumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // mALOPLabel
@@ -156,7 +157,7 @@
             // 
             lANLabel.AutoSize = true;
             lANLabel.ForeColor = System.Drawing.Color.Yellow;
-            lANLabel.Location = new System.Drawing.Point(769, 58);
+            lANLabel.Location = new System.Drawing.Point(963, 58);
             lANLabel.Name = "lANLabel";
             lANLabel.Size = new System.Drawing.Size(100, 22);
             lANLabel.TabIndex = 13;
@@ -166,7 +167,7 @@
             // 
             sOCAUTHILabel.AutoSize = true;
             sOCAUTHILabel.ForeColor = System.Drawing.Color.Yellow;
-            sOCAUTHILabel.Location = new System.Drawing.Point(769, 113);
+            sOCAUTHILabel.Location = new System.Drawing.Point(963, 113);
             sOCAUTHILabel.Name = "sOCAUTHILabel";
             sOCAUTHILabel.Size = new System.Drawing.Size(94, 22);
             sOCAUTHILabel.TabIndex = 14;
@@ -176,7 +177,7 @@
             // 
             tHOIGIANLabel1.AutoSize = true;
             tHOIGIANLabel1.ForeColor = System.Drawing.Color.Yellow;
-            tHOIGIANLabel1.Location = new System.Drawing.Point(769, 225);
+            tHOIGIANLabel1.Location = new System.Drawing.Point(963, 225);
             tHOIGIANLabel1.Name = "tHOIGIANLabel1";
             tHOIGIANLabel1.Size = new System.Drawing.Size(92, 22);
             tHOIGIANLabel1.TabIndex = 17;
@@ -186,7 +187,7 @@
             // 
             nGAYTHILabel.AutoSize = true;
             nGAYTHILabel.ForeColor = System.Drawing.Color.Yellow;
-            nGAYTHILabel.Location = new System.Drawing.Point(769, 168);
+            nGAYTHILabel.Location = new System.Drawing.Point(963, 168);
             nGAYTHILabel.Name = "nGAYTHILabel";
             nGAYTHILabel.Size = new System.Drawing.Size(82, 22);
             nGAYTHILabel.TabIndex = 17;
@@ -344,20 +345,6 @@
             this.dS.DataSetName = "DS";
             this.dS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // gIAOVIEN_DANGKYBindingSource
-            // 
-            this.gIAOVIEN_DANGKYBindingSource.DataMember = "GIAOVIEN_DANGKY";
-            this.gIAOVIEN_DANGKYBindingSource.DataSource = this.dS;
-            // 
-            // gIAOVIEN_DANGKYTableAdapter
-            // 
-            this.gIAOVIEN_DANGKYTableAdapter.ClearBeforeFill = true;
-            // 
-            // mONHOCBindingSource
-            // 
-            this.mONHOCBindingSource.DataMember = "MONHOC";
-            this.mONHOCBindingSource.DataSource = this.dS;
-            // 
             // tRINHDOComboBox
             // 
             this.tRINHDOComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.gIAOVIEN_DANGKYBindingSource, "TRINHDO", true));
@@ -371,34 +358,17 @@
             this.tRINHDOComboBox.Name = "tRINHDOComboBox";
             this.tRINHDOComboBox.Size = new System.Drawing.Size(214, 30);
             this.tRINHDOComboBox.TabIndex = 3;
+            this.tRINHDOComboBox.SelectedIndexChanged += new System.EventHandler(this.tRINHDOComboBox_SelectedIndexChanged);
             // 
-            // lANSpinEdit
+            // gIAOVIEN_DANGKYBindingSource1
             // 
-            this.lANSpinEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.gIAOVIEN_DANGKYBindingSource, "LAN", true));
-            this.lANSpinEdit.EditValue = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.lANSpinEdit.Location = new System.Drawing.Point(888, 57);
-            this.lANSpinEdit.MenuManager = this.barManager1;
-            this.lANSpinEdit.Name = "lANSpinEdit";
-            this.lANSpinEdit.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lANSpinEdit.Properties.Appearance.Options.UseFont = true;
-            this.lANSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lANSpinEdit.Properties.MaxValue = new decimal(new int[] {
-            2,
-            0,
-            0,
-            0});
-            this.lANSpinEdit.Properties.MinValue = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.lANSpinEdit.Size = new System.Drawing.Size(214, 28);
-            this.lANSpinEdit.TabIndex = 4;
+            this.gIAOVIEN_DANGKYBindingSource1.DataMember = "FK_GIAOVIEN_DANGKY_MONHOC1";
+            this.gIAOVIEN_DANGKYBindingSource1.DataSource = this.mONHOCBindingSource;
+            // 
+            // mONHOCBindingSource
+            // 
+            this.mONHOCBindingSource.DataMember = "MONHOC";
+            this.mONHOCBindingSource.DataSource = this.dS;
             // 
             // sOCAUTHISpinEdit
             // 
@@ -408,13 +378,15 @@
             0,
             0,
             0});
-            this.sOCAUTHISpinEdit.Location = new System.Drawing.Point(888, 112);
+            this.sOCAUTHISpinEdit.Location = new System.Drawing.Point(1082, 112);
             this.sOCAUTHISpinEdit.MenuManager = this.barManager1;
             this.sOCAUTHISpinEdit.Name = "sOCAUTHISpinEdit";
             this.sOCAUTHISpinEdit.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sOCAUTHISpinEdit.Properties.Appearance.Options.UseFont = true;
             this.sOCAUTHISpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.sOCAUTHISpinEdit.Properties.IsFloatValue = false;
+            this.sOCAUTHISpinEdit.Properties.Mask.EditMask = "N00";
             this.sOCAUTHISpinEdit.Properties.MaxValue = new decimal(new int[] {
             100,
             0,
@@ -428,12 +400,19 @@
             this.sOCAUTHISpinEdit.Size = new System.Drawing.Size(214, 28);
             this.sOCAUTHISpinEdit.TabIndex = 5;
             // 
+            // gIAOVIEN_DANGKYBindingSource
+            // 
+            this.gIAOVIEN_DANGKYBindingSource.DataMember = "GIAOVIEN_DANGKY";
+            this.gIAOVIEN_DANGKYBindingSource.DataSource = this.dS;
+            // 
             // grpB_txtRegistTest
             // 
             this.grpB_txtRegistTest.BackColor = System.Drawing.Color.Teal;
+            this.grpB_txtRegistTest.Controls.Add(this.label_TD);
+            this.grpB_txtRegistTest.Controls.Add(this.mAGVTextBox);
+            this.grpB_txtRegistTest.Controls.Add(this.lANNumericUpDown);
             this.grpB_txtRegistTest.Controls.Add(this.pictureBox1);
             this.grpB_txtRegistTest.Controls.Add(this.label2);
-            this.grpB_txtRegistTest.Controls.Add(this.mAGVTextBox);
             this.grpB_txtRegistTest.Controls.Add(this.nGAYTHIDateEdit);
             this.grpB_txtRegistTest.Controls.Add(this.mAMHComboBox1);
             this.grpB_txtRegistTest.Controls.Add(this.mALOPComboBox);
@@ -446,13 +425,12 @@
             this.grpB_txtRegistTest.Controls.Add(this.sOCAUTHISpinEdit);
             this.grpB_txtRegistTest.Controls.Add(lANLabel);
             this.grpB_txtRegistTest.Controls.Add(mAMHLabel);
-            this.grpB_txtRegistTest.Controls.Add(this.lANSpinEdit);
             this.grpB_txtRegistTest.Controls.Add(this.tRINHDOComboBox);
             this.grpB_txtRegistTest.Controls.Add(tRINHDOLabel);
             this.grpB_txtRegistTest.Dock = System.Windows.Forms.DockStyle.Top;
             this.grpB_txtRegistTest.Location = new System.Drawing.Point(0, 30);
             this.grpB_txtRegistTest.Name = "grpB_txtRegistTest";
-            this.grpB_txtRegistTest.Size = new System.Drawing.Size(1494, 264);
+            this.grpB_txtRegistTest.Size = new System.Drawing.Size(1494, 273);
             this.grpB_txtRegistTest.TabIndex = 18;
             this.grpB_txtRegistTest.TabStop = false;
             // 
@@ -476,21 +454,11 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Thông tin về chi tiết về ca thi";
             // 
-            // mAGVTextBox
-            // 
-            this.mAGVTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.gIAOVIEN_DANGKYBindingSource, "MAGV", true));
-            this.mAGVTextBox.Enabled = false;
-            this.mAGVTextBox.Location = new System.Drawing.Point(402, 110);
-            this.mAGVTextBox.Name = "mAGVTextBox";
-            this.mAGVTextBox.Size = new System.Drawing.Size(214, 30);
-            this.mAGVTextBox.TabIndex = 28;
-            this.mAGVTextBox.TextChanged += new System.EventHandler(this.mAGVTextBox_TextChanged);
-            // 
             // nGAYTHIDateEdit
             // 
             this.nGAYTHIDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.gIAOVIEN_DANGKYBindingSource, "NGAYTHI", true));
             this.nGAYTHIDateEdit.EditValue = null;
-            this.nGAYTHIDateEdit.Location = new System.Drawing.Point(888, 167);
+            this.nGAYTHIDateEdit.Location = new System.Drawing.Point(1082, 167);
             this.nGAYTHIDateEdit.MenuManager = this.barManager1;
             this.nGAYTHIDateEdit.Name = "nGAYTHIDateEdit";
             this.nGAYTHIDateEdit.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -543,13 +511,15 @@
             0,
             0,
             0});
-            this.tHOIGIANSpinEdit.Location = new System.Drawing.Point(888, 222);
+            this.tHOIGIANSpinEdit.Location = new System.Drawing.Point(1082, 222);
             this.tHOIGIANSpinEdit.MenuManager = this.barManager1;
             this.tHOIGIANSpinEdit.Name = "tHOIGIANSpinEdit";
             this.tHOIGIANSpinEdit.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tHOIGIANSpinEdit.Properties.Appearance.Options.UseFont = true;
             this.tHOIGIANSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.tHOIGIANSpinEdit.Properties.IsFloatValue = false;
+            this.tHOIGIANSpinEdit.Properties.Mask.EditMask = "N00";
             this.tHOIGIANSpinEdit.Properties.MaxValue = new decimal(new int[] {
             60,
             0,
@@ -563,18 +533,13 @@
             this.tHOIGIANSpinEdit.Size = new System.Drawing.Size(214, 28);
             this.tHOIGIANSpinEdit.TabIndex = 7;
             // 
-            // gIAOVIENBindingSource
-            // 
-            this.gIAOVIENBindingSource.DataMember = "GIAOVIEN";
-            this.gIAOVIENBindingSource.DataSource = this.dS;
-            // 
             // grpB_Branch
             // 
             this.grpB_Branch.BackColor = System.Drawing.Color.Blue;
             this.grpB_Branch.Controls.Add(this.label1);
             this.grpB_Branch.Controls.Add(this.cbBox_Branch);
             this.grpB_Branch.Dock = System.Windows.Forms.DockStyle.Top;
-            this.grpB_Branch.Location = new System.Drawing.Point(0, 294);
+            this.grpB_Branch.Location = new System.Drawing.Point(0, 303);
             this.grpB_Branch.Name = "grpB_Branch";
             this.grpB_Branch.Size = new System.Drawing.Size(1494, 67);
             this.grpB_Branch.TabIndex = 19;
@@ -608,11 +573,11 @@
             // 
             this.gIAOVIEN_DANGKYGridControl.DataSource = this.gIAOVIEN_DANGKYBindingSource;
             this.gIAOVIEN_DANGKYGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gIAOVIEN_DANGKYGridControl.Location = new System.Drawing.Point(0, 361);
+            this.gIAOVIEN_DANGKYGridControl.Location = new System.Drawing.Point(0, 370);
             this.gIAOVIEN_DANGKYGridControl.MainView = this.gridView1;
             this.gIAOVIEN_DANGKYGridControl.MenuManager = this.barManager1;
             this.gIAOVIEN_DANGKYGridControl.Name = "gIAOVIEN_DANGKYGridControl";
-            this.gIAOVIEN_DANGKYGridControl.Size = new System.Drawing.Size(1494, 388);
+            this.gIAOVIEN_DANGKYGridControl.Size = new System.Drawing.Size(1494, 379);
             this.gIAOVIEN_DANGKYGridControl.TabIndex = 19;
             this.gIAOVIEN_DANGKYGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -623,7 +588,6 @@
             this.colMAGV,
             this.colMAMH,
             this.colMALOP,
-            this.colTRINHDO,
             this.colNGAYTHI,
             this.colLAN,
             this.colSOCAUTHI,
@@ -694,26 +658,6 @@
             this.colMALOP.VisibleIndex = 2;
             this.colMALOP.Width = 94;
             // 
-            // colTRINHDO
-            // 
-            this.colTRINHDO.AppearanceCell.BackColor = System.Drawing.Color.Silver;
-            this.colTRINHDO.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colTRINHDO.AppearanceCell.Options.UseBackColor = true;
-            this.colTRINHDO.AppearanceCell.Options.UseFont = true;
-            this.colTRINHDO.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Primary;
-            this.colTRINHDO.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colTRINHDO.AppearanceHeader.ForeColor = System.Drawing.Color.White;
-            this.colTRINHDO.AppearanceHeader.Options.UseBackColor = true;
-            this.colTRINHDO.AppearanceHeader.Options.UseFont = true;
-            this.colTRINHDO.AppearanceHeader.Options.UseForeColor = true;
-            this.colTRINHDO.Caption = "Trình độ";
-            this.colTRINHDO.FieldName = "TRINHDO";
-            this.colTRINHDO.MinWidth = 25;
-            this.colTRINHDO.Name = "colTRINHDO";
-            this.colTRINHDO.Visible = true;
-            this.colTRINHDO.VisibleIndex = 3;
-            this.colTRINHDO.Width = 94;
-            // 
             // colNGAYTHI
             // 
             this.colNGAYTHI.AppearanceCell.BackColor = System.Drawing.Color.Silver;
@@ -731,7 +675,7 @@
             this.colNGAYTHI.MinWidth = 25;
             this.colNGAYTHI.Name = "colNGAYTHI";
             this.colNGAYTHI.Visible = true;
-            this.colNGAYTHI.VisibleIndex = 4;
+            this.colNGAYTHI.VisibleIndex = 3;
             this.colNGAYTHI.Width = 94;
             // 
             // colLAN
@@ -751,7 +695,7 @@
             this.colLAN.MinWidth = 25;
             this.colLAN.Name = "colLAN";
             this.colLAN.Visible = true;
-            this.colLAN.VisibleIndex = 5;
+            this.colLAN.VisibleIndex = 4;
             this.colLAN.Width = 94;
             // 
             // colSOCAUTHI
@@ -771,7 +715,7 @@
             this.colSOCAUTHI.MinWidth = 25;
             this.colSOCAUTHI.Name = "colSOCAUTHI";
             this.colSOCAUTHI.Visible = true;
-            this.colSOCAUTHI.VisibleIndex = 6;
+            this.colSOCAUTHI.VisibleIndex = 5;
             this.colSOCAUTHI.Width = 94;
             // 
             // colTHOIGIAN
@@ -791,20 +735,12 @@
             this.colTHOIGIAN.MinWidth = 25;
             this.colTHOIGIAN.Name = "colTHOIGIAN";
             this.colTHOIGIAN.Visible = true;
-            this.colTHOIGIAN.VisibleIndex = 7;
+            this.colTHOIGIAN.VisibleIndex = 6;
             this.colTHOIGIAN.Width = 94;
             // 
             // mONHOCTableAdapter
             // 
             this.mONHOCTableAdapter.ClearBeforeFill = true;
-            // 
-            // lOPTableAdapter
-            // 
-            this.lOPTableAdapter.ClearBeforeFill = true;
-            // 
-            // gIAOVIENTableAdapter
-            // 
-            this.gIAOVIENTableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
@@ -817,10 +753,51 @@
             this.tableAdapterManager.GIAOVIEN_DANGKYTableAdapter = this.gIAOVIEN_DANGKYTableAdapter;
             this.tableAdapterManager.GIAOVIENTableAdapter = null;
             this.tableAdapterManager.KHOATableAdapter = null;
-            this.tableAdapterManager.LOPTableAdapter = null;
-            this.tableAdapterManager.MONHOCTableAdapter = null;
+            this.tableAdapterManager.LOPTableAdapter = this.lOPTableAdapter;
+            this.tableAdapterManager.MONHOCTableAdapter = this.mONHOCTableAdapter;
             this.tableAdapterManager.SINHVIENTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = TN_CSDLPT.DSTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // gIAOVIEN_DANGKYTableAdapter
+            // 
+            this.gIAOVIEN_DANGKYTableAdapter.ClearBeforeFill = true;
+            // 
+            // lOPTableAdapter
+            // 
+            this.lOPTableAdapter.ClearBeforeFill = true;
+            // 
+            // fKGIAOVIENDANGKYMONHOC1BindingSource
+            // 
+            this.fKGIAOVIENDANGKYMONHOC1BindingSource.DataMember = "FK_GIAOVIEN_DANGKY_MONHOC1";
+            this.fKGIAOVIENDANGKYMONHOC1BindingSource.DataSource = this.mONHOCBindingSource;
+            // 
+            // lANNumericUpDown
+            // 
+            this.lANNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.gIAOVIEN_DANGKYBindingSource, "LAN", true));
+            this.lANNumericUpDown.Location = new System.Drawing.Point(1082, 59);
+            this.lANNumericUpDown.Name = "lANNumericUpDown";
+            this.lANNumericUpDown.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lANNumericUpDown.Size = new System.Drawing.Size(214, 30);
+            this.lANNumericUpDown.TabIndex = 30;
+            // 
+            // mAGVTextBox
+            // 
+            this.mAGVTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.gIAOVIEN_DANGKYBindingSource, "MAGV", true));
+            this.mAGVTextBox.Location = new System.Drawing.Point(402, 107);
+            this.mAGVTextBox.Name = "mAGVTextBox";
+            this.mAGVTextBox.ReadOnly = true;
+            this.mAGVTextBox.Size = new System.Drawing.Size(214, 30);
+            this.mAGVTextBox.TabIndex = 31;
+            // 
+            // label_TD
+            // 
+            this.label_TD.AutoSize = true;
+            this.label_TD.ForeColor = System.Drawing.Color.Fuchsia;
+            this.label_TD.Location = new System.Drawing.Point(632, 225);
+            this.label_TD.Name = "label_TD";
+            this.label_TD.Size = new System.Drawing.Size(99, 22);
+            this.label_TD.TabIndex = 32;
+            this.label_TD.Text = "LblTrinhdo";
             // 
             // fmRegistTest
             // 
@@ -842,10 +819,10 @@
             this.Load += new System.EventHandler(this.fmRegistTest_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dS)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gIAOVIEN_DANGKYBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gIAOVIEN_DANGKYBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mONHOCBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lANSpinEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sOCAUTHISpinEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gIAOVIEN_DANGKYBindingSource)).EndInit();
             this.grpB_txtRegistTest.ResumeLayout(false);
             this.grpB_txtRegistTest.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -853,11 +830,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.nGAYTHIDateEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOPBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tHOIGIANSpinEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gIAOVIENBindingSource)).EndInit();
             this.grpB_Branch.ResumeLayout(false);
             this.grpB_Branch.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gIAOVIEN_DANGKYGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKGIAOVIENDANGKYMONHOC1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lANNumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -879,39 +857,39 @@
         private DevExpress.XtraBars.BarButtonItem barBtn_Refresh;
         private DevExpress.XtraBars.BarButtonItem barBtn_Forbid;
         private DevExpress.XtraBars.BarButtonItem barBtn_Exit;
-        private System.Windows.Forms.BindingSource gIAOVIEN_DANGKYBindingSource;
         private DS dS;
-        private DSTableAdapters.GIAOVIEN_DANGKYTableAdapter gIAOVIEN_DANGKYTableAdapter;
         private System.Windows.Forms.GroupBox grpB_Branch;
         private System.Windows.Forms.GroupBox grpB_txtRegistTest;
         private DevExpress.XtraEditors.SpinEdit sOCAUTHISpinEdit;
-        private DevExpress.XtraEditors.SpinEdit lANSpinEdit;
         private System.Windows.Forms.ComboBox tRINHDOComboBox;
         private DevExpress.XtraGrid.GridControl gIAOVIEN_DANGKYGridControl;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn colMAGV;
         private DevExpress.XtraGrid.Columns.GridColumn colMAMH;
         private DevExpress.XtraGrid.Columns.GridColumn colMALOP;
-        private DevExpress.XtraGrid.Columns.GridColumn colTRINHDO;
         private DevExpress.XtraGrid.Columns.GridColumn colNGAYTHI;
         private DevExpress.XtraGrid.Columns.GridColumn colLAN;
         private DevExpress.XtraGrid.Columns.GridColumn colSOCAUTHI;
         private DevExpress.XtraGrid.Columns.GridColumn colTHOIGIAN;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbBox_Branch;
-        private System.Windows.Forms.BindingSource mONHOCBindingSource;
-        private DSTableAdapters.MONHOCTableAdapter mONHOCTableAdapter;
         private DevExpress.XtraEditors.SpinEdit tHOIGIANSpinEdit;
-        private System.Windows.Forms.BindingSource lOPBindingSource;
-        private DSTableAdapters.LOPTableAdapter lOPTableAdapter;
         private System.Windows.Forms.ComboBox mALOPComboBox;
-        private System.Windows.Forms.BindingSource gIAOVIENBindingSource;
-        private DSTableAdapters.GIAOVIENTableAdapter gIAOVIENTableAdapter;
         private System.Windows.Forms.ComboBox mAMHComboBox1;
         private DevExpress.XtraEditors.DateEdit nGAYTHIDateEdit;
-        private System.Windows.Forms.TextBox mAGVTextBox;
-        private DSTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.BindingSource mONHOCBindingSource;
+        private DSTableAdapters.MONHOCTableAdapter mONHOCTableAdapter;
+        private DSTableAdapters.TableAdapterManager tableAdapterManager;
+        private DSTableAdapters.LOPTableAdapter lOPTableAdapter;
+        private System.Windows.Forms.BindingSource lOPBindingSource;
+        private DSTableAdapters.GIAOVIEN_DANGKYTableAdapter gIAOVIEN_DANGKYTableAdapter;
+        private System.Windows.Forms.BindingSource gIAOVIEN_DANGKYBindingSource;
+        private System.Windows.Forms.BindingSource gIAOVIEN_DANGKYBindingSource1;
+        private System.Windows.Forms.BindingSource fKGIAOVIENDANGKYMONHOC1BindingSource;
+        private System.Windows.Forms.NumericUpDown lANNumericUpDown;
+        private System.Windows.Forms.TextBox mAGVTextBox;
+        private System.Windows.Forms.Label label_TD;
     }
 }

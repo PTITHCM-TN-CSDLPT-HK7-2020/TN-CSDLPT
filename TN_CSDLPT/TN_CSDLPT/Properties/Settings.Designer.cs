@@ -43,5 +43,26 @@ namespace TN_CSDLPT.Properties {
                 return ((string)(this["TN_CSDLPT_CS1_ConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-4KQ12ML;Initial Catalog=TN_CSDLPT;User ID=sa")]
+        public string TN_CSDLPTConnectionString1 {
+            get {
+                return ((string)(this["TN_CSDLPTConnectionString1"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-4KQ12ML\\MSSQLSERVER1;Initial Catalog=TN_CSDLPT;Persist Securi" +
+            "ty Info=True;User ID=sa")]
+        public string TN_CSDLPT_Cs1_sa {
+            get {
+                return ((string)(this["TN_CSDLPT_Cs1_sa"]));
+            }
+        }
     }
 }

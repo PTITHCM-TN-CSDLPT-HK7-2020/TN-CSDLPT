@@ -43,6 +43,11 @@ namespace TN_CSDLPT
         public static BindingSource bds_dspm = new BindingSource();  // giữ bdsPM khi đăng nhập
         public static fmMain fmChinh;
 
+        public static string[] trinhDo = {
+            "Đại học, chuyên ngành",
+            "Đại học, không chuyên ngành",
+            "Cao đẳng"
+        };
         public static int KetNoiCosoKhac()
         {
             if (Program.conn1 != null && Program.conn1.State == ConnectionState.Open)

@@ -44,6 +44,7 @@
             // 
             this.lb_IndexQuestion.AutoSize = true;
             this.lb_IndexQuestion.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_IndexQuestion.ForeColor = System.Drawing.Color.Yellow;
             this.lb_IndexQuestion.Location = new System.Drawing.Point(85, 33);
             this.lb_IndexQuestion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_IndexQuestion.Name = "lb_IndexQuestion";
@@ -54,17 +55,18 @@
             // lb_ContentQuestion
             // 
             this.lb_ContentQuestion.AutoSize = true;
-            this.lb_ContentQuestion.Location = new System.Drawing.Point(163, 38);
+            this.lb_ContentQuestion.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_ContentQuestion.Location = new System.Drawing.Point(162, 33);
             this.lb_ContentQuestion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_ContentQuestion.Name = "lb_ContentQuestion";
-            this.lb_ContentQuestion.Size = new System.Drawing.Size(144, 22);
+            this.lb_ContentQuestion.Size = new System.Drawing.Size(176, 27);
             this.lb_ContentQuestion.TabIndex = 1;
             this.lb_ContentQuestion.Text = "Nội dung câu hỏi";
             // 
             // rBtn_AnswerA
             // 
             this.rBtn_AnswerA.AutoSize = true;
-            this.rBtn_AnswerA.Location = new System.Drawing.Point(163, 130);
+            this.rBtn_AnswerA.Location = new System.Drawing.Point(163, 129);
             this.rBtn_AnswerA.Name = "rBtn_AnswerA";
             this.rBtn_AnswerA.Size = new System.Drawing.Size(101, 26);
             this.rBtn_AnswerA.TabIndex = 2;
@@ -76,7 +78,7 @@
             // rBtn_AnswerB
             // 
             this.rBtn_AnswerB.AutoSize = true;
-            this.rBtn_AnswerB.Location = new System.Drawing.Point(163, 205);
+            this.rBtn_AnswerB.Location = new System.Drawing.Point(163, 209);
             this.rBtn_AnswerB.Name = "rBtn_AnswerB";
             this.rBtn_AnswerB.Size = new System.Drawing.Size(101, 26);
             this.rBtn_AnswerB.TabIndex = 3;
@@ -88,7 +90,7 @@
             // rBtn_AnswerC
             // 
             this.rBtn_AnswerC.AutoSize = true;
-            this.rBtn_AnswerC.Location = new System.Drawing.Point(163, 281);
+            this.rBtn_AnswerC.Location = new System.Drawing.Point(163, 289);
             this.rBtn_AnswerC.Name = "rBtn_AnswerC";
             this.rBtn_AnswerC.Size = new System.Drawing.Size(101, 26);
             this.rBtn_AnswerC.TabIndex = 4;
@@ -100,7 +102,7 @@
             // rBtn_AnswerD
             // 
             this.rBtn_AnswerD.AutoSize = true;
-            this.rBtn_AnswerD.Location = new System.Drawing.Point(163, 355);
+            this.rBtn_AnswerD.Location = new System.Drawing.Point(163, 369);
             this.rBtn_AnswerD.Name = "rBtn_AnswerD";
             this.rBtn_AnswerD.Size = new System.Drawing.Size(102, 26);
             this.rBtn_AnswerD.TabIndex = 5;
@@ -117,33 +119,37 @@
             this.lb_A.Size = new System.Drawing.Size(24, 22);
             this.lb_A.TabIndex = 6;
             this.lb_A.Text = "A";
+            this.lb_A.Click += new System.EventHandler(this.lb_A_Click);
             // 
             // lb_B
             // 
             this.lb_B.AutoSize = true;
-            this.lb_B.Location = new System.Drawing.Point(130, 207);
+            this.lb_B.Location = new System.Drawing.Point(130, 211);
             this.lb_B.Name = "lb_B";
             this.lb_B.Size = new System.Drawing.Size(23, 22);
             this.lb_B.TabIndex = 7;
             this.lb_B.Text = "B";
+            this.lb_B.Click += new System.EventHandler(this.lb_B_Click);
             // 
             // lb_C
             // 
             this.lb_C.AutoSize = true;
-            this.lb_C.Location = new System.Drawing.Point(130, 283);
+            this.lb_C.Location = new System.Drawing.Point(130, 290);
             this.lb_C.Name = "lb_C";
             this.lb_C.Size = new System.Drawing.Size(23, 22);
             this.lb_C.TabIndex = 8;
             this.lb_C.Text = "C";
+            this.lb_C.Click += new System.EventHandler(this.lb_C_Click);
             // 
             // lb_D
             // 
             this.lb_D.AutoSize = true;
-            this.lb_D.Location = new System.Drawing.Point(130, 357);
+            this.lb_D.Location = new System.Drawing.Point(130, 369);
             this.lb_D.Name = "lb_D";
             this.lb_D.Size = new System.Drawing.Size(24, 22);
             this.lb_D.TabIndex = 9;
             this.lb_D.Text = "D";
+            this.lb_D.Click += new System.EventHandler(this.lb_D_Click);
             // 
             // QuestionItem
             // 

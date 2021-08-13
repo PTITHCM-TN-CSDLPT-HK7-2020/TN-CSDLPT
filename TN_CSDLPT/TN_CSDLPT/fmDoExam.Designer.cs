@@ -39,7 +39,6 @@
             this.btn_Refresh = new System.Windows.Forms.Button();
             this.nGAYTHIDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.btn_Search = new System.Windows.Forms.Button();
-            this.lANSpinEdit = new DevExpress.XtraEditors.SpinEdit();
             this.tHOIGIANSpinEdit = new DevExpress.XtraEditors.SpinEdit();
             this.sOCAUTHISpinEdit = new DevExpress.XtraEditors.SpinEdit();
             this.mAMHComboBox1 = new System.Windows.Forms.ComboBox();
@@ -76,6 +75,7 @@
             this.bAITHIBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bAITHITableAdapter = new TN_CSDLPT.DSTableAdapters.BAITHITableAdapter();
             this.flowLayoutPanel_Question = new System.Windows.Forms.FlowLayoutPanel();
+            this.lANSpinEdit = new System.Windows.Forms.NumericUpDown();
             mAMHLabel = new System.Windows.Forms.Label();
             tRINHDOLabel = new System.Windows.Forms.Label();
             tHOIGIANLabel1 = new System.Windows.Forms.Label();
@@ -83,7 +83,6 @@
             nGAYTHILabel = new System.Windows.Forms.Label();
             lANLabel = new System.Windows.Forms.Label();
             this.grpB_txtExam.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lANSpinEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tHOIGIANSpinEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sOCAUTHISpinEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mONHOCBindingSource)).BeginInit();
@@ -98,6 +97,7 @@
             this.pnl_S.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gIAOVIEN_DANGKYBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bAITHIBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lANSpinEdit)).BeginInit();
             this.SuspendLayout();
             // 
             // mAMHLabel
@@ -163,12 +163,12 @@
             // grpB_txtExam
             // 
             this.grpB_txtExam.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.grpB_txtExam.Controls.Add(this.lANSpinEdit);
             this.grpB_txtExam.Controls.Add(this.btn_Refresh);
             this.grpB_txtExam.Controls.Add(this.nGAYTHIDateTimePicker);
             this.grpB_txtExam.Controls.Add(this.btn_Search);
             this.grpB_txtExam.Controls.Add(nGAYTHILabel);
             this.grpB_txtExam.Controls.Add(lANLabel);
-            this.grpB_txtExam.Controls.Add(this.lANSpinEdit);
             this.grpB_txtExam.Controls.Add(this.tHOIGIANSpinEdit);
             this.grpB_txtExam.Controls.Add(tHOIGIANLabel1);
             this.grpB_txtExam.Controls.Add(sOCAUTHILabel);
@@ -221,33 +221,6 @@
             this.btn_Search.Text = "Tìm";
             this.btn_Search.UseVisualStyleBackColor = false;
             this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
-            // 
-            // lANSpinEdit
-            // 
-            this.lANSpinEdit.EditValue = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.lANSpinEdit.Location = new System.Drawing.Point(148, 116);
-            this.lANSpinEdit.Name = "lANSpinEdit";
-            this.lANSpinEdit.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lANSpinEdit.Properties.Appearance.Options.UseFont = true;
-            this.lANSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lANSpinEdit.Properties.MaxValue = new decimal(new int[] {
-            2,
-            0,
-            0,
-            0});
-            this.lANSpinEdit.Properties.MinValue = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.lANSpinEdit.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lANSpinEdit.Size = new System.Drawing.Size(144, 26);
-            this.lANSpinEdit.TabIndex = 26;
             // 
             // tHOIGIANSpinEdit
             // 
@@ -458,7 +431,7 @@
             this.pnl_Start.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_Start.Location = new System.Drawing.Point(0, 156);
             this.pnl_Start.Name = "pnl_Start";
-            this.pnl_Start.Size = new System.Drawing.Size(1592, 106);
+            this.pnl_Start.Size = new System.Drawing.Size(1592, 100);
             this.pnl_Start.TabIndex = 3;
             // 
             // dataGridView_Result
@@ -473,7 +446,7 @@
             this.dataGridView_Result.Name = "dataGridView_Result";
             this.dataGridView_Result.RowTemplate.Height = 24;
             this.dataGridView_Result.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView_Result.Size = new System.Drawing.Size(1592, 106);
+            this.dataGridView_Result.Size = new System.Drawing.Size(1592, 100);
             this.dataGridView_Result.TabIndex = 0;
             this.dataGridView_Result.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Result_CellContentClick);
             this.dataGridView_Result.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView_Result_CellMouseClick);
@@ -561,7 +534,7 @@
             this.pnl_S.Controls.Add(this.lb_TImer);
             this.pnl_S.Controls.Add(this.btn_Submit);
             this.pnl_S.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnl_S.Location = new System.Drawing.Point(0, 262);
+            this.pnl_S.Location = new System.Drawing.Point(0, 256);
             this.pnl_S.Name = "pnl_S";
             this.pnl_S.Size = new System.Drawing.Size(1592, 58);
             this.pnl_S.TabIndex = 2;
@@ -597,10 +570,32 @@
             this.flowLayoutPanel_Question.AutoScroll = true;
             this.flowLayoutPanel_Question.BackColor = System.Drawing.SystemColors.Highlight;
             this.flowLayoutPanel_Question.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel_Question.Location = new System.Drawing.Point(0, 320);
+            this.flowLayoutPanel_Question.Location = new System.Drawing.Point(0, 314);
             this.flowLayoutPanel_Question.Name = "flowLayoutPanel_Question";
-            this.flowLayoutPanel_Question.Size = new System.Drawing.Size(1592, 613);
+            this.flowLayoutPanel_Question.Size = new System.Drawing.Size(1592, 619);
             this.flowLayoutPanel_Question.TabIndex = 19;
+            // 
+            // lANSpinEdit
+            // 
+            this.lANSpinEdit.Location = new System.Drawing.Point(148, 109);
+            this.lANSpinEdit.Maximum = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            this.lANSpinEdit.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.lANSpinEdit.Name = "lANSpinEdit";
+            this.lANSpinEdit.Size = new System.Drawing.Size(144, 30);
+            this.lANSpinEdit.TabIndex = 33;
+            this.lANSpinEdit.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // fmDoExam
             // 
@@ -621,7 +616,6 @@
             this.Load += new System.EventHandler(this.fmDoExam_Load);
             this.grpB_txtExam.ResumeLayout(false);
             this.grpB_txtExam.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lANSpinEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tHOIGIANSpinEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sOCAUTHISpinEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mONHOCBindingSource)).EndInit();
@@ -638,6 +632,7 @@
             this.pnl_S.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gIAOVIEN_DANGKYBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bAITHIBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lANSpinEdit)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -668,7 +663,6 @@
         private System.Windows.Forms.BindingSource mONHOCBindingSource;
         private DSTableAdapters.MONHOCTableAdapter mONHOCTableAdapter;
         private DSTableAdapters.TableAdapterManager tableAdapterManager;
-        private DevExpress.XtraEditors.SpinEdit lANSpinEdit;
         private System.Windows.Forms.Label lb_IDClass;
         private System.Windows.Forms.Button btn_Search;
         private System.Windows.Forms.Panel pnl_S;
@@ -685,5 +679,6 @@
         private DSTableAdapters.BAITHITableAdapter bAITHITableAdapter;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_Question;
         private System.Windows.Forms.Button btn_Refresh;
+        private System.Windows.Forms.NumericUpDown lANSpinEdit;
     }
 }

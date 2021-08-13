@@ -59,10 +59,11 @@ namespace TN_CSDLPT
                 barBtn_Undo.Enabled = false;
                 barBtn_Save.Enabled = false;
                 barBtn_forbid.Enabled = false;
-                grpB_Farculty.Enabled = false;
-                gridView1.OptionsBehavior.ReadOnly = true;
-                gridView2.OptionsBehavior.ReadOnly = true;
+                grpB_txtFarculty.Enabled = false;
+               // gridView1.OptionsBehavior.ReadOnly = true;
+                //gridView2.OptionsBehavior.ReadOnly = true;
                 grpB_txtTeacher.Enabled = false;
+                MenuStrp_Teacher.Enabled = false;
             }
             else if(Program.mGroup == "Coso")
             {
@@ -384,7 +385,7 @@ namespace TN_CSDLPT
             if (mAGVTextEdit.Text.Trim() == "")
             {
                 MessageBox.Show("Mã giáo viên không được để trống!", "", MessageBoxButtons.OK);
-                mAKHTextBox.Focus();
+                mAGVTextEdit.Focus();
                 return;
             }
             try

@@ -130,6 +130,7 @@
             this.barBtn_Class.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barBtn_Class.ImageOptions.Image")));
             this.barBtn_Class.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barBtn_Class.ImageOptions.LargeImage")));
             this.barBtn_Class.Name = "barBtn_Class";
+            this.barBtn_Class.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtn_Class_ItemClick);
             // 
             // barBtn_Farculty
             // 
@@ -378,9 +379,7 @@
         public System.Windows.Forms.ToolStripStatusLabel Stslb_Group;
         public System.Windows.Forms.StatusStrip statusStrip1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem10;
         public DevExpress.XtraBars.Ribbon.RibbonPage ribPg_Tabbar;
-        private DevExpress.XtraBars.BarButtonItem barBtn_Question;
         public DevExpress.XtraBars.BarButtonItem barBtn_Class;
         public DevExpress.XtraBars.BarButtonItem barBtn_Farculty;
         private DevExpress.XtraBars.BarButtonItem barButtonItem_TestStu;
@@ -397,6 +396,8 @@
         public DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
         public DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
         public DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
+        public DevExpress.XtraBars.BarButtonItem barBtn_Question;
+        public DevExpress.XtraBars.BarButtonItem barButtonItem10;
     }
 }
 

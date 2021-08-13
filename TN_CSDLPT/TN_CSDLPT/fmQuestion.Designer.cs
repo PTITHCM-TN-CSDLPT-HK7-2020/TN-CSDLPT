@@ -104,40 +104,37 @@
             // 
             mAMHLabel.AutoSize = true;
             mAMHLabel.ForeColor = System.Drawing.Color.Yellow;
-            mAMHLabel.Location = new System.Drawing.Point(207, 128);
+            mAMHLabel.Location = new System.Drawing.Point(172, 90);
             mAMHLabel.Name = "mAMHLabel";
             mAMHLabel.Size = new System.Drawing.Size(113, 22);
             mAMHLabel.TabIndex = 0;
             mAMHLabel.Text = "Mã môn học:";
-            mAMHLabel.Click += new System.EventHandler(this.mAMHLabel_Click);
             // 
             // tRINHDOLabel
             // 
             tRINHDOLabel.AutoSize = true;
             tRINHDOLabel.ForeColor = System.Drawing.Color.Yellow;
-            tRINHDOLabel.Location = new System.Drawing.Point(233, 198);
+            tRINHDOLabel.Location = new System.Drawing.Point(198, 160);
             tRINHDOLabel.Name = "tRINHDOLabel";
             tRINHDOLabel.Size = new System.Drawing.Size(83, 22);
             tRINHDOLabel.TabIndex = 2;
             tRINHDOLabel.Text = "Trình độ:";
-            tRINHDOLabel.Click += new System.EventHandler(this.tRINHDOLabel_Click);
             // 
             // nOIDUNGLabel
             // 
             nOIDUNGLabel.AutoSize = true;
             nOIDUNGLabel.ForeColor = System.Drawing.Color.Yellow;
-            nOIDUNGLabel.Location = new System.Drawing.Point(232, 330);
+            nOIDUNGLabel.Location = new System.Drawing.Point(611, 94);
             nOIDUNGLabel.Name = "nOIDUNGLabel";
             nOIDUNGLabel.Size = new System.Drawing.Size(88, 22);
             nOIDUNGLabel.TabIndex = 4;
             nOIDUNGLabel.Text = "Nội dung:";
-            nOIDUNGLabel.Click += new System.EventHandler(this.nOIDUNGLabel_Click);
             // 
             // aLabel
             // 
             aLabel.AutoSize = true;
             aLabel.ForeColor = System.Drawing.Color.Yellow;
-            aLabel.Location = new System.Drawing.Point(290, 418);
+            aLabel.Location = new System.Drawing.Point(669, 182);
             aLabel.Name = "aLabel";
             aLabel.Size = new System.Drawing.Size(30, 22);
             aLabel.TabIndex = 6;
@@ -147,7 +144,7 @@
             // 
             bLabel.AutoSize = true;
             bLabel.ForeColor = System.Drawing.Color.Yellow;
-            bLabel.Location = new System.Drawing.Point(290, 464);
+            bLabel.Location = new System.Drawing.Point(669, 228);
             bLabel.Name = "bLabel";
             bLabel.Size = new System.Drawing.Size(29, 22);
             bLabel.TabIndex = 8;
@@ -157,7 +154,7 @@
             // 
             cLabel.AutoSize = true;
             cLabel.ForeColor = System.Drawing.Color.Yellow;
-            cLabel.Location = new System.Drawing.Point(914, 413);
+            cLabel.Location = new System.Drawing.Point(1293, 177);
             cLabel.Name = "cLabel";
             cLabel.Size = new System.Drawing.Size(29, 22);
             cLabel.TabIndex = 10;
@@ -167,7 +164,7 @@
             // 
             dLabel.AutoSize = true;
             dLabel.ForeColor = System.Drawing.Color.Yellow;
-            dLabel.Location = new System.Drawing.Point(914, 462);
+            dLabel.Location = new System.Drawing.Point(1293, 226);
             dLabel.Name = "dLabel";
             dLabel.Size = new System.Drawing.Size(30, 22);
             dLabel.TabIndex = 12;
@@ -177,7 +174,7 @@
             // 
             dAP_ANLabel.AutoSize = true;
             dAP_ANLabel.ForeColor = System.Drawing.Color.Yellow;
-            dAP_ANLabel.Location = new System.Drawing.Point(871, 334);
+            dAP_ANLabel.Location = new System.Drawing.Point(1250, 98);
             dAP_ANLabel.Name = "dAP_ANLabel";
             dAP_ANLabel.Size = new System.Drawing.Size(72, 22);
             dAP_ANLabel.TabIndex = 14;
@@ -187,12 +184,11 @@
             // 
             mAGVLabel.AutoSize = true;
             mAGVLabel.ForeColor = System.Drawing.Color.Yellow;
-            mAGVLabel.Location = new System.Drawing.Point(207, 268);
+            mAGVLabel.Location = new System.Drawing.Point(172, 230);
             mAGVLabel.Name = "mAGVLabel";
             mAGVLabel.Size = new System.Drawing.Size(120, 22);
             mAGVLabel.TabIndex = 16;
             mAGVLabel.Text = "Mã giáo viên:";
-            mAGVLabel.Click += new System.EventHandler(this.mAGVLabel_Click);
             // 
             // barManager1
             // 
@@ -623,12 +619,11 @@
             this.grpB_txtQuestion.Size = new System.Drawing.Size(1697, 572);
             this.grpB_txtQuestion.TabIndex = 6;
             this.grpB_txtQuestion.TabStop = false;
-            this.grpB_txtQuestion.Enter += new System.EventHandler(this.grpB_txtQuestion_Enter);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::TN_CSDLPT.Properties.Resources.question_mark;
-            this.pictureBox1.Location = new System.Drawing.Point(47, 154);
+            this.pictureBox1.Location = new System.Drawing.Point(24, 98);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(132, 132);
             this.pictureBox1.TabIndex = 31;
@@ -639,7 +634,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Yellow;
-            this.label1.Location = new System.Drawing.Point(589, 26);
+            this.label1.Location = new System.Drawing.Point(718, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(260, 32);
             this.label1.TabIndex = 17;
@@ -654,7 +649,7 @@
             "A",
             "B",
             "C"});
-            this.tRINHDOComboBox.Location = new System.Drawing.Point(335, 194);
+            this.tRINHDOComboBox.Location = new System.Drawing.Point(300, 156);
             this.tRINHDOComboBox.Name = "tRINHDOComboBox";
             this.tRINHDOComboBox.Size = new System.Drawing.Size(251, 30);
             this.tRINHDOComboBox.TabIndex = 2;
@@ -662,7 +657,7 @@
             // mAGVTextBox
             // 
             this.mAGVTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bODEBindingSource, "MAGV", true));
-            this.mAGVTextBox.Location = new System.Drawing.Point(335, 260);
+            this.mAGVTextBox.Location = new System.Drawing.Point(300, 222);
             this.mAGVTextBox.Name = "mAGVTextBox";
             this.mAGVTextBox.Size = new System.Drawing.Size(251, 30);
             this.mAGVTextBox.TabIndex = 3;
@@ -679,7 +674,7 @@
             "B",
             "C",
             "D"});
-            this.dAP_ANComboBox.Location = new System.Drawing.Point(950, 331);
+            this.dAP_ANComboBox.Location = new System.Drawing.Point(1329, 95);
             this.dAP_ANComboBox.Name = "dAP_ANComboBox";
             this.dAP_ANComboBox.Size = new System.Drawing.Size(151, 30);
             this.dAP_ANComboBox.TabIndex = 9;
@@ -687,7 +682,7 @@
             // dTextBox
             // 
             this.dTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bODEBindingSource, "D", true));
-            this.dTextBox.Location = new System.Drawing.Point(950, 459);
+            this.dTextBox.Location = new System.Drawing.Point(1329, 223);
             this.dTextBox.Name = "dTextBox";
             this.dTextBox.Size = new System.Drawing.Size(520, 30);
             this.dTextBox.TabIndex = 8;
@@ -695,7 +690,7 @@
             // cTextBox
             // 
             this.cTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bODEBindingSource, "C", true));
-            this.cTextBox.Location = new System.Drawing.Point(950, 410);
+            this.cTextBox.Location = new System.Drawing.Point(1329, 174);
             this.cTextBox.Name = "cTextBox";
             this.cTextBox.Size = new System.Drawing.Size(520, 30);
             this.cTextBox.TabIndex = 7;
@@ -703,7 +698,7 @@
             // bTextBox
             // 
             this.bTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bODEBindingSource, "B", true));
-            this.bTextBox.Location = new System.Drawing.Point(334, 461);
+            this.bTextBox.Location = new System.Drawing.Point(713, 225);
             this.bTextBox.Name = "bTextBox";
             this.bTextBox.Size = new System.Drawing.Size(520, 30);
             this.bTextBox.TabIndex = 6;
@@ -711,7 +706,7 @@
             // aTextBox
             // 
             this.aTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bODEBindingSource, "A", true));
-            this.aTextBox.Location = new System.Drawing.Point(334, 415);
+            this.aTextBox.Location = new System.Drawing.Point(713, 179);
             this.aTextBox.Name = "aTextBox";
             this.aTextBox.Size = new System.Drawing.Size(520, 30);
             this.aTextBox.TabIndex = 5;
@@ -719,7 +714,7 @@
             // nOIDUNGTextBox
             // 
             this.nOIDUNGTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bODEBindingSource, "NOIDUNG", true));
-            this.nOIDUNGTextBox.Location = new System.Drawing.Point(334, 326);
+            this.nOIDUNGTextBox.Location = new System.Drawing.Point(713, 90);
             this.nOIDUNGTextBox.Multiline = true;
             this.nOIDUNGTextBox.Name = "nOIDUNGTextBox";
             this.nOIDUNGTextBox.Size = new System.Drawing.Size(520, 67);
@@ -728,7 +723,7 @@
             // mAMHTextBox
             // 
             this.mAMHTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bODEBindingSource, "MAMH", true));
-            this.mAMHTextBox.Location = new System.Drawing.Point(335, 128);
+            this.mAMHTextBox.Location = new System.Drawing.Point(300, 90);
             this.mAMHTextBox.Name = "mAMHTextBox";
             this.mAMHTextBox.Size = new System.Drawing.Size(251, 30);
             this.mAMHTextBox.TabIndex = 1;
@@ -803,10 +798,10 @@
         private System.Windows.Forms.TextBox bTextBox;
         private System.Windows.Forms.TextBox aTextBox;
         private System.Windows.Forms.TextBox nOIDUNGTextBox;
-        private System.Windows.Forms.TextBox mAMHTextBox;
         private System.Windows.Forms.ComboBox tRINHDOComboBox;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox mAMHTextBox;
     }
 }

@@ -81,7 +81,7 @@ namespace TN_CSDLPT
             string malop = txtB_IDClass.Text.Trim();
             string masv = txtB_IDStudent.Text.Trim();
 
-            string query = "select MAGV, MAMH, MALOP, TRINHDO, NGAYTHI, LAN, SOCAUTHI, THOIGIAN from GIAOVIEN_DANGKY where MAMH = '" + mamh + "' and cast(NGAYTHI as date) = '" + ngay + "' and LAN = '" + lan + "'";
+            string query = "select MAGV, MAMH, MALOP, NGAYTHI, LAN, SOCAUTHI, THOIGIAN from GIAOVIEN_DANGKY where MAMH = '" + mamh +"' and MALOP = '"+malop+ "' and cast(NGAYTHI as date) = '" + ngay + "' and LAN = '" + lan + "'";
             dataGridView_Result.DataSource = Program.ExecSqlDataTable(query);
         }
 
@@ -113,12 +113,12 @@ namespace TN_CSDLPT
                 DataGridViewRow row = dataGridView_Result.Rows[e.RowIndex];
                 MALOP = row.Cells[2].Value.ToString().Trim();
                 MAMH = row.Cells[1].Value.ToString().Trim();
-                LAN = row.Cells[5].Value.ToString().Trim();
+                LAN = row.Cells[4].Value.ToString().Trim();
                 //soCauThi = int.Parse(row.Cells[6].Value.ToString());
                 //thoigianThi = int.Parse(row.Cells[7].Value.ToString());
                 //trinhdo = row.Cells[3].Value.ToString().Trim();
                 //ngayThi = Convert.ToDateTime(row.Cells[4].Value.ToString());
-                //MessageBox.Show(MALOP + " " + MAMH + " " + LAN + " " + soCauThi + " " + thoigianThi);
+                MessageBox.Show(MALOP + " " + MAMH + " " + LAN);
             }
         }
     }

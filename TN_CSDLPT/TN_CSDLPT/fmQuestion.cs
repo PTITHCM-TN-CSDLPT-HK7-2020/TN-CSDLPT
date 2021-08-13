@@ -42,7 +42,7 @@ namespace TN_CSDLPT
                 barBtn_Save.Enabled = false;
                 barBtn_Forbid.Enabled = false;
                 grpB_txtQuestion.Enabled = false;
-                bODEGridControl.Enabled = false;
+                //bODEGridControl.Enabled= false;
             }
             else if (Program.mGroup == "Coso")
             {
@@ -258,31 +258,6 @@ namespace TN_CSDLPT
                 barBtn_Delete.Enabled =
                 barBtn_Save.Enabled = false;
             }
-        }
-
-        private void tRINHDOLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void grpB_txtQuestion_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void mAMHLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void mAGVLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void nOIDUNGLabel_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

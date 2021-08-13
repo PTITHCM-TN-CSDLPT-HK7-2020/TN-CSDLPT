@@ -451,7 +451,7 @@
             this.kHOAGridControl.MainView = this.gridView1;
             this.kHOAGridControl.MenuManager = this.barManager1;
             this.kHOAGridControl.Name = "kHOAGridControl";
-            this.kHOAGridControl.Size = new System.Drawing.Size(934, 327);
+            this.kHOAGridControl.Size = new System.Drawing.Size(871, 327);
             this.kHOAGridControl.TabIndex = 5;
             this.kHOAGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -535,7 +535,7 @@
             this.grpB_Farculty.Dock = System.Windows.Forms.DockStyle.Left;
             this.grpB_Farculty.Location = new System.Drawing.Point(0, 90);
             this.grpB_Farculty.Name = "grpB_Farculty";
-            this.grpB_Farculty.Size = new System.Drawing.Size(940, 733);
+            this.grpB_Farculty.Size = new System.Drawing.Size(877, 733);
             this.grpB_Farculty.TabIndex = 11;
             this.grpB_Farculty.TabStop = false;
             // 
@@ -553,7 +553,7 @@
             this.grpB_txtFarculty.Dock = System.Windows.Forms.DockStyle.Top;
             this.grpB_txtFarculty.Location = new System.Drawing.Point(3, 353);
             this.grpB_txtFarculty.Name = "grpB_txtFarculty";
-            this.grpB_txtFarculty.Size = new System.Drawing.Size(934, 292);
+            this.grpB_txtFarculty.Size = new System.Drawing.Size(871, 292);
             this.grpB_txtFarculty.TabIndex = 6;
             this.grpB_txtFarculty.TabStop = false;
             // 
@@ -612,7 +612,7 @@
             this.gIAOVIENGridControl.MainView = this.gridView2;
             this.gIAOVIENGridControl.MenuManager = this.barManager1;
             this.gIAOVIENGridControl.Name = "gIAOVIENGridControl";
-            this.gIAOVIENGridControl.Size = new System.Drawing.Size(777, 327);
+            this.gIAOVIENGridControl.Size = new System.Drawing.Size(840, 327);
             this.gIAOVIENGridControl.TabIndex = 7;
             this.gIAOVIENGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -737,7 +737,7 @@
             // 
             // MenuStrp_Teacher
             // 
-            this.MenuStrp_Teacher.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.MenuStrp_Teacher.BackColor = System.Drawing.Color.Teal;
             this.MenuStrp_Teacher.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MenuStrp_Teacher.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.MenuStrp_Teacher.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -749,47 +749,65 @@
             this.hủyToolStripMenuItem});
             this.MenuStrp_Teacher.Name = "contextMenuStrip1";
             this.MenuStrp_Teacher.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.MenuStrp_Teacher.Size = new System.Drawing.Size(182, 148);
+            this.MenuStrp_Teacher.Size = new System.Drawing.Size(191, 148);
             // 
             // thêmLớpToolStripMenuItem
             // 
+            this.thêmLớpToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.thêmLớpToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.thêmLớpToolStripMenuItem.ForeColor = System.Drawing.Color.Yellow;
             this.thêmLớpToolStripMenuItem.Name = "thêmLớpToolStripMenuItem";
-            this.thêmLớpToolStripMenuItem.Size = new System.Drawing.Size(181, 24);
+            this.thêmLớpToolStripMenuItem.Size = new System.Drawing.Size(190, 24);
             this.thêmLớpToolStripMenuItem.Text = "Thêm giáo viên";
             this.thêmLớpToolStripMenuItem.Click += new System.EventHandler(this.thêmGVToolStripMenuItem_Click);
             // 
             // xóaToolStripMenuItem
             // 
+            this.xóaToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.xóaToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xóaToolStripMenuItem.ForeColor = System.Drawing.Color.Yellow;
             this.xóaToolStripMenuItem.Name = "xóaToolStripMenuItem";
-            this.xóaToolStripMenuItem.Size = new System.Drawing.Size(181, 24);
+            this.xóaToolStripMenuItem.Size = new System.Drawing.Size(190, 24);
             this.xóaToolStripMenuItem.Text = "Xóa";
             this.xóaToolStripMenuItem.Click += new System.EventHandler(this.xóaToolStripMenuItem_Click);
             // 
             // phụcHồiToolStripMenuItem
             // 
+            this.phụcHồiToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.phụcHồiToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phụcHồiToolStripMenuItem.ForeColor = System.Drawing.Color.Yellow;
             this.phụcHồiToolStripMenuItem.Name = "phụcHồiToolStripMenuItem";
-            this.phụcHồiToolStripMenuItem.Size = new System.Drawing.Size(181, 24);
+            this.phụcHồiToolStripMenuItem.Size = new System.Drawing.Size(190, 24);
             this.phụcHồiToolStripMenuItem.Text = "Phục hồi";
             this.phụcHồiToolStripMenuItem.Click += new System.EventHandler(this.phụcHồiToolStripMenuItem_Click);
             // 
             // ghiToolStripMenuItem
             // 
+            this.ghiToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.ghiToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ghiToolStripMenuItem.ForeColor = System.Drawing.Color.Yellow;
             this.ghiToolStripMenuItem.Name = "ghiToolStripMenuItem";
-            this.ghiToolStripMenuItem.Size = new System.Drawing.Size(181, 24);
+            this.ghiToolStripMenuItem.Size = new System.Drawing.Size(190, 24);
             this.ghiToolStripMenuItem.Text = "Ghi";
             this.ghiToolStripMenuItem.Click += new System.EventHandler(this.ghiToolStripMenuItem_Click);
             // 
             // làmMớiToolStripMenuItem
             // 
+            this.làmMớiToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.làmMớiToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.làmMớiToolStripMenuItem.ForeColor = System.Drawing.Color.Yellow;
             this.làmMớiToolStripMenuItem.Name = "làmMớiToolStripMenuItem";
-            this.làmMớiToolStripMenuItem.Size = new System.Drawing.Size(181, 24);
+            this.làmMớiToolStripMenuItem.Size = new System.Drawing.Size(190, 24);
             this.làmMớiToolStripMenuItem.Text = "Làm mới";
             this.làmMớiToolStripMenuItem.Click += new System.EventHandler(this.làmMớiToolStripMenuItem_Click);
             // 
             // hủyToolStripMenuItem
             // 
+            this.hủyToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.hủyToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hủyToolStripMenuItem.ForeColor = System.Drawing.Color.Yellow;
             this.hủyToolStripMenuItem.Name = "hủyToolStripMenuItem";
-            this.hủyToolStripMenuItem.Size = new System.Drawing.Size(181, 24);
+            this.hủyToolStripMenuItem.Size = new System.Drawing.Size(190, 24);
             this.hủyToolStripMenuItem.Text = "Hủy thao tác";
             this.hủyToolStripMenuItem.Click += new System.EventHandler(this.hủyToolStripMenuItem_Click);
             // 
@@ -813,9 +831,9 @@
             this.grpB_Teacher.Controls.Add(this.grpB_txtTeacher);
             this.grpB_Teacher.Controls.Add(this.gIAOVIENGridControl);
             this.grpB_Teacher.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grpB_Teacher.Location = new System.Drawing.Point(940, 90);
+            this.grpB_Teacher.Location = new System.Drawing.Point(877, 90);
             this.grpB_Teacher.Name = "grpB_Teacher";
-            this.grpB_Teacher.Size = new System.Drawing.Size(783, 733);
+            this.grpB_Teacher.Size = new System.Drawing.Size(846, 733);
             this.grpB_Teacher.TabIndex = 16;
             this.grpB_Teacher.TabStop = false;
             this.grpB_Teacher.Enter += new System.EventHandler(this.grpB_Teacher_Enter);
@@ -838,7 +856,7 @@
             this.grpB_txtTeacher.Dock = System.Windows.Forms.DockStyle.Top;
             this.grpB_txtTeacher.Location = new System.Drawing.Point(3, 353);
             this.grpB_txtTeacher.Name = "grpB_txtTeacher";
-            this.grpB_txtTeacher.Size = new System.Drawing.Size(777, 292);
+            this.grpB_txtTeacher.Size = new System.Drawing.Size(840, 292);
             this.grpB_txtTeacher.TabIndex = 13;
             this.grpB_txtTeacher.TabStop = false;
             // 
@@ -947,7 +965,7 @@
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fmFarculty";
-            this.Text = "Khoa";
+            this.Text = "Quản lý khoa";
             this.Load += new System.EventHandler(this.fmFarculty_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kHOABindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dS)).EndInit();

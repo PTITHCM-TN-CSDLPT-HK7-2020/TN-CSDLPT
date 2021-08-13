@@ -148,6 +148,7 @@
             // 
             // grpB_txtStudent
             // 
+            this.grpB_txtStudent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.grpB_txtStudent.Controls.Add(this.txtB_IDClass);
             this.grpB_txtStudent.Controls.Add(this.lb_IDClass);
             this.grpB_txtStudent.Controls.Add(this.txtB_FullName);
@@ -157,6 +158,7 @@
             this.grpB_txtStudent.Controls.Add(this.label2);
             this.grpB_txtStudent.Controls.Add(this.label4);
             this.grpB_txtStudent.Dock = System.Windows.Forms.DockStyle.Left;
+            this.grpB_txtStudent.ForeColor = System.Drawing.Color.Yellow;
             this.grpB_txtStudent.Location = new System.Drawing.Point(912, 0);
             this.grpB_txtStudent.Name = "grpB_txtStudent";
             this.grpB_txtStudent.Size = new System.Drawing.Size(934, 156);
@@ -234,6 +236,7 @@
             // 
             // grpB_txtExam
             // 
+            this.grpB_txtExam.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.grpB_txtExam.Controls.Add(this.btn_Refresh);
             this.grpB_txtExam.Controls.Add(this.nGAYTHIDateTimePicker);
             this.grpB_txtExam.Controls.Add(this.btn_Search);
@@ -250,6 +253,7 @@
             this.grpB_txtExam.Controls.Add(tRINHDOLabel);
             this.grpB_txtExam.Dock = System.Windows.Forms.DockStyle.Left;
             this.grpB_txtExam.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpB_txtExam.ForeColor = System.Drawing.Color.Yellow;
             this.grpB_txtExam.Location = new System.Drawing.Point(0, 0);
             this.grpB_txtExam.Name = "grpB_txtExam";
             this.grpB_txtExam.Size = new System.Drawing.Size(912, 156);
@@ -259,13 +263,15 @@
             // 
             // btn_Refresh
             // 
+            this.btn_Refresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btn_Refresh.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Refresh.ForeColor = System.Drawing.SystemColors.Desktop;
             this.btn_Refresh.Location = new System.Drawing.Point(787, 96);
             this.btn_Refresh.Name = "btn_Refresh";
             this.btn_Refresh.Size = new System.Drawing.Size(104, 47);
             this.btn_Refresh.TabIndex = 32;
             this.btn_Refresh.Text = "Refresh";
-            this.btn_Refresh.UseVisualStyleBackColor = true;
+            this.btn_Refresh.UseVisualStyleBackColor = false;
             this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
             // 
             // nGAYTHIDateTimePicker
@@ -278,13 +284,15 @@
             // 
             // btn_Search
             // 
+            this.btn_Search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btn_Search.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Search.ForeColor = System.Drawing.SystemColors.Desktop;
             this.btn_Search.Location = new System.Drawing.Point(787, 35);
             this.btn_Search.Name = "btn_Search";
             this.btn_Search.Size = new System.Drawing.Size(104, 47);
             this.btn_Search.TabIndex = 30;
             this.btn_Search.Text = "Tìm";
-            this.btn_Search.UseVisualStyleBackColor = true;
+            this.btn_Search.UseVisualStyleBackColor = false;
             this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
             // 
             // lANSpinEdit
@@ -402,7 +410,7 @@
             "C"});
             this.tRINHDOComboBox.Location = new System.Drawing.Point(544, 32);
             this.tRINHDOComboBox.Name = "tRINHDOComboBox";
-            this.tRINHDOComboBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tRINHDOComboBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tRINHDOComboBox.Size = new System.Drawing.Size(214, 30);
             this.tRINHDOComboBox.TabIndex = 13;
             // 
@@ -487,7 +495,7 @@
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fmExamHistoryResult";
-            this.Text = "v";
+            this.Text = "Xem chi tiết bài thi";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.fmExamHistoryResult_Load);
             this.pnl_InfoStu.ResumeLayout(false);

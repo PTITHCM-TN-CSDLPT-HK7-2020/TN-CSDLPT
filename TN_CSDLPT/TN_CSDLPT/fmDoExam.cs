@@ -20,7 +20,7 @@ namespace TN_CSDLPT
 
         private int dem = 0;
         public static Boolean checkThi = false;
-        private Boolean checkThiTiep = false;// Biến lưu nếu sv này thi t
+        private Boolean checkThiTiep = false;// Biến lưu nếu sv này thi tiếp
         private Boolean isSinhVien = false;
         private int thoigianThi = 0;
         private int soCauThi = 0;
@@ -256,15 +256,11 @@ namespace TN_CSDLPT
         {
             string query = "";
 
-            //string sqlUpdate = "";
             for (int i = 0; i < listCauHoi.Length; i++)
             {
-                //sqlUpdate += " UPDATE dbo.BAITHI SET DaChon = '"
-                //   + listCauHoi[i].CauDaChon
-                //   + "' WHERE CauHoi = " + listCauHoi[i].IDBaiThi + "  ";
-                query +="exec SP_LUUBAITHI '" + Program.mSV + "','" + MAMH.Trim() + "'," + LAN + ","
+                query +=" exec SP_LUUBAITHI '" + Program.mSV + "','" + MAMH.Trim() + "'," + LAN + ","
                     + listCauHoi[i].CauBaiThi + "," + listCauHoi[i].CauBoDe + ",'" + listCauHoi[i].CauDaChon + "','"+txtB_IDClass.Text.Trim()+"',"+
-                    +thoigianThi+' ';
+                    +thoigianThi;
             }
 
             Console.WriteLine("câu lệnh: " + query);
@@ -295,8 +291,8 @@ namespace TN_CSDLPT
             }
             else
             {
-                sql = "insert into BANGDIEM (MASV,MAMH,LAN, DIEM)" +
-                "values('" + Program.mSV + "', '" + MAMH + "'," + LAN + ", " + diem + ")";
+                sql = "insert into BANGDIEM (MASV,MAMH,LAN,NGAYTHI,DIEM)" +
+                "values('" + Program.mSV + "', '" + MAMH + "'," + LAN + ",'"+ngayHienTai+"',"+ diem + ")";
             }
             try
             {
@@ -333,7 +329,7 @@ namespace TN_CSDLPT
             tRINHDOComboBox.SelectedIndex = 0;
 
             string queryLoadBangGVDK = "select MAGV, MAMH, MALOP, TRINHDO, NGAYTHI, LAN, SOCAUTHI, THOIGIAN from GIAOVIEN_DANGKY where MAGV = '" + Program.username.Trim() + "'";
-
+            
             if (Program.mGroup == "Sinhvien")
             {
                 loadThongTinSInhVien();
@@ -367,6 +363,7 @@ namespace TN_CSDLPT
 
         private void btn_Search_Click(object sender, EventArgs e)
         {
+            Console.Write("Ngày hiện tại: " + ngayHienTai);
             string mamh = mAMHComboBox1.SelectedValue.ToString().Trim();
             int lan = int.Parse(lANSpinEdit.Value.ToString().Trim());
             string ngay = nGAYTHIDateTimePicker.Value.ToString("yyyy-MM-dd");

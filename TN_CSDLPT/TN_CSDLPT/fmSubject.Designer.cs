@@ -517,7 +517,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fmSubject";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Môn học";
+            this.Text = "Quản lý môn học";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.fmSubject_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();

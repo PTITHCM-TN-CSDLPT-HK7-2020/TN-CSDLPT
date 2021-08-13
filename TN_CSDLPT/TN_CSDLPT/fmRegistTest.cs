@@ -40,8 +40,6 @@ namespace TN_CSDLPT
             this.lOPTableAdapter.Connection.ConnectionString = Program.connstr;
             this.lOPTableAdapter.Fill(this.dS.LOP);
 
-            this.gIAOVIENTableAdapter.Connection.ConnectionString = Program.connstr;
-            this.gIAOVIENTableAdapter.Fill(this.dS.GIAOVIEN);
         }
         private bool CheckDeleteRegisting(string query)
         {
@@ -56,6 +54,13 @@ namespace TN_CSDLPT
         {
             dS.EnforceConstraints = false;
             // TODO: This line of code loads data into the 'dS.GIAOVIEN_DANGKY' table. You can move, or remove it, as needed.
+            this.gIAOVIEN_DANGKYTableAdapter.Fill(this.dS.GIAOVIEN_DANGKY);
+            // TODO: This line of code loads data into the 'dS.LOP' table. You can move, or remove it, as needed.
+            this.lOPTableAdapter.Fill(this.dS.LOP);
+            // TODO: This line of code loads data into the 'dS.MONHOC' table. You can move, or remove it, as needed.
+            this.mONHOCTableAdapter.Fill(this.dS.MONHOC);
+            
+            // TODO: This line of code loads data into the 'dS.GIAOVIEN_DANGKY' table. You can move, or remove it, as needed.
             this.gIAOVIEN_DANGKYTableAdapter.Connection.ConnectionString = Program.connstr;
                 this.gIAOVIEN_DANGKYTableAdapter.Fill(this.dS.GIAOVIEN_DANGKY);
 
@@ -67,9 +72,6 @@ namespace TN_CSDLPT
             this.lOPTableAdapter.Connection.ConnectionString = Program.connstr;
             this.lOPTableAdapter.Fill(this.dS.LOP);
 
-            // TODO: This line of code loads data into the 'dS.GIAOVIEN' table. You can move, or remove it, as needed.
-            this.gIAOVIENTableAdapter.Connection.ConnectionString = Program.connstr;
-            this.gIAOVIENTableAdapter.Fill(this.dS.GIAOVIEN);
 
             if (gIAOVIEN_DANGKYBindingSource.Count > 0)
             {
@@ -110,24 +112,34 @@ namespace TN_CSDLPT
 
         private void barBtn_Add_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            vitri = gIAOVIEN_DANGKYBindingSource.Position;
-            grpB_txtRegistTest.Enabled = true;
-
             gIAOVIEN_DANGKYBindingSource.AddNew();
 
-            nGAYTHIDateEdit.DateTime = DateTime.Now;
+            vitri = gIAOVIEN_DANGKYBindingSource.Position;
             mAGVTextBox.Text = Program.username;
+            mALOPComboBox.SelectedIndex =
+            mAMHComboBox1.SelectedIndex = 0;
+            tRINHDOComboBox.SelectedIndex = -1;
+
+            grpB_txtRegistTest.Enabled = true;
+
+            nGAYTHIDateEdit.DateTime = DateTime.Now;
+            lANNumericUpDown.Value = 1;
+            sOCAUTHISpinEdit.Value = sOCAUTHISpinEdit.Properties.MinValue;
+            tHOIGIANSpinEdit.Value = tHOIGIANSpinEdit.Properties.MinValue;
+
+
             barBtn_Add.Enabled = barBtn_Delete.Enabled = barBtn_Refresh.Enabled = false;
             barBtn_Save.Enabled = barBtn_Undo.Enabled = barBtn_Exit.Enabled = barBtn_Forbid.Enabled = true;
             mAGVTextBox.Enabled = false;
             gIAOVIEN_DANGKYGridControl.Enabled = false;
+
         }
 
         private void barBtn_Delete_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             string mamh = mAMHComboBox1.SelectedValue.ToString();
             string malop = mALOPComboBox.SelectedValue.ToString();
-            int lan = int.Parse(lANSpinEdit.Value.ToString());
+            int lan = int.Parse(lANNumericUpDown.Value.ToString());
             string query = "exec  SP_CHECKXOAGVDK "+mamh+","+malop+","+lan;
             if (gIAOVIEN_DANGKYBindingSource.Count == 0)//bảng môn học trống thì ko cho xóa
             {
@@ -170,10 +182,15 @@ namespace TN_CSDLPT
 
         private void barBtn_Save_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            //lấy những param cần thiết của SP_CHECKXOAGVDK
             string mamh = ((DataRowView)gIAOVIEN_DANGKYBindingSource[gIAOVIEN_DANGKYBindingSource.Position])["MAMH"].ToString();
             string malop = ((DataRowView)gIAOVIEN_DANGKYBindingSource[gIAOVIEN_DANGKYBindingSource.Position])["MALOP"].ToString();
-            int lan = int.Parse(((DataRowView)gIAOVIEN_DANGKYBindingSource[gIAOVIEN_DANGKYBindingSource.Position])["LAN"].ToString());
+            //int lan = int.Parse(((DataRowView)gIAOVIEN_DANGKYBindingSource[gIAOVIEN_DANGKYBindingSource.Position])["LAN"].ToString());
+            int lan = 1;
+            Console.Write("Test lần:" +lan);
             string query = "exec  SP_CHECKXOAGVDK " + mamh + "," + malop + "," + lan;
+            
+            //kiểm tra nhập rỗng
             if (mALOPComboBox.SelectedIndex == -1)
             {
                 MessageBox.Show("Mã lớp không được để trống!", "", MessageBoxButtons.OK);
@@ -192,10 +209,10 @@ namespace TN_CSDLPT
                 tRINHDOComboBox.Focus();
                 return;
             }
-            if (lANSpinEdit.Value.ToString()=="")
+            if (lANNumericUpDown.Value.ToString()=="")
             {
                 MessageBox.Show("Lần thi không được để trống!", "", MessageBoxButtons.OK);
-                lANSpinEdit.Focus();
+                lANNumericUpDown.Focus();
                 return;
             }
             if (sOCAUTHISpinEdit.Value.ToString() == "")
@@ -206,7 +223,13 @@ namespace TN_CSDLPT
             }
             if (nGAYTHIDateEdit.DateTime.ToString() == "")
             {
-                MessageBox.Show("Thời gian không được để trống!", "", MessageBoxButtons.OK);
+                MessageBox.Show("Thời gian thi không được để trống!", "", MessageBoxButtons.OK);
+                nGAYTHIDateEdit.Focus();
+                return;
+            }
+            if(nGAYTHIDateEdit.DateTime.Date < DateTime.Now.Date)
+            {
+                MessageBox.Show("Ngày thi không thể ở quá khứ!", "", MessageBoxButtons.OK);
                 nGAYTHIDateEdit.Focus();
                 return;
             }
@@ -218,8 +241,8 @@ namespace TN_CSDLPT
             }
             try
             {
-                
-                if (!CheckDeleteRegisting(query)) {
+                //nhấn ghi khi thêm mới hoặc sửa dòng đăng ký thi
+                if (!CheckDeleteRegisting(query)) { //check xem đã có điểm thi của sv trong dòng đăng ký nào chưa, nếu ko thì có thể sửa
                     gIAOVIEN_DANGKYBindingSource.EndEdit();
                     gIAOVIEN_DANGKYBindingSource.ResetCurrentItem();
                     this.gIAOVIEN_DANGKYTableAdapter.Connection.ConnectionString = Program.connstr;
@@ -229,50 +252,13 @@ namespace TN_CSDLPT
                     barBtn_Save.Enabled = barBtn_Undo.Enabled = true;
                     reloadConnection();
                 }
-                else
+                else //đã có sv thi ko thể sửa dòng đăng ký này
                 {
                     DialogResult dr = MessageBox.Show("Không thể sửa dòng này vì đã có điểm sinh viên! Vui lòng xem lại!", "", MessageBoxButtons.RetryCancel);
 
                     if (dr == DialogResult.Retry)
                     {
                         vitri = gIAOVIEN_DANGKYBindingSource.Position;
-                        //kHOABindingSource.AddNew();
-
-                        //foreach(var item in mALOPComboBox.Items)
-                        //{
-                        //    if (malop == item.ToString().Trim())
-                        //    {
-                        //        mALOPComboBox.SelectedValue = item;
-                        //        break;
-                        //    }
-                        //}
-
-                        //foreach (var item in mAMHComboBox1.Items)
-                        //{
-                        //    if (mamh == item.ToString().Trim())
-                        //    {
-                        //        mAMHComboBox1.SelectedValue = item;
-                        //        break;
-                        //    }
-                        //}
-
-                        //foreach(var item in mAMHComboBox1.Items)
-                        //{
-                        //    if (mamh == item.ToString().Trim())
-                        //    {
-                        //        mAMHComboBox1.SelectedValue = item;
-                        //        break;
-                        //    }
-                        //}
-
-                        //foreach (var item in tRINHDOComboBox.Items)
-                        //{
-                        //    if ( == item.ToString().Trim())
-                        //    {
-                        //        mAMHComboBox1.SelectedValue = item;
-                        //        break;
-                        //    }
-                        //}
 
                         gIAOVIEN_DANGKYGridControl.Enabled = grpB_txtRegistTest.Enabled = false;
                         barBtn_Add.Enabled = barBtn_Delete.Enabled = barBtn_Refresh.Enabled = false;
@@ -429,6 +415,26 @@ namespace TN_CSDLPT
                 barBtn_Save.Enabled = false;
             }
 
+        }
+
+        private void mONHOCBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.mONHOCBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.dS);
+
+        }
+
+        private void tRINHDOComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tRINHDOComboBox.SelectedIndex == -1)
+            {
+                label_TD.Text = "Chọn trình độ";
+            }
+            else
+            {
+                label_TD.Text = Program.trinhDo[tRINHDOComboBox.SelectedIndex];
+            }
         }
     }
 }

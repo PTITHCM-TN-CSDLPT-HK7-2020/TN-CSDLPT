@@ -31,6 +31,7 @@ namespace TN_CSDLPT
 
         private void fmClass_Load(object sender, EventArgs e)
         {
+           
             dS.EnforceConstraints = false;
 
             // TODO: This line of code loads data into the 'dS.KHOA' table. You can move, or remove it, as needed.
@@ -39,14 +40,13 @@ namespace TN_CSDLPT
             // TODO: This line of code loads data into the 'dS.GIAOVIEN' table. You can move, or remove it, as needed.
             this.sINHVIENTableAdapter.Connection.ConnectionString = Program.connstr;
             this.sINHVIENTableAdapter.Fill(this.dS.SINHVIEN);
-            // TODO: This line of code loads data into the 'dS.LOP' table. You can move, or remove it, as needed.
-            //this.lOPTableAdapter.Connection.ConnectionString = Program.connstr;
-            //this.lOPTableAdapter.Fill(this.dS.LOP);
-            // TODO: This line of code loads data into the 'dS.BODE' table. You can move, or remove it, as needed.
-            
+            // TODO: This line of code loads data into the 'dS.BANGDIEM' table. You can move, or remove it, as needed.
+            //this.bANGDIEMTableAdapter.Fill(this.dS.BANGDIEM);
+            // TODO: This line of code loads data into the 'dS.CHITIETBAITHISV' table. You can move, or remove it, as needed.
+            //this.cHITIETBAITHISVTableAdapter.Fill(this.dS.CHITIETBAITHISV);
 
-            makh = ((DataRowView)lOPBindingSource[0])["MALOP"].ToString();
-
+            malop = ((DataRowView)lOPBindingSource[0])["MALOP"].ToString();
+            makh = ((DataRowView)lOPBindingSource[0])["MAKH"].ToString();
             cb_Branch.DataSource = Program.bds_dspm;
             cb_Branch.DisplayMember = "TENCOSO";
             cb_Branch.ValueMember = "TENSERVER";
@@ -60,9 +60,10 @@ namespace TN_CSDLPT
                 bar_Save.Enabled = false;
                 bar_forbit.Enabled = false;
                 gr_Class.Enabled = false;
-                gridView1.OptionsBehavior.ReadOnly = true;
-                gridView2.OptionsBehavior.ReadOnly = true;
+                //gridView1.OptionsBehavior.ReadOnly = true;
+               // gridView2.OptionsBehavior.ReadOnly = true;
                 gr_Student.Enabled = false;
+                MenuStr_Student.Enabled = false;
             }
             else if (Program.mGroup == "Coso")
             {
@@ -191,15 +192,10 @@ namespace TN_CSDLPT
 
         }
 
-        private void lOPGridControl_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void bar_Del_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             string malop = "";
-            if(sINHVIENBindingSource.Count > 0)
+            if(fKSINHVIENLOPBindingSource.Count > 0)
             {
                 MessageBox.Show("Không thể xóa lớp này vì đã có sinh viên", "Thông báo", MessageBoxButtons.OK);
                 return;
@@ -324,26 +320,7 @@ namespace TN_CSDLPT
         /////EVENT CAC NUT ///////
         private void tHEMSVToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            vitriSV = lOPBindingSource.Position;
-            if (sINHVIENBindingSource.Count == 0)
-            {
-                malop = mALOPTextBox.Text.ToString();
-            }
-            else
-            {
-                malop = ((DataRowView)lOPBindingSource[0])["MALOP"].ToString();
-            }
-            sINHVIENBindingSource.AddNew();//thêm cuối
-
-            mALOPTextBox.Text = malop;
-
-            thêmLớpToolStripMenuItem.Enabled =
-            xóaToolStripMenuItem.Enabled =
-            làmMớiToolStripMenuItem.Enabled = false;
-           phụcHồiToolStripMenuItem.Enabled = true;
-           lOPGridControl.Enabled =
-            gr_Class.Enabled =
-           sINHVIENGridControl.Enabled = false;
+           
 
         }
 
@@ -439,6 +416,125 @@ namespace TN_CSDLPT
             if (vitriLOP> 0)
             {
                 lOPBindingSource.Position = vitriLOP;
+            }
+        }
+
+        private void sINHVIENGridControl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void thêmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            vitriSV = lOPBindingSource.Position;
+            if (fKSINHVIENLOPBindingSource.Count == 0)
+            {
+                malop = mALOPTextBox.Text.ToString();
+            }
+            else
+            {
+                malop = ((DataRowView)lOPBindingSource[0])["MALOP"].ToString();
+            }
+            fKSINHVIENLOPBindingSource.AddNew();//thêm cuối
+
+            mALOPTextBox.Text = malop;
+
+            thêmToolStripMenuItem.Enabled =
+            xóaStripMenuItem.Enabled =
+            mớiStripMenuItem.Enabled = false;
+            p_hồiStripMenuItem.Enabled = true;
+            lOPGridControl.Enabled =
+             gr_Class.Enabled =
+            sINHVIENGridControl.Enabled = false;
+        }
+
+        private void hủyStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fKSINHVIENLOPBindingSource.CancelEdit();
+            fmClass_Load(sender, e);
+            lOPGridControl.Enabled =
+            sINHVIENGridControl.Enabled =
+            groupBox2.Enabled =
+            thêmToolStripMenuItem.Enabled = xóaStripMenuItem.Enabled = mớiStripMenuItem.Enabled =
+            ghiStripMenuItem.Enabled = p_hồiStripMenuItem.Enabled = true;
+            if (vitriSV > 0)
+            {
+                lOPBindingSource.Position = vitriSV;
+            }
+        }
+
+
+        private void mớiStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.sINHVIENTableAdapter.Fill(this.dS.SINHVIEN);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi reload: " + ex.Message, "", MessageBoxButtons.OK);
+                return;
+            }
+        }
+
+        private void ghiStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (mASVTextEdit.Text.Trim() == "")
+            {
+                MessageBox.Show("Mã giáo viên không được để trống!", "", MessageBoxButtons.OK);
+                mASVTextEdit.Focus();
+                return;
+            }
+            try
+            {
+                fKSINHVIENLOPBindingSource.EndEdit();
+                fKSINHVIENLOPBindingSource.ResetCurrentItem();
+                this.sINHVIENTableAdapter.Connection.ConnectionString = Program.connstr;
+                this.sINHVIENTableAdapter.Update(this.dS.SINHVIEN);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Không thể ghi dữ liệu. \n" + ex.Message, "Lỗi", MessageBoxButtons.OK);
+                return;
+            }
+            lOPGridControl.Enabled = sINHVIENGridControl.Enabled =
+            groupBox1.Enabled = groupBox2.Enabled = true;
+
+            thêmToolStripMenuItem.Enabled = xóaStripMenuItem.Enabled = mớiStripMenuItem.Enabled =
+            ghiStripMenuItem.Enabled = p_hồiStripMenuItem.Enabled = true;
+            reloadConnection();
+        }
+
+        private void xóaStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string masv = "";
+            if (fK_BANGDIEM_SINHVIEN_BindingSource.Count > 0 || fK_CHITIETBAITHISV_SINHVIEN_BindingSource.Count > 0)
+            {
+                MessageBox.Show("Không thể xóa sinh viên viên này vì đã có điểm thi hoặc bài thi!", "", MessageBoxButtons.OK);
+                return;
+            }
+            if (MessageBox.Show("Bạn có chắc muốn xóa sinh viên này?", "Xác nhận", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                try
+                {
+                    masv = ((DataRowView)fKSINHVIENLOPBindingSource[fKSINHVIENLOPBindingSource.Position])["MASV"].ToString();//giữ mã để xóa lỗi, quay về lại 
+                    fKSINHVIENLOPBindingSource.RemoveCurrent();
+                    this.sINHVIENTableAdapter.Connection.ConnectionString = Program.connstr;
+                    this.sINHVIENTableAdapter.Update(this.dS.SINHVIEN);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi xóa giáo viên. Vui lòng thử lại.\n" + ex.Message, "", MessageBoxButtons.OK);
+                    this.sINHVIENTableAdapter.Fill(this.dS.SINHVIEN);
+                    fKSINHVIENLOPBindingSource.Position = fKSINHVIENLOPBindingSource.Find("MASV", masv);
+                    return;
+                }
+                if (fKSINHVIENLOPBindingSource.Count == 0)//bảng môn học trống thì ko cho xóa
+                {
+                    xóaStripMenuItem.Enabled = false;
+                }
+                fmClass_Load(sender, e);
             }
         }
     }
